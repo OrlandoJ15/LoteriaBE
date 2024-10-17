@@ -24,6 +24,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Entidades\Entidades.csproj" />
     <ProjectReference Include="..\LogicaNegocio\LogicaNegocio.csproj" />
+    <ProjectReference Include="..\MetodosComunes\MetodosComunes.csproj" />
   </ItemGroup>
 
 </Project>

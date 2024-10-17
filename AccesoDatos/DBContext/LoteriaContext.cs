@@ -6,16 +6,8 @@ namespace AccesoDatos.DBContext
 {
     public partial class LoteriaContext : DbContext
     {
-        /*
-        private readonly string? contextoBD;
-        public LoteriaContext(string? lcontextoBD)
-        {
-            contextoBD = lcontextoBD;
-          
-        }
-        */
 
-        private readonly IConfiguration _configuration;
+        private readonly IConfiguration? _configuration;
 
 
         public LoteriaContext(IConfiguration configuration)
@@ -42,22 +34,12 @@ namespace AccesoDatos.DBContext
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
 
-
-            var connectionString = _configuration.GetConnectionString("LoteriaBD");
+            var connectionString = _configuration?.GetConnectionString("LoteriaBD") ?? throw new InvalidOperationException("Connection string not found");
             optionsBuilder.UseSqlServer(connectionString);
 
-
-            /*
-            if (!optionsBuilder.IsConfigured)
-            {
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseSqlServer("Server=ANDRES\\SQLEXPRESS; Database=Loteria; Trusted_Connection=True; TrustServerCertificate=True;");
-            }
-            */
-
         }
-        
-    
+
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Cliente>(entity =>

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "1w0gUctrWFw=",
+  "dgSpecHash": "DSJ/+waeS8I=",
   "success": true,
-  "projectFilePath": "C:\\Loteria\\Back-End\\AccesoDatos\\AccesoDatos.csproj",
+  "projectFilePath": "C:\\Loteria\\LoteriaBE\\AccesoDatos\\AccesoDatos.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\andre\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\andre\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

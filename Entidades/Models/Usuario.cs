@@ -20,5 +20,6 @@ namespace Entidades.Models
 
         public virtual ICollection<Kardex> Kardices { get; set; }
         public virtual ICollection<TipoSorteo> TipoSorteos { get; set; }
+
     }
 }

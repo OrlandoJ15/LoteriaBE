@@ -15,20 +15,6 @@ namespace LoteriaWebApi
             
             var builder = WebApplication.CreateBuilder(args);
 
-            // Add services to the container.
-            //var connectionString = builder.Configuration.GetConnectionString("LoteriaBD");
-
-            //builder.Configuration.AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
-            //if (string.IsNullOrEmpty(connectionString))
-            //{
-            //    throw new InvalidOperationException("La cadena de conexión 'gCnnBD' no se encuentra en appsettings.json.");
-            //}
-
-
-            //builder.Services.AddDbContext<LoteriaContext>(options =>
-              //  options.UseSqlServer(connectionString));
-
-
             builder.Services.AddCors(options =>
             {
                 options.AddPolicy("PermitirFrontEnd",
@@ -41,7 +27,6 @@ namespace LoteriaWebApi
             });
 
             builder.Services.AddControllers();
-            // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 

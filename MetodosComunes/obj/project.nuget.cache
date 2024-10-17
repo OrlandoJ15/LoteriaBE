@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "627hEown8wo=",
+  "success": true,
+  "projectFilePath": "C:\\Loteria\\LoteriaBE\\MetodosComunes\\MetodosComunes.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\andre\\.nuget\\packages\\nlog\\5.3.4\\nlog.5.3.4.nupkg.sha512"
+  ],
+  "logs": []
+}

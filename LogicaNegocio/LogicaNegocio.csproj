@@ -13,6 +13,7 @@
   <ItemGroup>
     <ProjectReference Include="..\AccesoDatos\AccesoDatos.csproj" />
     <ProjectReference Include="..\Entidades\Entidades.csproj" />
+    <ProjectReference Include="..\MetodosComunes\MetodosComunes.csproj" />
   </ItemGroup>
 
 </Project>

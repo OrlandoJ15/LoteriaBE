@@ -1,11 +1,105 @@
-﻿
+﻿using AccesoDatos.Implementacion;
+using AccesoDatos.Interfaz;
+using Entidades.Models;
+using LogicaNegocio.Interfaz;
+using Microsoft.Extensions.Configuration;
+using MetodosComunes;
+
+namespace LogicaNegocio.Implementacion
+{
+    public class UsuarioLN : IUsuarioLN
+    {
+
+        private readonly IUsuarioAD gObjUsuarioAD;
+
+        public Excepciones gObjExcepciones = new Excepciones();
+
+        public UsuarioLN(IConfiguration _configuration)
+        {
+            gObjUsuarioAD = new UsuarioAD(_configuration);
+        }
+
+
+        private T EjecutarProcConEntidad<T> (Func<T> funcion)
+        {
+            try
+            {
+                return funcion();
+            }
+            catch (Exception lEx)
+            {
+                gObjExcepciones.LogError(lEx);
+                // Lanza la excepción para que la maneje la capa superior
+                throw;
+            }
+        }
+        private bool EjecutarProcSinEntidad(Action accion)
+        {
+            try
+            {
+                accion();
+                return true;
+            }
+            catch (Exception lEx)
+            {
+                gObjExcepciones.LogError(lEx);
+                // Lanza la excepción para que la maneje la capa superior
+                throw;
+            }
+        }
+
+        public List<Usuario> RecUsuario()
+        {
+            return EjecutarProcConEntidad(() => gObjUsuarioAD.RecUsuario());
+        }
+
+        public Usuario? RecUsuarioXId(int pIdUsuario)
+        {
+            return EjecutarProcConEntidad(() => gObjUsuarioAD.RecUsuarioXId(pIdUsuario));
+        }
+        public bool InsUsuario(Usuario pUsuario)
+        {
+            return EjecutarProcSinEntidad (() => gObjUsuarioAD.InsUsuario(pUsuario));
+        }
+
+        public bool ModUsuario(Usuario pUsuario)
+        {
+            return EjecutarProcSinEntidad (() => gObjUsuarioAD.ModUsuario(pUsuario));
+        }
+
+        public bool DelUsuario(Usuario pUsuario)
+        {
+            return EjecutarProcSinEntidad (() => gObjUsuarioAD.DelUsuario(pUsuario));
+        }
+
+        public Usuario? ValidarLoginUsuario(int pId, string pClave)
+        {
+            return EjecutarProcConEntidad (() => gObjUsuarioAD.ValidarLoginUsuario (pId, pClave));
+        }
+
+        public bool ModClaveUsuario(int pId, string pClave)
+        {
+            return EjecutarProcSinEntidad (() => gObjUsuarioAD.ModClaveUsuario (pId, pClave));
+        }
+
+    }
+}
+
+
+
+
+
+
+
+
+
+/*
 using AccesoDatos.Implementacion;
 using AccesoDatos.Interfaz;
 using Entidades.Models;
 using LogicaNegocio.Interfaz;
 using Microsoft.Extensions.Configuration;
-using NLog;
-
+using MetodosComunes;
 
 namespace LogicaNegocio.Implementacion
 {
@@ -13,9 +107,8 @@ namespace LogicaNegocio.Implementacion
     {
         
         private readonly IUsuarioAD gObjUsuarioAD;
-     
 
-        private readonly Logger gObjError = LogManager.GetCurrentClassLogger();
+        public Excepciones gObjExcepciones = new Excepciones();
 
         public UsuarioLN(IConfiguration _configuration)
         {
@@ -32,26 +125,13 @@ namespace LogicaNegocio.Implementacion
             }
             catch (Exception lEx)
             {
-
-                // Obtener el nombre del método actual de forma segura
-                var methodInfo = System.Reflection.MethodBase.GetCurrentMethod();
-                string methodName = methodInfo?.ToString() ?? "Método no disponible"; // Uso del operador de coalescencia nula
-
-                // Registrar el error
-                gObjError.Error("SE HA PRODUCIDO UN ERROR. Detalle: " + lEx.Message +
-                                "// " + (lEx.InnerException?.Message ?? "No Inner Exception") +
-                                ". Método: " + methodName);
-
+                gObjExcepciones.LogError(lEx);
                 // Lanza la excepción para que la maneje la capa superior
                 throw;
             }
 
             return lObjRespuesta;
         }
-       
-
-
-   
 
         public Usuario? RecUsuarioXId(int pIdUsuario)
         {
@@ -63,15 +143,7 @@ namespace LogicaNegocio.Implementacion
             }
             catch (Exception lEx)
             {
-                // Obtener el nombre del método actual de forma segura
-                var methodInfo = System.Reflection.MethodBase.GetCurrentMethod();
-                string methodName = methodInfo?.ToString() ?? "Método no disponible"; // Uso del operador de coalescencia nula
-
-                // Registrar el error
-                gObjError.Error("SE HA PRODUCIDO UN ERROR. Detalle: " + lEx.Message +
-                                "// " + (lEx.InnerException?.Message ?? "No Inner Exception") +
-                                ". Método: " + methodName);
-
+                gObjExcepciones.LogError(lEx);
                 // Lanza la excepción para que la maneje la capa superior
                 throw;
             }
@@ -88,15 +160,7 @@ namespace LogicaNegocio.Implementacion
             }
             catch (Exception lEx)
             {
-                // Obtener el nombre del método actual de forma segura
-                var methodInfo = System.Reflection.MethodBase.GetCurrentMethod();
-                string methodName = methodInfo?.ToString() ?? "Método no disponible"; // Uso del operador de coalescencia nula
-
-                // Registrar el error
-                gObjError.Error("SE HA PRODUCIDO UN ERROR. Detalle: " + lEx.Message +
-                                "// " + (lEx.InnerException?.Message ?? "No Inner Exception") +
-                                ". Método: " + methodName);
-
+                gObjExcepciones.LogError(lEx);
                 // Lanza la excepción para que la maneje la capa superior
                 throw;
             }
@@ -113,15 +177,7 @@ namespace LogicaNegocio.Implementacion
             }
             catch (Exception lEx)
             {
-                // Obtener el nombre del método actual de forma segura
-                var methodInfo = System.Reflection.MethodBase.GetCurrentMethod();
-                string methodName = methodInfo?.ToString() ?? "Método no disponible"; // Uso del operador de coalescencia nula
-
-                // Registrar el error
-                gObjError.Error("SE HA PRODUCIDO UN ERROR. Detalle: " + lEx.Message +
-                                "// " + (lEx.InnerException?.Message ?? "No Inner Exception") +
-                                ". Método: " + methodName);
-
+                gObjExcepciones.LogError(lEx);
                 // Lanza la excepción para que la maneje la capa superior
                 throw;
             }
@@ -138,20 +194,13 @@ namespace LogicaNegocio.Implementacion
             }
             catch (Exception lEx)
             {
-                // Obtener el nombre del método actual de forma segura
-                var methodInfo = System.Reflection.MethodBase.GetCurrentMethod();
-                string methodName = methodInfo?.ToString() ?? "Método no disponible"; // Uso del operador de coalescencia nula
-
-                // Registrar el error
-                gObjError.Error("SE HA PRODUCIDO UN ERROR. Detalle: " + lEx.Message +
-                                "// " + (lEx.InnerException?.Message ?? "No Inner Exception") +
-                                ". Método: " + methodName);
-
+                gObjExcepciones.LogError(lEx);
                 // Lanza la excepción para que la maneje la capa superior
                 throw;
             }
             return lObjRespuesta;
         }
+
 
         public Usuario? ValidarLoginUsuario(int pId, string pClave)
         {
@@ -163,15 +212,7 @@ namespace LogicaNegocio.Implementacion
             }
             catch (Exception lEx)
             {
-                // Obtener el nombre del método actual de forma segura
-                var methodInfo = System.Reflection.MethodBase.GetCurrentMethod();
-                string methodName = methodInfo?.ToString() ?? "Método no disponible"; // Uso del operador de coalescencia nula
-
-                // Registrar el error
-                gObjError.Error("SE HA PRODUCIDO UN ERROR. Detalle: " + lEx.Message +
-                                "// " + (lEx.InnerException?.Message ?? "No Inner Exception") +
-                                ". Método: " + methodName);
-
+                gObjExcepciones.LogError(lEx);
                 // Lanza la excepción para que la maneje la capa superior
                 throw;
             }
@@ -188,169 +229,13 @@ namespace LogicaNegocio.Implementacion
             }
             catch (Exception lEx)
             {
-                // Obtener el nombre del método actual de forma segura
-                var methodInfo = System.Reflection.MethodBase.GetCurrentMethod();
-                string methodName = methodInfo?.ToString() ?? "Método no disponible"; // Uso del operador de coalescencia nula
-
-                // Registrar el error
-                gObjError.Error("SE HA PRODUCIDO UN ERROR. Detalle: " + lEx.Message +
-                                "// " + (lEx.InnerException?.Message ?? "No Inner Exception") +
-                                ". Método: " + methodName);
-
+                gObjExcepciones.LogError(lEx);
                 // Lanza la excepción para que la maneje la capa superior
                 throw;
             }
             return lObjRespuesta;
         }
 
-
     }
 }
-
-
-/*
-using AccesoDatos.Implementacion;
-using AccesoDatos.Interfaz;
-using Entidades.Models;
-using LogicaNegocio.Interfaz;
-using NLog;
-
-namespace LogicaNegocio.Implementacion
-{
-    public class UsuarioLN : IUsuarioLN
-    {
-        private readonly IUsuarioAD gObjUsuarioAD;
-        private readonly Logger gObjError = LogManager.GetCurrentClassLogger();
-
-        public UsuarioLN(IUsuarioAD usuarioAD)
-        {
-            gObjUsuarioAD = usuarioAD ?? throw new ArgumentNullException(nameof(usuarioAD), "El acceso a datos no puede ser nulo.");
-        }
-
-        public List<Usuario> RecUsuario()
-        {
-            try
-            {
-                return gObjUsuarioAD.RecUsuario();
-            }
-            catch (Exception lEx)
-            {
-                LogError(lEx);
-                throw;
-            }
-        }
-
-        public Usuario? RecUsuarioXId(int pIdUsuario)
-        {
-            // Validar que el ID del usuario sea un valor válido
-            if (pIdUsuario <= 0)
-            {
-                throw new ArgumentException("El ID del usuario debe ser un valor positivo.");
-            }
-
-            try
-            {
-                return gObjUsuarioAD.RecUsuarioXId(pIdUsuario);
-            }
-            catch (Exception lEx)
-            {
-                LogError(lEx);
-                throw;
-            }
-        }
-
-        public bool InsUsuario(Usuario pUsuario)
-        {
-            // Validar que el usuario no sea nulo
-            if (pUsuario == null)
-            {
-                throw new ArgumentNullException(nameof(pUsuario), "El usuario no puede ser nulo.");
-            }
-
-            try
-            {
-                return gObjUsuarioAD.InsUsuario(pUsuario);
-            }
-            catch (Exception lEx)
-            {
-                LogError(lEx);
-                throw;
-            }
-        }
-
-        public bool ModUsuario(Usuario pUsuario)
-        {
-            // Validar que el usuario no sea nulo
-            if (pUsuario == null)
-            {
-                throw new ArgumentNullException(nameof(pUsuario), "El usuario no puede ser nulo.");
-            }
-
-            try
-            {
-                return gObjUsuarioAD.ModUsuario(pUsuario);
-            }
-            catch (Exception lEx)
-            {
-                LogError(lEx);
-                throw;
-            }
-        }
-
-        public bool DelUsuario(Usuario pUsuario)
-        {
-            // Validar que el usuario no sea nulo
-            if (pUsuario == null)
-            {
-                throw new ArgumentNullException(nameof(pUsuario), "El usuario no puede ser nulo.");
-            }
-
-            try
-            {
-                return gObjUsuarioAD.DelUsuario(pUsuario);
-            }
-            catch (Exception lEx)
-            {
-                LogError(lEx);
-                throw;
-            }
-        }
-
-        public bool ValidarLoginUsuario(int pId, string pClave)
-        {
-            // Validar que el ID y la clave no sean nulos o inválidos
-            if (pId <= 0)
-            {
-                throw new ArgumentException("El ID del usuario debe ser un valor positivo.");
-            }
-            if (string.IsNullOrWhiteSpace(pClave))
-            {
-                throw new ArgumentException("La clave no puede estar vacía.");
-            }
-
-            try
-            {
-                return gObjUsuarioAD.ValidarLoginUsuario(pId, pClave);
-            }
-            catch (Exception lEx)
-            {
-                LogError(lEx);
-                throw;
-            }
-        }
-
-        private void LogError(Exception lEx)
-        {
-            // Obtener el nombre del método actual de forma segura
-            var methodInfo = System.Reflection.MethodBase.GetCurrentMethod();
-            string methodName = methodInfo?.ToString() ?? "Método no disponible";
-
-            // Registrar el error
-            gObjError.Error("SE HA PRODUCIDO UN ERROR. Detalle: " + lEx.Message +
-                            "// " + (lEx.InnerException?.Message ?? "No Inner Exception") +
-                            ". Método: " + methodName);
-        }
-    }
-}
-
 */

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "j7DFhvLaxd4=",
+  "dgSpecHash": "+ueWpXbHAq8=",
   "success": true,
-  "projectFilePath": "C:\\Loteria\\Back-End\\LogicaNegocio\\LogicaNegocio.csproj",
+  "projectFilePath": "C:\\Loteria\\LoteriaBE\\LogicaNegocio\\LogicaNegocio.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\andre\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\andre\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",

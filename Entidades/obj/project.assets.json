@@ -54,11 +54,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Loteria\\Back-End\\Entidades\\Entidades.csproj",
+      "projectUniqueName": "C:\\Loteria\\LoteriaBE\\Entidades\\Entidades.csproj",
       "projectName": "Entidades",
-      "projectPath": "C:\\Loteria\\Back-End\\Entidades\\Entidades.csproj",
+      "projectPath": "C:\\Loteria\\LoteriaBE\\Entidades\\Entidades.csproj",
       "packagesPath": "C:\\Users\\andre\\.nuget\\packages\\",
-      "outputPath": "C:\\Loteria\\Back-End\\Entidades\\obj\\",
+      "outputPath": "C:\\Loteria\\LoteriaBE\\Entidades\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\andre\\AppData\\Roaming\\NuGet\\NuGet.Config",

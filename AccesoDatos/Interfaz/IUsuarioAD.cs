@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Entidades.Models;
+﻿using Entidades.Models;
 
 namespace AccesoDatos.Interfaz
 {
@@ -12,9 +7,9 @@ namespace AccesoDatos.Interfaz
              
         List<Usuario> RecUsuario();
         Usuario? RecUsuarioXId(int pIdUsuario);
-        bool InsUsuario(Usuario pUsuarioPA);
-        bool ModUsuario(Usuario pUsuarioPA);
-        bool DelUsuario(Usuario pUsuarioPA);
+        bool InsUsuario(Usuario pUsuario);
+        bool ModUsuario(Usuario pUsuario);
+        bool DelUsuario(Usuario pUsuario);
         Usuario? ValidarLoginUsuario(int pId, string pClave);
         bool ModClaveUsuario(int pId, string pClave);
 

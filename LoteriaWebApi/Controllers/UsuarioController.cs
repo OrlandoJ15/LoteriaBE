@@ -1,5 +1,4 @@
-﻿
-using Entidades.Models;
+﻿using Entidades.Models;
 using LogicaNegocio.Implementacion;
 using LogicaNegocio.Interfaz;
 using MetodosComunes;
@@ -16,7 +15,6 @@ namespace LoteriaWebApi.Controllers
         public IConfiguration lConfiguration;
 
         private readonly IUsuarioLN gObjUsuarioLN;
-        //private readonly Logger gObjError = LogManager.GetCurrentClassLogger();
 
         public Excepciones gObjExcepciones = new Excepciones();
 
@@ -74,14 +72,15 @@ namespace LoteriaWebApi.Controllers
             }
         }
 
-        [Route("[action]/{pIdUsuario}")]
-        [HttpGet]
-        public IActionResult? RecUsuarioXId(int pIdUsuario)
+
+        [Route("[action]")]
+        [HttpPost]
+        public IActionResult? RecUsuarioXId([FromBody] Usuario pUsuario)
         {
             try
             {
                 // Llamada al método para obtener el usuario por su ID
-                var lObjRespuesta = gObjUsuarioLN.RecUsuarioXId(pIdUsuario);
+                var lObjRespuesta = gObjUsuarioLN.RecUsuarioXId(pUsuario.IdUsuario);
 
                 return HandleResponse(lObjRespuesta);
 
@@ -91,6 +90,7 @@ namespace LoteriaWebApi.Controllers
                 return ManejoError(lEx);
             }
         }
+
 
         [Route("[action]")]
         [HttpPost]
@@ -102,7 +102,6 @@ namespace LoteriaWebApi.Controllers
             try
             {
                 gObjUsuarioLN.InsUsuario(pUsuario);
-                //return Ok(pUsuario);
                 return CreatedAtAction(nameof(RecUsuarioXId), new { pIdUsuario = pUsuario.IdUsuario }, pUsuario); // Retorna 201 Created, Mejor por convencion de REST API
             }
             catch (Exception lEx)
@@ -172,29 +171,20 @@ namespace LoteriaWebApi.Controllers
         [HttpPut]
         public IActionResult ModClaveUsuario([FromBody] Usuario pUsuario)
         {
+            if (!ModelState.IsValid || string.IsNullOrEmpty(pUsuario.Clave))
+                return BadRequest("Modelo Invalido");
 
             try
             {
-                if (ModelState.IsValid)
-                {
-                    if (string.IsNullOrEmpty(pUsuario.Clave))
-                    {
-                        return BadRequest("La clave no puede ser nula o vacía.");
-                    }
-                    gObjUsuarioLN.ModClaveUsuario(pUsuario.IdUsuario, pUsuario.Clave);
-                    return Ok();
-                }
-                else
-                {
-                    return BadRequest("Modelo Invalido");
-                }
+                gObjUsuarioLN.ModClaveUsuario(pUsuario.IdUsuario, pUsuario.Clave);
+                return Ok();
+                
             }
             catch (Exception lEx)
             {
                 return ManejoError(lEx);
             }
         }
-       
     }
 }
 

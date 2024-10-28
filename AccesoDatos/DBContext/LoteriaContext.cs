@@ -1,18 +1,21 @@
-﻿using Entidades.Models;
+﻿using System;
+using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata;
+using AccesoDatos;
 using Microsoft.Extensions.Configuration;
+using Entidades.Models;
 
 namespace AccesoDatos.DBContext
 {
     public partial class LoteriaContext : DbContext
     {
-
         private readonly IConfiguration? _configuration;
 
 
         public LoteriaContext(IConfiguration configuration)
         {
-            _configuration = configuration ;
+            _configuration = configuration;
         }
 
 
@@ -21,7 +24,7 @@ namespace AccesoDatos.DBContext
         {
 
         }
-        
+
 
         public virtual DbSet<Cliente> Clientes { get; set; } = null!;
         public virtual DbSet<Kardex> Kardices { get; set; } = null!;
@@ -30,7 +33,6 @@ namespace AccesoDatos.DBContext
         public virtual DbSet<TipoSorteo> TipoSorteos { get; set; } = null!;
         public virtual DbSet<Usuario> Usuarios { get; set; } = null!;
 
-        
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
 
@@ -38,6 +40,7 @@ namespace AccesoDatos.DBContext
             optionsBuilder.UseSqlServer(connectionString);
 
         }
+
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -171,9 +174,9 @@ namespace AccesoDatos.DBContext
 
                 entity.Property(e => e.IdTipoSorteo).HasColumnName("idTipoSorteo");
 
-                entity.Property(e => e.Monto)
-                    .HasColumnType("decimal(18, 2)")
-                    .HasColumnName("monto");
+                entity.Property(e => e.IdUsuario).HasColumnName("idUsuario");
+
+                entity.Property(e => e.Monto).HasColumnName("monto");
 
                 entity.Property(e => e.Nombre)
                     .HasMaxLength(50)
@@ -181,6 +184,18 @@ namespace AccesoDatos.DBContext
                     .HasColumnName("nombre");
 
                 entity.Property(e => e.Numero).HasColumnName("numero");
+
+                entity.HasOne(d => d.IdTipoSorteoNavigation)
+                    .WithMany(p => p.Sorteos)
+                    .HasForeignKey(d => d.IdTipoSorteo)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK_Sorteo_TipoSorteo1");
+
+                entity.HasOne(d => d.IdUsuarioNavigation)
+                    .WithMany(p => p.Sorteos)
+                    .HasForeignKey(d => d.IdUsuario)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK_Sorteo_Usuario");
             });
 
             modelBuilder.Entity<TipoSorteo>(entity =>
@@ -201,20 +216,12 @@ namespace AccesoDatos.DBContext
                     .HasColumnType("datetime")
                     .HasColumnName("fechaInicio");
 
-                entity.Property(e => e.IdUsuario).HasColumnName("idUsuario");
-
                 entity.Property(e => e.Nombre)
                     .HasMaxLength(50)
                     .IsUnicode(false)
                     .HasColumnName("nombre");
 
                 entity.Property(e => e.NumeroGanador).HasColumnName("numeroGanador");
-
-                entity.HasOne(d => d.IdUsuarioNavigation)
-                    .WithMany(p => p.TipoSorteos)
-                    .HasForeignKey(d => d.IdUsuario)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_TipoSorteo_Usuario");
             });
 
             modelBuilder.Entity<Usuario>(entity =>

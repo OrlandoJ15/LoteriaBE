@@ -1,4 +1,5 @@
-﻿using Entidades.Models;
+﻿
+using Entidades.Models;
 
 namespace AccesoDatos.Interfaz
 {

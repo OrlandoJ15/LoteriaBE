@@ -8,7 +8,7 @@ namespace Entidades.Models
         public Usuario()
         {
             Kardices = new HashSet<Kardex>();
-            TipoSorteos = new HashSet<TipoSorteo>();
+            Sorteos = new HashSet<Sorteo>();
         }
 
         public int IdUsuario { get; set; }
@@ -19,7 +19,6 @@ namespace Entidades.Models
         public string? Clave { get; set; }
 
         public virtual ICollection<Kardex> Kardices { get; set; }
-        public virtual ICollection<TipoSorteo> TipoSorteos { get; set; }
-
+        public virtual ICollection<Sorteo> Sorteos { get; set; }
     }
 }

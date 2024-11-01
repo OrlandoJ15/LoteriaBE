@@ -218,3 +218,5 @@ C:\Loteria\LoteriaBE\LoteriaWebApi\obj\Debug\net8.0\refint\LoteriaWebApi.dll
 C:\Loteria\LoteriaBE\LoteriaWebApi\obj\Debug\net8.0\LoteriaWebApi.pdb
 C:\Loteria\LoteriaBE\LoteriaWebApi\obj\Debug\net8.0\LoteriaWebApi.genruntimeconfig.cache
 C:\Loteria\LoteriaBE\LoteriaWebApi\obj\Debug\net8.0\ref\LoteriaWebApi.dll
+C:\Loteria\LoteriaBE\LoteriaWebApi\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Loteria\LoteriaBE\LoteriaWebApi\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll

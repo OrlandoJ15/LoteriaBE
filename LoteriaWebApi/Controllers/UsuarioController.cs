@@ -4,6 +4,13 @@ using LogicaNegocio.Interfaz;
 using MetodosComunes;
 using Microsoft.AspNetCore.Mvc;
 
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using System.Text;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.IdentityModel.Tokens;
+using Microsoft.EntityFrameworkCore.Metadata.Conventions;
+
 namespace LoteriaWebApi.Controllers
 {
 
@@ -12,11 +19,11 @@ namespace LoteriaWebApi.Controllers
     public class UsuarioController : ControllerBase
     {
 
-        public IConfiguration lConfiguration;
+        private readonly IConfiguration lConfiguration;
 
         private readonly IUsuarioLN gObjUsuarioLN;
 
-        public Excepciones gObjExcepciones = new Excepciones();
+        private readonly Excepciones gObjExcepciones = new Excepciones();
 
         public UsuarioController(IConfiguration lConfig)
         {
@@ -25,6 +32,37 @@ namespace LoteriaWebApi.Controllers
 
             gObjUsuarioLN = new UsuarioLN(lConfiguration);
         }
+
+
+        //METODO PARA GENERAR EL TOKEN JWT
+        
+        private string GenearJwtToken(Usuario pUsuario)
+        {
+            var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(lConfiguration["Jwt:Key"]));
+            var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
+
+            var claims = new[]
+            {
+                new Claim(JwtRegisteredClaimNames.Sub , pUsuario.NombreUsuario),
+                new Claim("IdUsuario", pUsuario.IdUsuario.ToString()),
+                new Claim("Rol", pUsuario.Rol.ToString())
+            };
+
+            var token = new JwtSecurityToken(
+                issuer: lConfiguration["Jwt:Issuer"],
+                audience: lConfiguration["Jwt:Issuer"],
+                claims: claims,
+                expires: DateTime.Now.AddHours(1),
+                signingCredentials: credentials);
+
+            return new JwtSecurityTokenHandler().WriteToken(token);
+
+        }
+
+
+        
+
+
 
         //Metodo para manejar la excepcion y devulocion de status de error
         private ActionResult ManejoError(Exception Ex)
@@ -44,7 +82,31 @@ namespace LoteriaWebApi.Controllers
         }
 
 
+        // Endpoint de autenticación para generar token
 
+        [AllowAnonymous]
+        [Route("Login")]
+        [HttpPost]
+        public IActionResult Login([FromBody] Usuario pUsuario)
+        {
+            if (pUsuario == null || string.IsNullOrEmpty(pUsuario.Clave))
+                return BadRequest("Credenciales Invalidas");
+
+            try
+            {
+                var user = gObjUsuarioLN.ValidarLoginUsuario(pUsuario.IdUsuario, pUsuario.Clave);
+                if (user == null)
+                    return Unauthorized("Usuario o Clave Incorrecta");
+
+                var token = GenearJwtToken(user);
+                return Ok(new { Token = token });
+            }catch (Exception ex)
+            {
+                return ManejoError(ex);
+            }
+        }
+
+        [Authorize]
         [Route("[action]")]
         [HttpGet]
         public ActionResult<List<Usuario>> RecUsuario()
@@ -71,6 +133,7 @@ namespace LoteriaWebApi.Controllers
                 return ManejoError(lEx);
             }
         }
+
 
 
         [Route("[action]")]
@@ -151,6 +214,7 @@ namespace LoteriaWebApi.Controllers
 
         [Route("[action]")]
         [HttpPost]
+
         public IActionResult? ValidarUsuarioLogin([FromBody] Usuario pUsuario)
         {
             if (!ModelState.IsValid || pUsuario == null || string.IsNullOrEmpty(pUsuario.Clave))

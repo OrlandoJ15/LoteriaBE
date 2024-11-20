@@ -35,12 +35,13 @@ namespace AccesoDatos.Implementacion
                     while (lReader.Read())
                     {
                         Sorteo lobjDatosSorteo = new Sorteo();
-                        lobjDatosSorteo.IdSorteo = Convert.ToInt32(lReader["idSorteo"]);
-                        lobjDatosSorteo.Nombre = lReader["nombre"]?.ToString() ?? string.Empty;
-                        lobjDatosSorteo.Numero = Convert.ToInt32(lReader["numero"]);
-                        lobjDatosSorteo.Monto = Convert.ToInt32(lReader["monto"]);
+                        lobjDatosSorteo.Id = Convert.ToInt32(lReader["id"]);
                         lobjDatosSorteo.IdUsuario = Convert.ToInt32(lReader["idUsuario"]);
                         lobjDatosSorteo.IdTipoSorteo = Convert.ToInt32(lReader["idTipoSorteo"]);
+                        lobjDatosSorteo.NombreUsuario = lReader["nombreUsuario"].ToString() ?? string.Empty;
+                        lobjDatosSorteo.NombreTipoSorteoGeneral = lReader["nombreTipoSorteoGeneral"].ToString() ?? string.Empty;
+                        lobjDatosSorteo.FechaTipoSorteo = Convert.ToDateTime(lReader["fechaTipoSorteo"]);
+
                         lObjRespuesta.Add(lobjDatosSorteo);
 
                     }
@@ -73,12 +74,12 @@ namespace AccesoDatos.Implementacion
                     {
                         lObjRespuesta = new Sorteo
                         {
-                            IdSorteo = Convert.ToInt32(lReader["idSorteo"]),
-                            Nombre = lReader["nombre"]?.ToString() ?? string.Empty,
-                            Numero = Convert.ToInt32(lReader["numero"]),
-                            Monto = Convert.ToInt32(lReader["monto"]),
+                            Id = Convert.ToInt32(lReader["id"]),
                             IdUsuario = Convert.ToInt32(lReader["idUsuario"]),
-                            IdTipoSorteo = Convert.ToInt32(lReader["idTipoSorteo"])
+                            IdTipoSorteo = Convert.ToInt32(lReader["idTipoSorteo"]),
+                            NombreUsuario = lReader["nombreUsuario"].ToString() ?? string.Empty,
+                            NombreTipoSorteoGeneral = lReader["nombreTipoSorteoGeneral"].ToString() ?? string.Empty,
+                            FechaTipoSorteo = Convert.ToDateTime(lReader["fechaTipoSorteo"]),
 
                         };
                     }
@@ -123,14 +124,11 @@ namespace AccesoDatos.Implementacion
 
                     if (procedimientoAlmacenado == "delSorteoPA")
                     {
-                        lCmd.Parameters.Add(new SqlParameter("@idSorteo", pSorteo.IdSorteo));
+                        lCmd.Parameters.Add(new SqlParameter("@idSorteo", pSorteo.Id));
                     }
                     else
                     {
-                        lCmd.Parameters.Add(new SqlParameter("@idSorteo", pSorteo.IdSorteo));
-                        lCmd.Parameters.Add(new SqlParameter("@nombre", pSorteo.Nombre));
-                        lCmd.Parameters.Add(new SqlParameter("@numero", pSorteo.Numero));
-                        lCmd.Parameters.Add(new SqlParameter("@monto", pSorteo.Monto));
+                        lCmd.Parameters.Add(new SqlParameter("@idSorteo", pSorteo.Id));
                         lCmd.Parameters.Add(new SqlParameter("@idUsuario", pSorteo.IdUsuario));
                         lCmd.Parameters.Add(new SqlParameter("@idTipoSorteo", pSorteo.IdTipoSorteo));
 

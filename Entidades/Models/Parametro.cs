@@ -5,7 +5,7 @@ namespace Entidades.Models
 {
     public partial class Parametro
     {
-        public int IdParametro { get; set; }
+        public int Id { get; set; }
         public int RazonSocial { get; set; }
         public string Nombre { get; set; } = null!;
         public string Telefono { get; set; } = null!;

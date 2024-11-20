@@ -1,4 +1,5 @@
-﻿using AccesoDatos.DBContext;
+﻿
+using AccesoDatos.DBContext;
 using AccesoDatos.Interfaz;
 using Entidades.Models;
 using MetodosComunes;
@@ -35,7 +36,7 @@ namespace AccesoDatos.Implementacion
                     while (lReader.Read())
                     {
                         Kardex lobjDatosKardex = new Kardex();
-                        lobjDatosKardex.IdKardex = Convert.ToInt32(lReader["idKardex"]);
+                        lobjDatosKardex.Id = Convert.ToInt32(lReader["id"]);
                         lobjDatosKardex.Serie = lReader["serie"]?.ToString() ?? string.Empty;
                         lobjDatosKardex.Numero = Convert.ToInt32(lReader["numero"]);
                         lobjDatosKardex.Nombre = lReader["nombre"]?.ToString() ?? string.Empty;
@@ -73,7 +74,7 @@ namespace AccesoDatos.Implementacion
                     {
                         lObjRespuesta = new Kardex
                         {
-                            IdKardex = Convert.ToInt32(lReader["idKardex"]),
+                            Id = Convert.ToInt32(lReader["id"]),
                             Serie = lReader["serie"]?.ToString() ?? string.Empty,
                             Numero = Convert.ToInt32(lReader["numero"]),
                             Nombre = lReader["nombre"]?.ToString() ?? string.Empty,
@@ -123,7 +124,7 @@ namespace AccesoDatos.Implementacion
 
                     if (procedimientoAlmacenado == "delKardexPA")
                     {
-                        lCmd.Parameters.Add(new SqlParameter("@idKardex", pKardex.IdKardex));
+                        lCmd.Parameters.Add(new SqlParameter("@idKardex", pKardex.Id));
                     }
                     else if (procedimientoAlmacenado == "insKardexPA")
                     {
@@ -135,7 +136,7 @@ namespace AccesoDatos.Implementacion
                     }
                     else
                     {
-                        lCmd.Parameters.Add(new SqlParameter("@idKardex", pKardex.IdKardex));
+                        lCmd.Parameters.Add(new SqlParameter("@idKardex", pKardex.Id));
                         lCmd.Parameters.Add(new SqlParameter("@serie", pKardex.Serie));
                         lCmd.Parameters.Add(new SqlParameter("@numero", pKardex.Numero));
                         lCmd.Parameters.Add(new SqlParameter("@nombre", pKardex.Nombre));

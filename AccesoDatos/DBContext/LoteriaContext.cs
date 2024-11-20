@@ -5,6 +5,8 @@ using Microsoft.EntityFrameworkCore.Metadata;
 using AccesoDatos;
 using Microsoft.Extensions.Configuration;
 using Entidades.Models;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace AccesoDatos.DBContext
 {
@@ -26,11 +28,13 @@ namespace AccesoDatos.DBContext
         }
 
 
-        public virtual DbSet<Cliente> Clientes { get; set; } = null!;
+        public virtual DbSet<DetalleSorteo> DetalleSorteos { get; set; } = null!;
         public virtual DbSet<Kardex> Kardices { get; set; } = null!;
         public virtual DbSet<Parametro> Parametros { get; set; } = null!;
         public virtual DbSet<Sorteo> Sorteos { get; set; } = null!;
+        public virtual DbSet<Suite> Suites { get; set; } = null!;
         public virtual DbSet<TipoSorteo> TipoSorteos { get; set; } = null!;
+        public virtual DbSet<TipoSorteoGeneral> TipoSorteoGenerals { get; set; } = null!;
         public virtual DbSet<Usuario> Usuarios { get; set; } = null!;
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -43,66 +47,38 @@ namespace AccesoDatos.DBContext
 
 
 
+
+
+
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Cliente>(entity =>
+            modelBuilder.Entity<DetalleSorteo>(entity =>
             {
-                entity.HasKey(e => e.IdCliente);
+                entity.ToTable("DetalleSorteo");
 
-                entity.ToTable("Cliente");
+                entity.Property(e => e.Id).HasColumnName("id");
 
-                entity.Property(e => e.IdCliente)
-                    .ValueGeneratedNever()
-                    .HasColumnName("idCliente");
+                entity.Property(e => e.IdSorteo).HasColumnName("idSorteo");
 
-                entity.Property(e => e.Bloqueado).HasColumnName("bloqueado");
+                entity.Property(e => e.Monto).HasColumnName("monto");
 
-                entity.Property(e => e.Cedula).HasColumnName("cedula");
+                entity.Property(e => e.Numero).HasColumnName("numero");
 
-                entity.Property(e => e.Clave)
-                    .HasMaxLength(64)
-                    .IsUnicode(false)
-                    .HasColumnName("clave");
-
-                entity.Property(e => e.Email)
-                    .HasMaxLength(50)
-                    .IsUnicode(false)
-                    .HasColumnName("email");
-
-                entity.Property(e => e.FechaBorrado)
-                    .HasColumnType("datetime")
-                    .HasColumnName("fechaBorrado");
-
-                entity.Property(e => e.FechaCreacion)
-                    .HasColumnType("datetime")
-                    .HasColumnName("fechaCreacion");
-
-                entity.Property(e => e.Nombre)
-                    .HasMaxLength(50)
-                    .IsUnicode(false)
-                    .HasColumnName("nombre");
-
-                entity.Property(e => e.NombreUsuario)
-                    .HasMaxLength(50)
-                    .IsUnicode(false)
-                    .HasColumnName("nombreUsuario");
-
-                entity.Property(e => e.Telefono)
-                    .HasMaxLength(15)
-                    .IsUnicode(false)
-                    .HasColumnName("telefono");
+                entity.HasOne(d => d.IdSorteoNavigation)
+                    .WithMany(p => p.DetalleSorteos)
+                    .HasForeignKey(d => d.IdSorteo)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK_DetalleSorteo_Sorteo");
             });
 
             modelBuilder.Entity<Kardex>(entity =>
             {
-                entity.HasKey(e => e.IdKardex)
-                    .HasName("PK_Historial");
-
                 entity.ToTable("Kardex");
 
-                entity.Property(e => e.IdKardex)
-                    .ValueGeneratedNever()
-                    .HasColumnName("idKardex");
+                entity.Property(e => e.Id).HasColumnName("id");
+
+                entity.Property(e => e.IdSorteo).HasColumnName("idSorteo");
 
                 entity.Property(e => e.IdUsuario).HasColumnName("idUsuario");
 
@@ -131,14 +107,11 @@ namespace AccesoDatos.DBContext
 
             modelBuilder.Entity<Parametro>(entity =>
             {
-                entity.HasKey(e => e.IdParametro)
-                    .HasName("PK_Parametros_1");
-
                 entity.ToTable("Parametro");
 
-                entity.Property(e => e.IdParametro)
+                entity.Property(e => e.Id)
                     .ValueGeneratedNever()
-                    .HasColumnName("idParametro");
+                    .HasColumnName("id");
 
                 entity.Property(e => e.Cedula).HasColumnName("cedula");
 
@@ -164,26 +137,13 @@ namespace AccesoDatos.DBContext
 
             modelBuilder.Entity<Sorteo>(entity =>
             {
-                entity.HasKey(e => e.IdSorteo);
-
                 entity.ToTable("Sorteo");
 
-                entity.Property(e => e.IdSorteo)
-                    .ValueGeneratedNever()
-                    .HasColumnName("idSorteo");
+                entity.Property(e => e.Id).HasColumnName("id");
 
                 entity.Property(e => e.IdTipoSorteo).HasColumnName("idTipoSorteo");
 
                 entity.Property(e => e.IdUsuario).HasColumnName("idUsuario");
-
-                entity.Property(e => e.Monto).HasColumnName("monto");
-
-                entity.Property(e => e.Nombre)
-                    .HasMaxLength(50)
-                    .IsUnicode(false)
-                    .HasColumnName("nombre");
-
-                entity.Property(e => e.Numero).HasColumnName("numero");
 
                 entity.HasOne(d => d.IdTipoSorteoNavigation)
                     .WithMany(p => p.Sorteos)
@@ -198,41 +158,67 @@ namespace AccesoDatos.DBContext
                     .HasConstraintName("FK_Sorteo_Usuario");
             });
 
+            modelBuilder.Entity<Suite>(entity =>
+            {
+                entity.ToTable("Suite");
+
+                entity.Property(e => e.Id).HasColumnName("id");
+
+                entity.Property(e => e.ImagenUrl)
+                    .HasMaxLength(500)
+                    .IsUnicode(false)
+                    .HasColumnName("imagenUrl");
+            });
+
             modelBuilder.Entity<TipoSorteo>(entity =>
             {
-                entity.HasKey(e => e.IdTipoSorteo);
-
                 entity.ToTable("TipoSorteo");
 
-                entity.Property(e => e.IdTipoSorteo)
-                    .ValueGeneratedNever()
-                    .HasColumnName("idTipoSorteo");
+                entity.Property(e => e.Id).HasColumnName("id");
 
-                entity.Property(e => e.FechaFin)
-                    .HasColumnType("datetime")
-                    .HasColumnName("fechaFin");
+                entity.Property(e => e.Fecha)
+                    .HasColumnType("date")
+                    .HasColumnName("fecha");
 
-                entity.Property(e => e.FechaInicio)
-                    .HasColumnType("datetime")
-                    .HasColumnName("fechaInicio");
+                entity.Property(e => e.IdTipoSorteoGeneral).HasColumnName("idTipoSorteoGeneral");
+
+                entity.Property(e => e.NumeroGanador).HasColumnName("numeroGanador");
+
+                //Propiedad anadida
+                entity.Property(e => e.NombreTipoSorteoGeneral).HasColumnName("nombreTipoSorteoGeneral");
+
+                entity.HasOne(d => d.IdTipoSorteoGeneralNavigation)
+                    .WithMany(p => p.TipoSorteos)
+                    .HasForeignKey(d => d.IdTipoSorteoGeneral)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK_TipoSorteo_TipoSorteoGeneral");
+            });
+
+            modelBuilder.Entity<TipoSorteoGeneral>(entity =>
+            {
+                entity.ToTable("TipoSorteoGeneral");
+
+                entity.Property(e => e.Id).HasColumnName("id");
+
+                entity.Property(e => e.Fondo).HasColumnName("fondo");
+
+                entity.Property(e => e.HoraFin).HasColumnName("horaFin");
 
                 entity.Property(e => e.Nombre)
                     .HasMaxLength(50)
                     .IsUnicode(false)
                     .HasColumnName("nombre");
 
-                entity.Property(e => e.NumeroGanador).HasColumnName("numeroGanador");
+                entity.Property(e => e.PorcentajePago).HasColumnName("porcentajePago");
             });
 
             modelBuilder.Entity<Usuario>(entity =>
             {
-                entity.HasKey(e => e.IdUsuario);
-
                 entity.ToTable("Usuario");
 
-                entity.Property(e => e.IdUsuario)
+                entity.Property(e => e.Id)
                     .ValueGeneratedNever()
-                    .HasColumnName("idUsuario");
+                    .HasColumnName("id");
 
                 entity.Property(e => e.Clave)
                     .HasMaxLength(64)

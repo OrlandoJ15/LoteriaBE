@@ -2,6 +2,7 @@
 using LogicaNegocio.Implementacion;
 using LogicaNegocio.Interfaz;
 using MetodosComunes;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace LoteriaWebApi.Controllers
@@ -42,6 +43,7 @@ namespace LoteriaWebApi.Controllers
             return Ok(response); // Retorna 200 OK con la respuesta
         }
 
+        [Authorize]
         [Route("[action]")]
         [HttpGet]
         public ActionResult<List<Sorteo>> RecSorteo()
@@ -54,12 +56,12 @@ namespace LoteriaWebApi.Controllers
 
                 var Sorteo = lObjRespuesta.Select(u => new Sorteo
                 {
-                    IdSorteo = u.IdSorteo,
-                    Nombre = u.Nombre,
-                    Numero = u.Numero,
-                    Monto = u.Monto,
+                    Id = u.Id,
                     IdUsuario = u.IdUsuario,
-                    IdTipoSorteo = u.IdTipoSorteo
+                    IdTipoSorteo = u.IdTipoSorteo,
+                    NombreUsuario = u.NombreUsuario,
+                    NombreTipoSorteoGeneral = u.NombreTipoSorteoGeneral,
+                    FechaTipoSorteo = u.FechaTipoSorteo,
                 }).ToList();
 
                 return Ok(Sorteo); // Retorna un HTTP 200 con la lista de Sorteos.
@@ -70,6 +72,7 @@ namespace LoteriaWebApi.Controllers
             }
         }
 
+        [Authorize]
         [Route("[action]")]
         [HttpPost]
         public IActionResult? RecSorteoXId([FromBody] Sorteo pSorteo)
@@ -77,7 +80,7 @@ namespace LoteriaWebApi.Controllers
             try
             {
                 // Llamada al método para obtener el usuario por su ID
-                var lObjRespuesta = gObjSorteoLN.RecSorteoXId(pSorteo.IdSorteo);
+                var lObjRespuesta = gObjSorteoLN.RecSorteoXId(pSorteo.Id);
 
                 return HandleResponse(lObjRespuesta);
 
@@ -88,6 +91,7 @@ namespace LoteriaWebApi.Controllers
             }
         }
 
+        [Authorize]
         [Route("[action]")]
         [HttpPost]
         public IActionResult InsSorteo([FromBody] Sorteo pSorteo)
@@ -98,7 +102,7 @@ namespace LoteriaWebApi.Controllers
             try
             {
                 gObjSorteoLN.InsSorteo(pSorteo);
-                return CreatedAtAction(nameof(RecSorteoXId), new { pIdSorteo = pSorteo.IdSorteo }, pSorteo); // Retorna 201 Created, Mejor por convencion de REST API
+                return CreatedAtAction(nameof(RecSorteoXId), new { pIdSorteo = pSorteo.Id }, pSorteo); // Retorna 201 Created, Mejor por convencion de REST API
             }
             catch (Exception lEx)
             {
@@ -106,6 +110,7 @@ namespace LoteriaWebApi.Controllers
             }
         }
 
+        [Authorize]
         [Route("[action]")]
         [HttpPut]
         public IActionResult ModSorteo([FromBody] Sorteo pSorteo)
@@ -124,11 +129,11 @@ namespace LoteriaWebApi.Controllers
             }
         }
 
+        [Authorize]
         [Route("[action]")]
         [HttpDelete]
         public IActionResult DelSorteo([FromBody] int IdSorteo)
         {
-
             try
             {
                 var lSorteo = gObjSorteoLN.RecSorteoXId(IdSorteo);
@@ -144,6 +149,5 @@ namespace LoteriaWebApi.Controllers
                 return ManejoError(lEx);
             }
         }
-
     }
 }

@@ -8,22 +8,21 @@ namespace LoteriaWebApi
     {
         public static void Main(string[] args)
         {
-            
             var builder = WebApplication.CreateBuilder(args);
 
-            //CONFIGURACION DE CORS 
+            // CONFIGURACIÓN DE CORS 
             builder.Services.AddCors(options =>
             {
-                options.AddPolicy("PermitirFrontEnd",
-                    policy =>
-                    {
-                        policy.AllowAnyOrigin() // Dirección de tu frontend
-                              .AllowAnyHeader()
-                              .AllowAnyMethod();
-                    });
+                options.AddPolicy("PermitirFrontEnd", policy =>
+                {
+                    policy.WithOrigins("http://localhost:5173", "http://190.113.84.163:5000")
+                          .AllowCredentials()
+                          .AllowAnyHeader()
+                          .AllowAnyMethod();
+                });
             });
 
-            //CONFIGURACION DEL JWT 
+            // CONFIGURACIÓN DEL JWT 
             var key = builder.Configuration["Jwt:Key"];
             var issuer = builder.Configuration["Jwt:Issuer"];
             builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
@@ -39,10 +38,24 @@ namespace LoteriaWebApi
                         ValidAudience = issuer,
                         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(key))
                     };
+                    options.Events = new JwtBearerEvents
+                    {
+                        OnMessageReceived = context =>
+                        {
+                            // Leer el token desde la cookie
+                            var accessToken = context.Request.Cookies["Token1"];
+                            if (!string.IsNullOrEmpty(accessToken))
+                            {
+                                context.Token = accessToken;
+                            }
+                            return Task.CompletedTask;
+                        }
+                    };
                 });
 
             // Configuración de controladores y servicios
             builder.Services.AddControllers();
+
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
@@ -66,7 +79,6 @@ namespace LoteriaWebApi
             app.MapControllers();
 
             app.Run();
-            
         }
     }
 }

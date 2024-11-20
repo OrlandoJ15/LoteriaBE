@@ -38,7 +38,7 @@ namespace AccesoDatos.Implementacion
                     while (lReader.Read())
                     {
                         Usuario lobjDatosUsuario = new Usuario();
-                        lobjDatosUsuario.IdUsuario = Convert.ToInt32(lReader["idUsuario"]);
+                        lobjDatosUsuario.Id = Convert.ToInt32(lReader["id"]);
                         lobjDatosUsuario.Nombre = lReader["nombre"]?.ToString() ?? string.Empty;
                         lobjDatosUsuario.NombreUsuario = lReader["nombreUsuario"]?.ToString() ?? string.Empty;
                         lobjDatosUsuario.Rol = Convert.ToInt32(lReader["rol"]);
@@ -73,7 +73,7 @@ namespace AccesoDatos.Implementacion
                     {
                         lObjRespuesta = new Usuario
                         {
-                            IdUsuario = Convert.ToInt32(lReader["idUsuario"]),
+                            Id = Convert.ToInt32(lReader["idUsuario"]),
                             Nombre = lReader["nombre"]?.ToString() ?? string.Empty,
                             NombreUsuario = lReader["nombreUsuario"]?.ToString() ?? string.Empty,
                             Rol = Convert.ToInt32(lReader["rol"]),
@@ -121,11 +121,11 @@ namespace AccesoDatos.Implementacion
 
                     if (procedimientoAlmacenado == "delUsuarioPA")
                     {
-                        lCmd.Parameters.Add(new SqlParameter("@idUsuario", pUsuario.IdUsuario));
+                        lCmd.Parameters.Add(new SqlParameter("@idUsuario", pUsuario.Id));
                     }
                     else
                     {
-                        lCmd.Parameters.Add(new SqlParameter("@idUsuario", pUsuario.IdUsuario));
+                        lCmd.Parameters.Add(new SqlParameter("@idUsuario", pUsuario.Id));
                         lCmd.Parameters.Add(new SqlParameter("@nombre", pUsuario.Nombre));
                         lCmd.Parameters.Add(new SqlParameter("@nombreUsuario", pUsuario.NombreUsuario));
                         lCmd.Parameters.Add(new SqlParameter("@rol", pUsuario.Rol));
@@ -173,7 +173,7 @@ namespace AccesoDatos.Implementacion
                         {
                             lObjRespuesta = new Usuario
                             {
-                                IdUsuario = Convert.ToInt32(lReader["idUsuario"]),
+                                Id = Convert.ToInt32(lReader["id"]),
                                 Nombre = lReader["nombre"]?.ToString() ?? string.Empty,
                                 NombreUsuario = lReader["nombreUsuario"]?.ToString() ?? string.Empty,
                                 Rol = Convert.ToInt32(lReader["rol"]),

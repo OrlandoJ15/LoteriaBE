@@ -2,6 +2,7 @@
 using LogicaNegocio.Implementacion;
 using LogicaNegocio.Interfaz;
 using MetodosComunes;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace LoteriaWebApi.Controllers
@@ -42,6 +43,7 @@ namespace LoteriaWebApi.Controllers
             return Ok(response); // Retorna 200 OK con la respuesta
         }
 
+        [Authorize]
         [Route("[action]")]
         [HttpGet]
         public ActionResult<List<Kardex>> RecKardex()
@@ -54,7 +56,7 @@ namespace LoteriaWebApi.Controllers
 
                 var Kardex = lObjRespuesta.Select(u => new Kardex
                 {
-                    IdKardex = u.IdKardex,
+                    Id = u.Id,
                     Serie = u.Serie,
                     Numero = u.Numero,
                     Nombre = u.Nombre,
@@ -70,6 +72,7 @@ namespace LoteriaWebApi.Controllers
             }
         }
 
+        [Authorize]
         [Route("[action]")]
         [HttpPost]
         public IActionResult? RecKardexXId([FromBody] Kardex pKardex)
@@ -77,7 +80,7 @@ namespace LoteriaWebApi.Controllers
             try
             {
                 // Llamada al método para obtener el kardex por su ID
-                var lObjRespuesta = gObjKardexLN.RecKardexXId(pKardex.IdKardex);
+                var lObjRespuesta = gObjKardexLN.RecKardexXId(pKardex.Id);
 
                 return HandleResponse(lObjRespuesta);
 
@@ -88,6 +91,7 @@ namespace LoteriaWebApi.Controllers
             }
         }
 
+        [Authorize]
         [Route("[action]")]
         [HttpPost]
         public IActionResult InsKardex([FromBody] Kardex pKardex)
@@ -98,7 +102,7 @@ namespace LoteriaWebApi.Controllers
             try
             {
                 gObjKardexLN.InsKardex(pKardex);
-                return CreatedAtAction(nameof(RecKardexXId), new { pIdKardex = pKardex.IdKardex }, pKardex); // Retorna 201 Created, Mejor por convencion de REST API
+                return CreatedAtAction(nameof(RecKardexXId), new { pIdKardex = pKardex.Id }, pKardex); // Retorna 201 Created, Mejor por convencion de REST API
             }
             catch (Exception lEx)
             {
@@ -106,6 +110,7 @@ namespace LoteriaWebApi.Controllers
             }
         }
 
+        [Authorize]
         [Route("[action]")]
         [HttpPut]
         public IActionResult ModKardex([FromBody] Kardex pKardex)
@@ -124,11 +129,11 @@ namespace LoteriaWebApi.Controllers
             }
         }
 
+        [Authorize]
         [Route("[action]")]
         [HttpDelete]
         public IActionResult DelKardex([FromBody] int IdKardex)
         {
-
             try
             {
                 var lKardex = gObjKardexLN.RecKardexXId(IdKardex);

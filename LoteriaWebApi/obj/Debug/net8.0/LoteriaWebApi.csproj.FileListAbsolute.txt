@@ -151,6 +151,7 @@ C:\Loteria\LoteriaBE\LoteriaWebApi\bin\Debug\net8.0\LoteriaWebApi.runtimeconfig.
 C:\Loteria\LoteriaBE\LoteriaWebApi\bin\Debug\net8.0\LoteriaWebApi.dll
 C:\Loteria\LoteriaBE\LoteriaWebApi\bin\Debug\net8.0\LoteriaWebApi.pdb
 C:\Loteria\LoteriaBE\LoteriaWebApi\bin\Debug\net8.0\Humanizer.dll
+C:\Loteria\LoteriaBE\LoteriaWebApi\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Loteria\LoteriaBE\LoteriaWebApi\bin\Debug\net8.0\Microsoft.Data.SqlClient.dll
 C:\Loteria\LoteriaBE\LoteriaWebApi\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
 C:\Loteria\LoteriaBE\LoteriaWebApi\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
@@ -158,6 +159,7 @@ C:\Loteria\LoteriaBE\LoteriaWebApi\bin\Debug\net8.0\Microsoft.EntityFrameworkCor
 C:\Loteria\LoteriaBE\LoteriaWebApi\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
 C:\Loteria\LoteriaBE\LoteriaWebApi\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.SqlServer.dll
 C:\Loteria\LoteriaBE\LoteriaWebApi\bin\Debug\net8.0\Microsoft.Identity.Client.dll
+C:\Loteria\LoteriaBE\LoteriaWebApi\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
 C:\Loteria\LoteriaBE\LoteriaWebApi\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
 C:\Loteria\LoteriaBE\LoteriaWebApi\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
 C:\Loteria\LoteriaBE\LoteriaWebApi\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
@@ -218,5 +220,3 @@ C:\Loteria\LoteriaBE\LoteriaWebApi\obj\Debug\net8.0\refint\LoteriaWebApi.dll
 C:\Loteria\LoteriaBE\LoteriaWebApi\obj\Debug\net8.0\LoteriaWebApi.pdb
 C:\Loteria\LoteriaBE\LoteriaWebApi\obj\Debug\net8.0\LoteriaWebApi.genruntimeconfig.cache
 C:\Loteria\LoteriaBE\LoteriaWebApi\obj\Debug\net8.0\ref\LoteriaWebApi.dll
-C:\Loteria\LoteriaBE\LoteriaWebApi\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
-C:\Loteria\LoteriaBE\LoteriaWebApi\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll

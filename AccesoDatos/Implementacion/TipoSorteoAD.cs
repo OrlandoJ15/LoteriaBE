@@ -1,5 +1,4 @@
-﻿
-using AccesoDatos.DBContext;
+﻿using AccesoDatos.DBContext;
 using AccesoDatos.Interfaz;
 using Entidades.Models;
 using MetodosComunes;
@@ -36,11 +35,12 @@ namespace AccesoDatos.Implementacion
                     while (lReader.Read())
                     {
                         TipoSorteo lobjDatosTipoSorteo = new TipoSorteo();
-                        lobjDatosTipoSorteo.IdTipoSorteo = Convert.ToInt32(lReader["idTipoSorteo"]);
-                        lobjDatosTipoSorteo.Nombre = lReader["nombre"]?.ToString() ?? string.Empty;
-                        lobjDatosTipoSorteo.FechaInicio = Convert.ToDateTime(lReader["fechaInicio"]);
-                        lobjDatosTipoSorteo.FechaFin = Convert.ToDateTime(lReader["fechaFin"]);
-                        lobjDatosTipoSorteo.NumeroGanador = Convert.ToInt32(lReader["numeroGanador"]);
+                        lobjDatosTipoSorteo.Id = Convert.ToInt32(lReader["id"]);
+                        lobjDatosTipoSorteo.NumeroGanador = lReader["numeroGanador"] != DBNull.Value ? Convert.ToInt32(lReader["numeroGanador"]) : (int?)null;
+                        lobjDatosTipoSorteo.IdTipoSorteoGeneral = Convert.ToInt32(lReader["idTipoSorteoGeneral"]);
+                        lobjDatosTipoSorteo.Fecha = Convert.ToDateTime(lReader["fecha"]);
+                        lobjDatosTipoSorteo.NombreTipoSorteoGeneral = lReader["nombreTipoSorteoGeneral"].ToString() ?? string.Empty;
+
                         lObjRespuesta.Add(lobjDatosTipoSorteo);
 
                     }
@@ -73,11 +73,11 @@ namespace AccesoDatos.Implementacion
                     {
                         lObjRespuesta = new TipoSorteo
                         {
-                            IdTipoSorteo = Convert.ToInt32(lReader["idTipoSorteo"]),
-                            Nombre = lReader["nombre"]?.ToString() ?? string.Empty,
-                            FechaInicio = Convert.ToDateTime(lReader["fechaInicio"]),
-                            FechaFin = Convert.ToDateTime(lReader["fechaFin"]),
-                            NumeroGanador = Convert.ToInt32(lReader["numeroGanador"])
+                            Id = Convert.ToInt32(lReader["idTipoSorteo"]),
+                            NumeroGanador = Convert.ToInt32(lReader["numeroGanador"]),
+                            IdTipoSorteoGeneral = Convert.ToInt32(lReader["idTipoSorteoGeneral"]),
+                            Fecha = Convert.ToDateTime(lReader["fecha"]),
+                            NombreTipoSorteoGeneral = lReader["nombreTipoSorteoGeneral"].ToString() ?? string.Empty,
                         };
                     }
                     gObjSqlCommandAbrirCerrar.CerrarConexion(lCmd);
@@ -121,16 +121,15 @@ namespace AccesoDatos.Implementacion
 
                     if (procedimientoAlmacenado == "delTipoSorteoPA")
                     {
-                        lCmd.Parameters.Add(new SqlParameter("@idTipoSorteo", pTipoSorteo.IdTipoSorteo));
+                        lCmd.Parameters.Add(new SqlParameter("@idTipoSorteo", pTipoSorteo.Id));
                     }
                     else
                     {
-                        lCmd.Parameters.Add(new SqlParameter("@idTipoSorteo", pTipoSorteo.IdTipoSorteo));
-                        lCmd.Parameters.Add(new SqlParameter("@nombre", pTipoSorteo.Nombre));
-                        lCmd.Parameters.Add(new SqlParameter("@fechaInicio", pTipoSorteo.FechaInicio));
-                        lCmd.Parameters.Add(new SqlParameter("@fechaFin", pTipoSorteo.FechaFin));
+                        lCmd.Parameters.Add(new SqlParameter("@idTipoSorteo", pTipoSorteo.Id));
                         lCmd.Parameters.Add(new SqlParameter("@numeroGanador", pTipoSorteo.NumeroGanador));
-                        
+                        lCmd.Parameters.Add(new SqlParameter("@idTipoSorteoGeneral", pTipoSorteo.IdTipoSorteoGeneral));
+                        lCmd.Parameters.Add(new SqlParameter("@fecha", pTipoSorteo.Fecha));
+
                     }
 
                     if (lCmd.ExecuteNonQuery() > 0)

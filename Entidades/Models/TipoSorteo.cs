@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Entidades.Models
 {
@@ -10,12 +11,18 @@ namespace Entidades.Models
             Sorteos = new HashSet<Sorteo>();
         }
 
-        public int IdTipoSorteo { get; set; }
-        public string Nombre { get; set; } = null!;
-        public DateTime FechaInicio { get; set; }
-        public DateTime FechaFin { get; set; }
-        public int NumeroGanador { get; set; }
+        public int Id { get; set; }
+        public int? NumeroGanador { get; set; }
+        public int IdTipoSorteoGeneral { get; set; }
+        public DateTime Fecha { get; set; }
+        
 
+        public virtual TipoSorteoGeneral IdTipoSorteoGeneralNavigation { get; set; } = null!;
         public virtual ICollection<Sorteo> Sorteos { get; set; }
+
+
+        // Propiedad manual para el nombre del TipoSorteoGeneral (no mapeada a la BD)
+        [NotMapped] // Esto indica que no es una columna de la tabla
+        public string? NombreTipoSorteoGeneral { get; set; } = string.Empty;
     }
 }

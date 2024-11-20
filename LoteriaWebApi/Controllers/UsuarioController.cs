@@ -2,14 +2,12 @@
 using LogicaNegocio.Implementacion;
 using LogicaNegocio.Interfaz;
 using MetodosComunes;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-
+using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.IdentityModel.Tokens;
-using Microsoft.EntityFrameworkCore.Metadata.Conventions;
 
 namespace LoteriaWebApi.Controllers
 {
@@ -35,33 +33,32 @@ namespace LoteriaWebApi.Controllers
 
 
         //METODO PARA GENERAR EL TOKEN JWT
-        
+
         private string GenearJwtToken(Usuario pUsuario)
         {
             var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(lConfiguration["Jwt:Key"]));
             var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
-
+            
+            /*
             var claims = new[]
             {
                 new Claim(JwtRegisteredClaimNames.Sub , pUsuario.NombreUsuario),
-                new Claim("IdUsuario", pUsuario.IdUsuario.ToString()),
+                new Claim("Id", pUsuario.Id.ToString()),
                 new Claim("Rol", pUsuario.Rol.ToString())
             };
+            */
+
 
             var token = new JwtSecurityToken(
                 issuer: lConfiguration["Jwt:Issuer"],
                 audience: lConfiguration["Jwt:Issuer"],
-                claims: claims,
+                //claims: claims,
                 expires: DateTime.Now.AddHours(1),
                 signingCredentials: credentials);
 
             return new JwtSecurityTokenHandler().WriteToken(token);
 
         }
-
-
-        
-
 
 
         //Metodo para manejar la excepcion y devulocion de status de error
@@ -75,6 +72,7 @@ namespace LoteriaWebApi.Controllers
         private IActionResult HandleResponse<T>(T response)
         {
             if (response == null)
+
             {
                 return new JsonResult(null);// Retorna 404 Not Found
             }
@@ -94,20 +92,33 @@ namespace LoteriaWebApi.Controllers
 
             try
             {
-                var user = gObjUsuarioLN.ValidarLoginUsuario(pUsuario.IdUsuario, pUsuario.Clave);
+                var user = gObjUsuarioLN.ValidarLoginUsuario(pUsuario.Id, pUsuario.Clave);
                 if (user == null)
                     return Unauthorized("Usuario o Clave Incorrecta");
 
                 var token = GenearJwtToken(user);
-                return Ok(new { Token = token });
-            }catch (Exception ex)
+
+
+                HttpContext.Response.Cookies.Append("Token1", token, new CookieOptions
+                {
+                    HttpOnly = true,
+                    Secure = false,
+                    SameSite = SameSiteMode.Lax,
+                    //Path = "/Login",
+                    Expires = DateTimeOffset.Now.AddHours(1),
+                });
+         
+                return Ok(new { Message = "Inicio de sesión exitoso" });
+                //return Ok(new { Token = token, user });
+            }
+            catch (Exception ex)
             {
                 return ManejoError(ex);
             }
         }
 
         [Authorize]
-        [Route("[action]")]
+        [Route("RecUsuario")]
         [HttpGet]
         public ActionResult<List<Usuario>> RecUsuario()
         {
@@ -119,7 +130,7 @@ namespace LoteriaWebApi.Controllers
 
                 var Usuario = lObjRespuesta.Select(u => new Usuario
                 {
-                    IdUsuario = u.IdUsuario,
+                    Id = u.Id,
                     Nombre = u.Nombre,
                     NombreUsuario = u.NombreUsuario,
                     Rol = u.Rol,
@@ -135,7 +146,7 @@ namespace LoteriaWebApi.Controllers
         }
 
 
-
+        [Authorize]
         [Route("[action]")]
         [HttpPost]
         public IActionResult? RecUsuarioXId([FromBody] Usuario pUsuario)
@@ -143,7 +154,7 @@ namespace LoteriaWebApi.Controllers
             try
             {
                 // Llamada al método para obtener el usuario por su ID
-                var lObjRespuesta = gObjUsuarioLN.RecUsuarioXId(pUsuario.IdUsuario);
+                var lObjRespuesta = gObjUsuarioLN.RecUsuarioXId(pUsuario.Id);
 
                 return HandleResponse(lObjRespuesta);
 
@@ -154,7 +165,7 @@ namespace LoteriaWebApi.Controllers
             }
         }
 
-
+        [Authorize]
         [Route("[action]")]
         [HttpPost]
         public IActionResult InsUsuario([FromBody] Usuario pUsuario)
@@ -165,7 +176,7 @@ namespace LoteriaWebApi.Controllers
             try
             {
                 gObjUsuarioLN.InsUsuario(pUsuario);
-                return CreatedAtAction(nameof(RecUsuarioXId), new { pIdUsuario = pUsuario.IdUsuario }, pUsuario); // Retorna 201 Created, Mejor por convencion de REST API
+                return CreatedAtAction(nameof(RecUsuarioXId), new { pIdUsuario = pUsuario.Id }, pUsuario); // Retorna 201 Created, Mejor por convencion de REST API
             }
             catch (Exception lEx)
             {
@@ -173,6 +184,7 @@ namespace LoteriaWebApi.Controllers
             }
         }
 
+        [Authorize]
         [Route("[action]")]
         [HttpPut]
         public IActionResult ModUsuario([FromBody] Usuario pUsuario)
@@ -191,6 +203,7 @@ namespace LoteriaWebApi.Controllers
             }
         }
 
+        [Authorize]
         [Route("[action]")]
         [HttpDelete]
         public IActionResult DelUsuario([FromBody] int IdUsuario)
@@ -212,9 +225,9 @@ namespace LoteriaWebApi.Controllers
             }
         }
 
+
         [Route("[action]")]
         [HttpPost]
-
         public IActionResult? ValidarUsuarioLogin([FromBody] Usuario pUsuario)
         {
             if (!ModelState.IsValid || pUsuario == null || string.IsNullOrEmpty(pUsuario.Clave))
@@ -222,8 +235,8 @@ namespace LoteriaWebApi.Controllers
 
             try
             {
-                var lUsuario = gObjUsuarioLN.ValidarLoginUsuario(pUsuario.IdUsuario, pUsuario.Clave);
-                return HandleResponse(lUsuario); 
+                var lUsuario = gObjUsuarioLN.ValidarLoginUsuario(pUsuario.Id, pUsuario.Clave);
+                return HandleResponse(lUsuario);
             }
             catch (Exception lEx)
             {
@@ -231,6 +244,7 @@ namespace LoteriaWebApi.Controllers
             }
         }
 
+        [Authorize]
         [Route("[action]")]
         [HttpPut]
         public IActionResult ModClaveUsuario([FromBody] Usuario pUsuario)
@@ -240,15 +254,44 @@ namespace LoteriaWebApi.Controllers
 
             try
             {
-                gObjUsuarioLN.ModClaveUsuario(pUsuario.IdUsuario, pUsuario.Clave);
+                gObjUsuarioLN.ModClaveUsuario(pUsuario.Id, pUsuario.Clave);
                 return Ok();
-                
+
             }
             catch (Exception lEx)
             {
                 return ManejoError(lEx);
             }
         }
+
+
+
+        [Route("[action]")]
+        [HttpPost]
+        public IActionResult Logout()
+        {
+            // Esto asegura que la cookie JWT sea eliminada
+            Response.Cookies.Append("Token1", "", new CookieOptions
+            {
+                Expires = DateTime.Now.AddDays(-1), // Se asegura de que la cookie expire inmediatamente
+                HttpOnly = true,
+                Secure = false, // Cambiar a 'false' si estás trabajando en desarrollo sin HTTPS
+                SameSite = SameSiteMode.Lax // Ajusta según sea necesario
+            });
+
+            return Ok(new { message = "Usuario deslogueado exitosamente" });
+        }
+
+        [Route("[action]")]
+        [HttpPost]
+        public IActionResult eliminaCookie()
+        {
+            // Esto asegura que la cookie JWT sea eliminada
+            Response.Cookies.Delete("Token1");
+
+            return Ok(new { message = "cokie eliminada exitosamente" });
+        }
+
     }
 }
 

@@ -43,7 +43,7 @@ namespace LoteriaWebApi.Controllers
             return Ok(response); // Retorna 200 OK con la respuesta
         }
 
-        [Authorize]
+        //[Authorize]
         [Route("[action]")]
         [HttpGet]
         public ActionResult<List<Kardex>> RecKardex()
@@ -72,7 +72,7 @@ namespace LoteriaWebApi.Controllers
             }
         }
 
-        [Authorize]
+        //[Authorize]
         [Route("[action]")]
         [HttpPost]
         public IActionResult? RecKardexXId([FromBody] Kardex pKardex)
@@ -91,7 +91,7 @@ namespace LoteriaWebApi.Controllers
             }
         }
 
-        [Authorize]
+        //[Authorize]
         [Route("[action]")]
         [HttpPost]
         public IActionResult InsKardex([FromBody] Kardex pKardex)
@@ -110,7 +110,7 @@ namespace LoteriaWebApi.Controllers
             }
         }
 
-        [Authorize]
+        //[Authorize]
         [Route("[action]")]
         [HttpPut]
         public IActionResult ModKardex([FromBody] Kardex pKardex)
@@ -129,7 +129,7 @@ namespace LoteriaWebApi.Controllers
             }
         }
 
-        [Authorize]
+        //[Authorize]
         [Route("[action]")]
         [HttpDelete]
         public IActionResult DelKardex([FromBody] int IdKardex)

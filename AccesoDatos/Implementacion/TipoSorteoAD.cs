@@ -148,5 +148,45 @@ namespace AccesoDatos.Implementacion
             return lObjRespuesta;
         }
 
+
+
+
+
+
+        public int RecIdTipoSorteoFromTipoSorteoGeneral(int pIdTipoSorteoGeneral)
+        {
+            int lObjRespuesta = 0;
+            try
+            {
+                using (LoteriaContext lobjCnn = new LoteriaContext(_configuration))
+                {
+                    var lCmd = gObjSqlCommandAbrirCerrar.CrearComando(lobjCnn, "RecIdTipoSorteoFromTipoSorteoGeneralPA");
+                    lCmd.Parameters.Add(new SqlParameter("@idTipoSorteoGeneral", pIdTipoSorteoGeneral));
+                    lCmd.Parameters.Add(new SqlParameter("@fecha", DateTime.Now.Date));
+
+                    var lReader = lCmd.ExecuteReader();
+
+                    // Si hay filas en el reader, creamos un nuevo objeto TipoSorteo
+                    if (lReader.Read())
+                    {
+                        lObjRespuesta = Convert.ToInt32(lReader["id"]);
+                                               
+                    }
+                    gObjSqlCommandAbrirCerrar.CerrarConexion(lCmd);
+                }
+            }
+            catch (Exception lEx)
+            {
+                gObjExcepciones.LogError(lEx);
+                // Lanza la excepción para que la maneje la capa superior
+                throw;
+            }
+
+            // Si no se encontró ningún registro, lObjRespuesta seguirá siendo null
+            return lObjRespuesta;
+        }
+
+
+
     }
 }

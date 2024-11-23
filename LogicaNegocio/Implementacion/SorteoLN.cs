@@ -74,5 +74,13 @@ namespace LogicaNegocio.Implementacion
             return EjecutarProcSinEntidad(() => gObjSorteoAD.DelSorteo(pSorteo));
         }
 
+
+
+
+        public int RecIdSorteoFromParametro()
+        {
+            return EjecutarProcConEntidad(() => gObjSorteoAD.RecIdSorteoFromParametro());
+        }
+
     }
 }

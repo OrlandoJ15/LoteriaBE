@@ -43,7 +43,7 @@ namespace LoteriaWebApi.Controllers
             return Ok(response); // Retorna 200 OK con la respuesta
         }
 
-        [Authorize]
+        //[Authorize]
         [Route("[action]")]
         [HttpGet]
         public ActionResult<List<Sorteo>> RecSorteo()
@@ -72,7 +72,7 @@ namespace LoteriaWebApi.Controllers
             }
         }
 
-        [Authorize]
+        //[Authorize]
         [Route("[action]")]
         [HttpPost]
         public IActionResult? RecSorteoXId([FromBody] Sorteo pSorteo)
@@ -91,7 +91,7 @@ namespace LoteriaWebApi.Controllers
             }
         }
 
-        [Authorize]
+        //[Authorize]
         [Route("[action]")]
         [HttpPost]
         public IActionResult InsSorteo([FromBody] Sorteo pSorteo)
@@ -110,13 +110,13 @@ namespace LoteriaWebApi.Controllers
             }
         }
 
-        [Authorize]
+        //[Authorize]
         [Route("[action]")]
         [HttpPut]
         public IActionResult ModSorteo([FromBody] Sorteo pSorteo)
         {
             if (!ModelState.IsValid)
-                return BadRequest("<odelo Invalido");
+                return BadRequest("Modelo Invalido");
 
             try
             {
@@ -129,7 +129,7 @@ namespace LoteriaWebApi.Controllers
             }
         }
 
-        [Authorize]
+        //[Authorize]
         [Route("[action]")]
         [HttpDelete]
         public IActionResult DelSorteo([FromBody] int IdSorteo)
@@ -149,5 +149,29 @@ namespace LoteriaWebApi.Controllers
                 return ManejoError(lEx);
             }
         }
+
+
+
+
+
+        //[Authorize]
+        [Route("[action]")]
+        [HttpPost]
+        public IActionResult? RecIdSorteoFromParametro()
+        {
+            try
+            {
+                // Llamada al método para obtener el usuario por su ID
+                var lObjRespuesta = gObjSorteoLN.RecIdSorteoFromParametro();
+
+                return HandleResponse(lObjRespuesta);
+
+            }
+            catch (Exception lEx)
+            {
+                return ManejoError(lEx);
+            }
+        }
+
     }
 }

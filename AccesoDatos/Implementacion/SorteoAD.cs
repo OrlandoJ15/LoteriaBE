@@ -126,14 +126,13 @@ namespace AccesoDatos.Implementacion
                     {
                         lCmd.Parameters.Add(new SqlParameter("@idSorteo", pSorteo.Id));
                     }
-                    else
+                    else 
                     {
                         lCmd.Parameters.Add(new SqlParameter("@idSorteo", pSorteo.Id));
                         lCmd.Parameters.Add(new SqlParameter("@idUsuario", pSorteo.IdUsuario));
                         lCmd.Parameters.Add(new SqlParameter("@idTipoSorteo", pSorteo.IdTipoSorteo));
 
                     }
-
                     if (lCmd.ExecuteNonQuery() > 0)
                     {
                         lObjRespuesta = true;
@@ -147,6 +146,41 @@ namespace AccesoDatos.Implementacion
                 gObjExcepciones.LogError(lEx);
                 throw;
             }
+            return lObjRespuesta;
+        }
+
+
+
+
+
+
+        public int RecIdSorteoFromParametro()
+        {
+            int lObjRespuesta = 0;
+            try
+            {
+                using (LoteriaContext lobjCnn = new LoteriaContext(_configuration))
+                {
+                    var lCmd = gObjSqlCommandAbrirCerrar.CrearComando(lobjCnn, "RecIdSorteoFromPaametroPA");
+                    
+                    var lReader = lCmd.ExecuteReader();
+
+                    // Si hay filas en el reader, creamos un nuevo objeto TipoSorteo
+                    while (lReader.Read())
+                    {
+                        gObjSqlCommandAbrirCerrar.CerrarConexion(lCmd);
+                    }
+                        
+                }
+            }
+            catch (Exception lEx)
+            {
+                gObjExcepciones.LogError(lEx);
+                // Lanza la excepción para que la maneje la capa superior
+                throw;
+            }
+
+            // Si no se encontró ningún registro, lObjRespuesta seguirá siendo null
             return lObjRespuesta;
         }
 

@@ -15,7 +15,7 @@ namespace LoteriaWebApi
             {
                 options.AddPolicy("PermitirFrontEnd", policy =>
                 {
-                    policy.WithOrigins("http://localhost:5173", "http://190.113.84.163:5000")
+                    policy.WithOrigins("http://localhost:5173", "https://white-grass-096de5c10.5.azurestaticapps.net")
                           .AllowCredentials()
                           .AllowAnyHeader()
                           .AllowAnyMethod();
@@ -43,7 +43,7 @@ namespace LoteriaWebApi
                         OnMessageReceived = context =>
                         {
                             // Leer el token desde la cookie
-                            var accessToken = context.Request.Cookies["Token1"];
+                            var accessToken = context.Request.Cookies["Token"];
                             if (!string.IsNullOrEmpty(accessToken))
                             {
                                 context.Token = accessToken;

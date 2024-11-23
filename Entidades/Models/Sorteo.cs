@@ -15,8 +15,8 @@ namespace Entidades.Models
         public int IdUsuario { get; set; }
         public int IdTipoSorteo { get; set; }
 
-        public virtual TipoSorteo IdTipoSorteoNavigation { get; set; } = null!;
-        public virtual Usuario IdUsuarioNavigation { get; set; } = null!;
+        public virtual TipoSorteo? IdTipoSorteoNavigation { get; set; } = null!;
+        public virtual Usuario? IdUsuarioNavigation { get; set; } = null!;
         public virtual ICollection<DetalleSorteo> DetalleSorteos { get; set; }
 
         // Propiedad manual para el nombre del TipoSorteoGeneral (no mapeada a la BD)

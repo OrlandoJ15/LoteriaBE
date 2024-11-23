@@ -99,13 +99,13 @@ namespace LoteriaWebApi.Controllers
                 var token = GenearJwtToken(user);
 
 
-                HttpContext.Response.Cookies.Append("Token1", token, new CookieOptions
+                HttpContext.Response.Cookies.Append("Token", token, new CookieOptions
                 {
                     HttpOnly = true,
-                    Secure = false,
+                    Secure = true,
                     SameSite = SameSiteMode.Lax,
                     //Path = "/Login",
-                    Expires = DateTimeOffset.Now.AddHours(1),
+                    Expires = DateTimeOffset.Now.AddHours(2),
                 });
          
                 return Ok(new { Message = "Inicio de sesión exitoso" });
@@ -190,7 +190,7 @@ namespace LoteriaWebApi.Controllers
         public IActionResult ModUsuario([FromBody] Usuario pUsuario)
         {
             if (!ModelState.IsValid)
-                return BadRequest("<odelo Invalido");
+                return BadRequest("Modelo Invalido");
 
             try
             {
@@ -271,11 +271,11 @@ namespace LoteriaWebApi.Controllers
         public IActionResult Logout()
         {
             // Esto asegura que la cookie JWT sea eliminada
-            Response.Cookies.Append("Token1", "", new CookieOptions
+            Response.Cookies.Append("Token", "", new CookieOptions
             {
                 Expires = DateTime.Now.AddDays(-1), // Se asegura de que la cookie expire inmediatamente
                 HttpOnly = true,
-                Secure = false, // Cambiar a 'false' si estás trabajando en desarrollo sin HTTPS
+                Secure = true, // Cambiar a 'false' si estás trabajando en desarrollo sin HTTPS
                 SameSite = SameSiteMode.Lax // Ajusta según sea necesario
             });
 
@@ -287,9 +287,9 @@ namespace LoteriaWebApi.Controllers
         public IActionResult eliminaCookie()
         {
             // Esto asegura que la cookie JWT sea eliminada
-            Response.Cookies.Delete("Token1");
+            Response.Cookies.Delete("Token");
 
-            return Ok(new { message = "cokie eliminada exitosamente" });
+            return Ok(new { message = "Cookie eliminada exitosamente" });
         }
 
     }

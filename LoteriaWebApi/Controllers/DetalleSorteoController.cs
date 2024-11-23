@@ -43,7 +43,7 @@ namespace LoteriaWebApi.Controllers
             return Ok(response); // Retorna 200 OK con la respuesta
         }
 
-        [Authorize]
+        //[Authorize]
         [Route("[action]")]
         [HttpGet]
         public ActionResult<List<DetalleSorteo>> RecDetalleSorteo()
@@ -70,7 +70,7 @@ namespace LoteriaWebApi.Controllers
             }
         }
 
-        [Authorize]
+        //[Authorize]
         [Route("[action]")]
         [HttpPost]
         public IActionResult? RecDetalleSorteoXId([FromBody] DetalleSorteo pDetalleSorteo)
@@ -89,7 +89,7 @@ namespace LoteriaWebApi.Controllers
             }
         }
 
-        [Authorize]
+        //[Authorize]
         [Route("[action]")]
         [HttpPost]
         public IActionResult InsDetalleSorteo([FromBody] DetalleSorteo pDetalleSorteo)
@@ -108,7 +108,7 @@ namespace LoteriaWebApi.Controllers
             }
         }
 
-        [Authorize]
+        //[Authorize]
         [Route("[action]")]
         [HttpPut]
         public IActionResult ModDetalleSorteo([FromBody] DetalleSorteo pDetalleSorteo)
@@ -127,7 +127,7 @@ namespace LoteriaWebApi.Controllers
             }
         }
 
-        [Authorize]
+        //[Authorize]
         [Route("[action]")]
         [HttpDelete]
         public IActionResult DelDetalleSorteo([FromBody] int IdDetalleSorteo)

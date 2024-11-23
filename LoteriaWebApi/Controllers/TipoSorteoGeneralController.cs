@@ -43,7 +43,7 @@ namespace LoteriaWebApi.Controllers
             return Ok(response); // Retorna 200 OK con la respuesta
         }
 
-        [Authorize]
+        //[Authorize]
         [Route("[action]")]
         [HttpGet]
         public ActionResult<List<TipoSorteoGeneral>> RecTipoSorteoGeneral()
@@ -71,7 +71,7 @@ namespace LoteriaWebApi.Controllers
             }
         }
 
-        [Authorize]
+        //[Authorize]
         [Route("[action]")]
         [HttpPost]
         public IActionResult? RecTipoSorteoGeneralXId([FromBody] TipoSorteoGeneral pTipoSorteoGeneral)
@@ -90,7 +90,7 @@ namespace LoteriaWebApi.Controllers
             }
         }
 
-        [Authorize]
+        //[Authorize]
         [Route("[action]")]
         [HttpPost]
         public IActionResult InsTipoSorteoGeneral([FromBody] TipoSorteoGeneral pTipoSorteoGeneral)
@@ -108,7 +108,7 @@ namespace LoteriaWebApi.Controllers
                 return ManejoError(lEx);
             }
         }
-        [Authorize]
+        //[Authorize]
         [Route("[action]")]
         [HttpPut]
         public IActionResult ModTipoSorteoGeneral([FromBody] TipoSorteoGeneral pTipoSorteoGeneral)
@@ -127,7 +127,7 @@ namespace LoteriaWebApi.Controllers
             }
         }
 
-        [Authorize]
+        //[Authorize]
         [Route("[action]")]
         [HttpDelete]
         public IActionResult DelTipoSorteoGeneral([FromBody] int IdTipoSorteoGeneral)

@@ -74,5 +74,18 @@ namespace LogicaNegocio.Implementacion
             return EjecutarProcSinEntidad(() => gObjTipoSorteoAD.DelTipoSorteo(pTipoSorteo));
         }
 
+
+
+
+
+
+
+
+
+        public int RecIdTipoSorteoFromTipoSorteoGeneral(int pIdTipoSorteoGeneral)
+        {
+            return EjecutarProcConEntidad(() => gObjTipoSorteoAD.RecIdTipoSorteoFromTipoSorteoGeneral(pIdTipoSorteoGeneral));
+        }
+
     }
 }

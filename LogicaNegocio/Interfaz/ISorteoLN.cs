@@ -9,6 +9,7 @@ namespace LogicaNegocio.Interfaz
         bool InsSorteo(Sorteo pSorteo);
         bool ModSorteo(Sorteo pSorteo);
         bool DelSorteo(Sorteo pSorteo);
+        public int RecIdSorteoFromParametro();
 
     }
 }

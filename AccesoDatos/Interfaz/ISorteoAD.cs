@@ -9,6 +9,7 @@ namespace AccesoDatos.Interfaz
         bool InsSorteo(Sorteo pSorteo);
         bool ModSorteo(Sorteo pSorteo);
         bool DelSorteo(Sorteo pSorteo);
+        int RecIdSorteoFromParametro();
     }
 }
 

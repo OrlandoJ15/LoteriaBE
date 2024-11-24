@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
@@ -15,7 +16,7 @@ namespace LoteriaWebApi
             {
                 options.AddPolicy("PermitirFrontEnd", policy =>
                 {
-                    policy.WithOrigins("http://localhost:5173", "https://white-grass-096de5c10.5.azurestaticapps.net")
+                    policy.WithOrigins("http://localhost:5173", "https://multiplicados.net")
                           .AllowCredentials()
                           .AllowAnyHeader()
                           .AllowAnyMethod();
@@ -52,6 +53,29 @@ namespace LoteriaWebApi
                         }
                     };
                 });
+
+            builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+            .AddCookie(options =>
+            {
+                options.Cookie.Name = "Token"; // Nombre de la cookie donde está el token
+                options.Cookie.HttpOnly = true; // La cookie será solo accesible desde el servidor
+                options.Cookie.SecurePolicy = CookieSecurePolicy.Always; // La cookie solo será enviada sobre HTTPS
+                options.SlidingExpiration = true; // Expiración deslizante para la cookie
+                options.ExpireTimeSpan = TimeSpan.FromHours(2); // Tiempo de expiración de la cookie
+                options.Events = new CookieAuthenticationEvents
+                {
+                    OnValidatePrincipal = context =>
+                    {
+                        // Puedes agregar aquí tu lógica de validación del token, si es necesario
+                        return Task.CompletedTask;
+                    }
+                };
+            });
+
+            builder.Services.AddAuthorization(options =>
+            {
+                options.AddPolicy("Authenticated", policy => policy.RequireAuthenticatedUser());
+            });
 
             // Configuración de controladores y servicios
             builder.Services.AddControllers();

@@ -53,4 +53,4 @@ jobs:
           app-name: 'MultiplicaDOS'
           slot-name: 'Production'
           package: .
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_0DD28327A64C40BFA0550468909FDE2F }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_0A38E2A2C1264C1D9D51EB2ABE9828EE }}

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MetodosComunes")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5cd3cd7f1fefc8805425106bc7cb266229f5a799")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a31bcb5bf7a877ea8c26b3cc8970be731387e9e4")]
 [assembly: System.Reflection.AssemblyProductAttribute("MetodosComunes")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MetodosComunes")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

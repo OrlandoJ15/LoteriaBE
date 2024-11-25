@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Loteria\\Back-End\\LoteriaBE\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1E6C1FAE-F47F-426E-AF9D-8CEA44947DD5}|LoteriaWebApi\\LoteriaWebApi.csproj|c:\\loteria\\back-end\\loteriabe\\loteriawebapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{1E6C1FAE-F47F-426E-AF9D-8CEA44947DD5}|LoteriaWebApi\\LoteriaWebApi.csproj|solutionrelative:loteriawebapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1E6C1FAE-F47F-426E-AF9D-8CEA44947DD5}|LoteriaWebApi\\LoteriaWebApi.csproj|c:\\loteria\\back-end\\loteriabe\\loteriawebapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1E6C1FAE-F47F-426E-AF9D-8CEA44947DD5}|LoteriaWebApi\\LoteriaWebApi.csproj|solutionrelative:loteriawebapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1E6C1FAE-F47F-426E-AF9D-8CEA44947DD5}|LoteriaWebApi\\LoteriaWebApi.csproj|c:\\loteria\\back-end\\loteriabe\\loteriawebapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{1E6C1FAE-F47F-426E-AF9D-8CEA44947DD5}|LoteriaWebApi\\LoteriaWebApi.csproj|solutionrelative:loteriawebapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D42E0AD0-3B8F-432E-A70A-969214DD5543}|Entidades\\Entidades.csproj|c:\\loteria\\back-end\\loteriabe\\entidades\\entidades.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
@@ -41,11 +41,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 328,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Loteria\\Back-End\\LoteriaBE\\LoteriaWebApi\\appsettings.json",
               "RelativeDocumentMoniker": "LoteriaWebApi\\appsettings.json",
@@ -110,13 +110,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Loteria\\Back-End\\LoteriaBE\\LoteriaWebApi\\Program.cs",
               "RelativeDocumentMoniker": "LoteriaWebApi\\Program.cs",
-              "ToolTip": "C:\\Loteria\\Back-End\\LoteriaBE\\LoteriaWebApi\\Program.cs",
-              "RelativeToolTip": "LoteriaWebApi\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAABSAAAAAAAAAA==",
+              "ToolTip": "C:\\Loteria\\Back-End\\LoteriaBE\\LoteriaWebApi\\Program.cs*",
+              "RelativeToolTip": "LoteriaWebApi\\Program.cs*",
+              "ViewState": "AgIAABgAAAAAAAAAAAAYwCYAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-19T06:33:07.346Z",
               "EditorCaption": ""

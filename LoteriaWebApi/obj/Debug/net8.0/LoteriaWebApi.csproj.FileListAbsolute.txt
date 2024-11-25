@@ -220,3 +220,10 @@ C:\Loteria\LoteriaBE\LoteriaWebApi\obj\Debug\net8.0\refint\LoteriaWebApi.dll
 C:\Loteria\LoteriaBE\LoteriaWebApi\obj\Debug\net8.0\LoteriaWebApi.pdb
 C:\Loteria\LoteriaBE\LoteriaWebApi\obj\Debug\net8.0\LoteriaWebApi.genruntimeconfig.cache
 C:\Loteria\LoteriaBE\LoteriaWebApi\obj\Debug\net8.0\ref\LoteriaWebApi.dll
+C:\Loteria\LoteriaBE\LoteriaWebApi\bin\Debug\net8.0\Azure.Core.dll
+C:\Loteria\LoteriaBE\LoteriaWebApi\bin\Debug\net8.0\Azure.Identity.dll
+C:\Loteria\LoteriaBE\LoteriaWebApi\bin\Debug\net8.0\Azure.Security.KeyVault.Secrets.dll
+C:\Loteria\LoteriaBE\LoteriaWebApi\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Loteria\LoteriaBE\LoteriaWebApi\bin\Debug\net8.0\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Loteria\LoteriaBE\LoteriaWebApi\bin\Debug\net8.0\System.ClientModel.dll
+C:\Loteria\LoteriaBE\LoteriaWebApi\bin\Debug\net8.0\System.Memory.Data.dll

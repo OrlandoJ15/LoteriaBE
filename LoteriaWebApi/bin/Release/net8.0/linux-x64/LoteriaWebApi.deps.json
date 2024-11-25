@@ -549,7 +549,10 @@
           "NLog": "5.3.4"
         },
         "runtime": {
-          "AccesoDatos.dll": {}
+          "AccesoDatos.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "Entidades/1.0.0": {
@@ -558,7 +561,10 @@
           "NLog": "5.3.4"
         },
         "runtime": {
-          "Entidades.dll": {}
+          "Entidades.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "LogicaNegocio/1.0.0": {
@@ -570,7 +576,10 @@
           "NLog": "5.3.4"
         },
         "runtime": {
-          "LogicaNegocio.dll": {}
+          "LogicaNegocio.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "MetodosComunes/1.0.0": {
@@ -579,7 +588,10 @@
           "NLog": "5.3.4"
         },
         "runtime": {
-          "MetodosComunes.dll": {}
+          "MetodosComunes.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }

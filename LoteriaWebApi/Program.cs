@@ -22,7 +22,7 @@ namespace LoteriaWebApi
                 options.AddPolicy("PermitirFrontEnd", policy =>
                 {
 
-                    policy.WithOrigins("http://localhost:5173", "https://multiplicados.net", "https://keyvaultloteria.vault.azure.net/")
+                    policy.WithOrigins("http://localhost:5173", "https://multiplicados.net", "https://keyvaultloteria.vault.azure.net")
                           .AllowCredentials()
                           .AllowAnyHeader()
                           .AllowAnyMethod();

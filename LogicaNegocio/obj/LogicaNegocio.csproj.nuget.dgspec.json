@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Loteria\\LoteriaBE\\LogicaNegocio\\LogicaNegocio.csproj": {}
+    "C:\\Loteria\\Back-End\\LoteriaBE\\LogicaNegocio\\LogicaNegocio.csproj": {}
   },
   "projects": {
-    "C:\\Loteria\\LoteriaBE\\AccesoDatos\\AccesoDatos.csproj": {
+    "C:\\Loteria\\Back-End\\LoteriaBE\\AccesoDatos\\AccesoDatos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Loteria\\LoteriaBE\\AccesoDatos\\AccesoDatos.csproj",
+        "projectUniqueName": "C:\\Loteria\\Back-End\\LoteriaBE\\AccesoDatos\\AccesoDatos.csproj",
         "projectName": "AccesoDatos",
-        "projectPath": "C:\\Loteria\\LoteriaBE\\AccesoDatos\\AccesoDatos.csproj",
-        "packagesPath": "C:\\Users\\andre\\.nuget\\packages\\",
-        "outputPath": "C:\\Loteria\\LoteriaBE\\AccesoDatos\\obj\\",
+        "projectPath": "C:\\Loteria\\Back-End\\LoteriaBE\\AccesoDatos\\AccesoDatos.csproj",
+        "packagesPath": "C:\\Users\\orlan\\.nuget\\packages\\",
+        "outputPath": "C:\\Loteria\\Back-End\\LoteriaBE\\AccesoDatos\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\andre\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\orlan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -29,11 +33,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Loteria\\LoteriaBE\\Entidades\\Entidades.csproj": {
-                "projectPath": "C:\\Loteria\\LoteriaBE\\Entidades\\Entidades.csproj"
+              "C:\\Loteria\\Back-End\\LoteriaBE\\Entidades\\Entidades.csproj": {
+                "projectPath": "C:\\Loteria\\Back-End\\LoteriaBE\\Entidades\\Entidades.csproj"
               },
-              "C:\\Loteria\\LoteriaBE\\MetodosComunes\\MetodosComunes.csproj": {
-                "projectPath": "C:\\Loteria\\LoteriaBE\\MetodosComunes\\MetodosComunes.csproj"
+              "C:\\Loteria\\Back-End\\LoteriaBE\\MetodosComunes\\MetodosComunes.csproj": {
+                "projectPath": "C:\\Loteria\\Back-End\\LoteriaBE\\MetodosComunes\\MetodosComunes.csproj"
               }
             }
           }
@@ -102,7 +106,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.404/PortableRuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {
@@ -111,17 +115,21 @@
         }
       }
     },
-    "C:\\Loteria\\LoteriaBE\\Entidades\\Entidades.csproj": {
+    "C:\\Loteria\\Back-End\\LoteriaBE\\Entidades\\Entidades.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Loteria\\LoteriaBE\\Entidades\\Entidades.csproj",
+        "projectUniqueName": "C:\\Loteria\\Back-End\\LoteriaBE\\Entidades\\Entidades.csproj",
         "projectName": "Entidades",
-        "projectPath": "C:\\Loteria\\LoteriaBE\\Entidades\\Entidades.csproj",
-        "packagesPath": "C:\\Users\\andre\\.nuget\\packages\\",
-        "outputPath": "C:\\Loteria\\LoteriaBE\\Entidades\\obj\\",
+        "projectPath": "C:\\Loteria\\Back-End\\LoteriaBE\\Entidades\\Entidades.csproj",
+        "packagesPath": "C:\\Users\\orlan\\.nuget\\packages\\",
+        "outputPath": "C:\\Loteria\\Back-End\\LoteriaBE\\Entidades\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\andre\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\orlan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -178,7 +186,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.404/PortableRuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {
@@ -187,17 +195,21 @@
         }
       }
     },
-    "C:\\Loteria\\LoteriaBE\\LogicaNegocio\\LogicaNegocio.csproj": {
+    "C:\\Loteria\\Back-End\\LoteriaBE\\LogicaNegocio\\LogicaNegocio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Loteria\\LoteriaBE\\LogicaNegocio\\LogicaNegocio.csproj",
+        "projectUniqueName": "C:\\Loteria\\Back-End\\LoteriaBE\\LogicaNegocio\\LogicaNegocio.csproj",
         "projectName": "LogicaNegocio",
-        "projectPath": "C:\\Loteria\\LoteriaBE\\LogicaNegocio\\LogicaNegocio.csproj",
-        "packagesPath": "C:\\Users\\andre\\.nuget\\packages\\",
-        "outputPath": "C:\\Loteria\\LoteriaBE\\LogicaNegocio\\obj\\",
+        "projectPath": "C:\\Loteria\\Back-End\\LoteriaBE\\LogicaNegocio\\LogicaNegocio.csproj",
+        "packagesPath": "C:\\Users\\orlan\\.nuget\\packages\\",
+        "outputPath": "C:\\Loteria\\Back-End\\LoteriaBE\\LogicaNegocio\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\andre\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\orlan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -212,14 +224,14 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Loteria\\LoteriaBE\\AccesoDatos\\AccesoDatos.csproj": {
-                "projectPath": "C:\\Loteria\\LoteriaBE\\AccesoDatos\\AccesoDatos.csproj"
+              "C:\\Loteria\\Back-End\\LoteriaBE\\AccesoDatos\\AccesoDatos.csproj": {
+                "projectPath": "C:\\Loteria\\Back-End\\LoteriaBE\\AccesoDatos\\AccesoDatos.csproj"
               },
-              "C:\\Loteria\\LoteriaBE\\Entidades\\Entidades.csproj": {
-                "projectPath": "C:\\Loteria\\LoteriaBE\\Entidades\\Entidades.csproj"
+              "C:\\Loteria\\Back-End\\LoteriaBE\\Entidades\\Entidades.csproj": {
+                "projectPath": "C:\\Loteria\\Back-End\\LoteriaBE\\Entidades\\Entidades.csproj"
               },
-              "C:\\Loteria\\LoteriaBE\\MetodosComunes\\MetodosComunes.csproj": {
-                "projectPath": "C:\\Loteria\\LoteriaBE\\MetodosComunes\\MetodosComunes.csproj"
+              "C:\\Loteria\\Back-End\\LoteriaBE\\MetodosComunes\\MetodosComunes.csproj": {
+                "projectPath": "C:\\Loteria\\Back-End\\LoteriaBE\\MetodosComunes\\MetodosComunes.csproj"
               }
             }
           }
@@ -264,7 +276,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.404/PortableRuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {
@@ -273,17 +285,21 @@
         }
       }
     },
-    "C:\\Loteria\\LoteriaBE\\MetodosComunes\\MetodosComunes.csproj": {
+    "C:\\Loteria\\Back-End\\LoteriaBE\\MetodosComunes\\MetodosComunes.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Loteria\\LoteriaBE\\MetodosComunes\\MetodosComunes.csproj",
+        "projectUniqueName": "C:\\Loteria\\Back-End\\LoteriaBE\\MetodosComunes\\MetodosComunes.csproj",
         "projectName": "MetodosComunes",
-        "projectPath": "C:\\Loteria\\LoteriaBE\\MetodosComunes\\MetodosComunes.csproj",
-        "packagesPath": "C:\\Users\\andre\\.nuget\\packages\\",
-        "outputPath": "C:\\Loteria\\LoteriaBE\\MetodosComunes\\obj\\",
+        "projectPath": "C:\\Loteria\\Back-End\\LoteriaBE\\MetodosComunes\\MetodosComunes.csproj",
+        "packagesPath": "C:\\Users\\orlan\\.nuget\\packages\\",
+        "outputPath": "C:\\Loteria\\Back-End\\LoteriaBE\\MetodosComunes\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\andre\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\orlan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -340,7 +356,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.404/PortableRuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {

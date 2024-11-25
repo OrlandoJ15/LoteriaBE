@@ -21,7 +21,11 @@ namespace LoteriaWebApi
             {
                 options.AddPolicy("PermitirFrontEnd", policy =>
                 {
+<<<<<<< HEAD
                     policy.WithOrigins("http://localhost:5173", "https://white-grass-096de5c10.5.azurestaticapps.net","https://multiplicados.net")
+=======
+                    policy.WithOrigins("http://localhost:5173", "https://multiplicados.net")
+>>>>>>> 015c4ffb48d3b87fc7a839c769bcb85ad1fe8435
                           .AllowCredentials()
                           .AllowAnyHeader()
                           .AllowAnyMethod();

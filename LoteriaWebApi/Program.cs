@@ -1,6 +1,10 @@
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+using Azure.Identity;
+using Azure.Security.KeyVault.Secrets;
+
+
 
 namespace LoteriaWebApi
 {
@@ -10,21 +14,29 @@ namespace LoteriaWebApi
         {
             var builder = WebApplication.CreateBuilder(args);
 
+
+
             // CONFIGURACIÓN DE CORS 
             builder.Services.AddCors(options =>
             {
                 options.AddPolicy("PermitirFrontEnd", policy =>
                 {
-                    policy.WithOrigins("http://localhost:5173", "https://white-grass-096de5c10.5.azurestaticapps.net")
+                    policy.WithOrigins("http://localhost:5173", "https://white-grass-096de5c10.5.azurestaticapps.net","https://multiplicados.net")
                           .AllowCredentials()
                           .AllowAnyHeader()
                           .AllowAnyMethod();
                 });
             });
 
-            // CONFIGURACIÓN DEL JWT 
-            var key = builder.Configuration["Jwt:Key"];
+
+            // CONFIGURACIÓN DE AZURE KEY VAULT
+            var keyVaultUrl = builder.Configuration["AzureKeyVault:VaultUrl"];
+            var secretClient = new SecretClient(new Uri("https://keyvaultloteria.vault.azure.net/"), new DefaultAzureCredential());
+            var jwtSecretKey = secretClient.GetSecret("Jwtkey").Value.Value; // Obtiene el secreto desde Key Vault
             var issuer = builder.Configuration["Jwt:Issuer"];
+
+            // CONFIGURACIÓN DEL JWT 
+            
             builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddJwtBearer(options =>
                 {
@@ -36,8 +48,9 @@ namespace LoteriaWebApi
                         ValidateIssuerSigningKey = true,
                         ValidIssuer = issuer,
                         ValidAudience = issuer,
-                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(key))
+                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtSecretKey))
                     };
+                    /*
                     options.Events = new JwtBearerEvents
                     {
                         OnMessageReceived = context =>
@@ -51,6 +64,7 @@ namespace LoteriaWebApi
                             return Task.CompletedTask;
                         }
                     };
+                    */
                 });
 
             // Configuración de controladores y servicios
@@ -71,6 +85,7 @@ namespace LoteriaWebApi
             app.UseCors("PermitirFrontEnd");
 
             app.UseHttpsRedirection();
+            app.UseHsts(); //esto es para ue solo permita coneccion por https - activan el htttp transport security 
 
             // Autenticación y autorización
             app.UseAuthentication();

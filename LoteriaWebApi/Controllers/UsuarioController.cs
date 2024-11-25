@@ -79,7 +79,6 @@ namespace LoteriaWebApi.Controllers
             return Ok(response); // Retorna 200 OK con la respuesta
         }
 
-
         // Endpoint de autenticación para generar token
 
         [AllowAnonymous]
@@ -98,7 +97,7 @@ namespace LoteriaWebApi.Controllers
 
                 var token = GenearJwtToken(user);
 
-
+                /*
                 HttpContext.Response.Cookies.Append("Token", token, new CookieOptions
                 {
                     HttpOnly = true,
@@ -107,9 +106,10 @@ namespace LoteriaWebApi.Controllers
                     //Path = "/Login",
                     Expires = DateTimeOffset.Now.AddHours(2),
                 });
+                */
          
-                return Ok(new { Message = "Inicio de sesión exitoso" });
-                //return Ok(new { Token = token, user });
+                //return Ok(new { Message = "Inicio de sesión exitoso actualizado" });
+                return Ok(new { Token = token, user });
             }
             catch (Exception ex)
             {

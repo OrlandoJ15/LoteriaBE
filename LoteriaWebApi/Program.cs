@@ -22,7 +22,7 @@ namespace LoteriaWebApi
                 options.AddPolicy("PermitirFrontEnd", policy =>
                 {
 
-                    policy.WithOrigins("http://localhost:5173", "https://multiplicados.net", "https://keyvaultloteria.vault.azure.net/")
+                    policy.WithOrigins("http://localhost:5173", "https://multiplicados.net", "https://keyvaultloteria.vault.azure.net")
                           .AllowCredentials()
                           .AllowAnyHeader()
                           .AllowAnyMethod();
@@ -32,7 +32,7 @@ namespace LoteriaWebApi
 
             // CONFIGURACIÓN DE AZURE KEY VAULT
             var keyVaultUrl = builder.Configuration["AzureKeyVault:VaultUrl"];
-            var secretClient = new SecretClient(new Uri("https://keyvaultloteria.vault.azure.net/"), new DefaultAzureCredential());
+            var secretClient = new SecretClient(new Uri(keyVaultUrl), new DefaultAzureCredential());
             var jwtSecretKey = secretClient.GetSecret("Jwtkey").Value.Value; // Obtiene el secreto desde Key Vault
             var issuer = builder.Configuration["Jwt:Issuer"];
 

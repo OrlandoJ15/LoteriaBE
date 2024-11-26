@@ -42,7 +42,7 @@ namespace LoteriaWebApi.Controllers
             /*
             var claims = new[]
             {
-                new Claim(JwtRegisteredClaimNames.Sub , pUsuario.NombreUsuario),
+                new Claim(JwtRegisteredClaimNames.Sub , pUsuario.NombreUsuario),    
                 new Claim("Id", pUsuario.Id.ToString()),
                 new Claim("Rol", pUsuario.Rol.ToString())
             };

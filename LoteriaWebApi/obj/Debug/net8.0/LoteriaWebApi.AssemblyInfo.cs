@@ -14,11 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LoteriaWebApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-<<<<<<< Updated upstream
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1847593b2d703b11588d699cdfc897499ef9287e")]
-=======
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c76276647ec30c93d7b2015176b0d402c35ec1fe")]
->>>>>>> Stashed changes
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+407631baec889d73332c4898214fdf73dcb12d9f")]
 [assembly: System.Reflection.AssemblyProductAttribute("LoteriaWebApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LoteriaWebApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

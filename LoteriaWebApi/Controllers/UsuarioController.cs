@@ -66,8 +66,8 @@ namespace LoteriaWebApi.Controllers
 
 
             var token = new JwtSecurityToken(
-                issuer: lConfiguration["Jwt:Issuer"],
-                audience: lConfiguration["Jwt:Issuer"],
+                //issuer: lConfiguration["Jwt:Issuer"],
+                //audience: lConfiguration["Jwt:Issuer"],
                 //claims: claims,
                 expires: DateTime.Now.AddDays(2),
                 signingCredentials: credentials);

@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Loteria\\LoteriaBE\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1E6C1FAE-F47F-426E-AF9D-8CEA44947DD5}|LoteriaWebApi\\LoteriaWebApi.csproj|c:\\loteria\\loteriabe\\loteriawebapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1E6C1FAE-F47F-426E-AF9D-8CEA44947DD5}|LoteriaWebApi\\LoteriaWebApi.csproj|solutionrelative:loteriawebapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1E6C1FAE-F47F-426E-AF9D-8CEA44947DD5}|LoteriaWebApi\\LoteriaWebApi.csproj|c:\\loteria\\loteriabe\\loteriawebapi\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1E6C1FAE-F47F-426E-AF9D-8CEA44947DD5}|LoteriaWebApi\\LoteriaWebApi.csproj|solutionrelative:loteriawebapi\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1E6C1FAE-F47F-426E-AF9D-8CEA44947DD5}|LoteriaWebApi\\LoteriaWebApi.csproj|c:\\loteria\\loteriabe\\loteriawebapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E6C1FAE-F47F-426E-AF9D-8CEA44947DD5}|LoteriaWebApi\\LoteriaWebApi.csproj|solutionrelative:loteriawebapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1E6C1FAE-F47F-426E-AF9D-8CEA44947DD5}|LoteriaWebApi\\LoteriaWebApi.csproj|c:\\loteria\\loteriabe\\loteriawebapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -22,17 +22,57 @@
       "DocumentGroups": [
         {
           "DockedWidth": 326,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 10,
           "Children": [
             {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:8:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e506b91c-c606-466a-90a9-123d1d1e12b3}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "UsuarioController.cs",
               "DocumentMoniker": "C:\\Loteria\\LoteriaBE\\LoteriaWebApi\\Controllers\\UsuarioController.cs",
               "RelativeDocumentMoniker": "LoteriaWebApi\\Controllers\\UsuarioController.cs",
               "ToolTip": "C:\\Loteria\\LoteriaBE\\LoteriaWebApi\\Controllers\\UsuarioController.cs",
               "RelativeToolTip": "LoteriaWebApi\\Controllers\\UsuarioController.cs",
-              "ViewState": "AQIAAHQAAAAAAAAAAAAjwIUAAAAIAAAA",
+              "ViewState": "AQIAACwAAAAAAAAAAAAMwEQAAAA3AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-23T08:15:03.921Z",
               "EditorCaption": ""
@@ -54,17 +94,25 @@
         },
         {
           "DockedWidth": 330,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Loteria\\LoteriaBE\\LoteriaWebApi\\Program.cs",
               "RelativeDocumentMoniker": "LoteriaWebApi\\Program.cs",
               "ToolTip": "C:\\Loteria\\LoteriaBE\\LoteriaWebApi\\Program.cs",
               "RelativeToolTip": "LoteriaWebApi\\Program.cs",
-              "ViewState": "AQIAABsAAAAAAAAAAAAjwDQAAAAxAAAA",
+              "ViewState": "AQIAACEAAAAAAAAAAAAjwDgAAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-23T08:13:40.196Z",
               "EditorCaption": ""

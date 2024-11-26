@@ -38,8 +38,8 @@ namespace LoteriaWebApi
             
             var jwtSecretKey = secretClient.GetSecret("JwtKey").Value.Value; // Obtiene el secreto desde Key Vault
 
-            var issuer = builder.Configuration["Jwt:Issuer"];
-            var audience = builder.Configuration["Jwt:Issuer"];
+            //var issuer = builder.Configuration["Jwt:Issuer"];
+            //var audience = builder.Configuration["Jwt:Issuer"];
 
 
             // CONFIGURACIÓN DEL JWT 
@@ -53,8 +53,8 @@ namespace LoteriaWebApi
                         ValidateAudience = false,
                         ValidateLifetime = true,
                         ValidateIssuerSigningKey = true,
-                        ValidIssuer = issuer,
-                        ValidAudience = issuer,
+                        //ValidIssuer = issuer,
+                        //ValidAudience = issuer,
                         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtSecretKey))
                     };
                     /*

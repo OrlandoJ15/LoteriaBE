@@ -31,9 +31,14 @@ namespace LoteriaWebApi
 
 
             // CONFIGURACIÓN DE AZURE KEY VAULT
-            var keyVaultUrl = builder.Configuration["AzureKeyVault:VaultUrl"];
+            var keyVaultUrl = builder.Configuration["AzureKeyVault:VaultUrl"];  //Url del key Vault
+
+
+
             var secretClient = new SecretClient(new Uri(keyVaultUrl), new DefaultAzureCredential());
+            
             var jwtSecretKey = secretClient.GetSecret("Jwtkey").Value.Value; // Obtiene el secreto desde Key Vault
+            
             var issuer = builder.Configuration["Jwt:Issuer"];
 
             // CONFIGURACIÓN DEL JWT 

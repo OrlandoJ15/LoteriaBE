@@ -36,7 +36,7 @@ namespace LoteriaWebApi.Controllers
 
         private string GenearJwtToken(Usuario pUsuario)
         {
-            var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(lConfiguration["JwtKey"]));
+            var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(lConfiguration["AzureKeyVault"]));
             var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
             
             /*

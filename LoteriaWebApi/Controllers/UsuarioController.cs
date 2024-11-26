@@ -38,7 +38,7 @@ namespace LoteriaWebApi.Controllers
         {
             var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(lConfiguration["AzureKeyVault:VaultUrl"]));
             var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
-            
+            //test
             /*
             var claims = new[]
             {

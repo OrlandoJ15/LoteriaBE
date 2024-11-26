@@ -19,10 +19,10 @@ namespace LoteriaWebApi
             // CONFIGURACIÓN DE CORS 
             builder.Services.AddCors(options =>
             {
-                options.AddPolicy("PermitirFrontEnd", policy =>
+                options.AddPolicy("MultiplicaDOS", policy =>
                 {
 
-                    policy.WithOrigins("http://localhost:5173", "https://multiplicados.net", "https://keyvaultloteria.vault.azure.net")
+                    policy.WithOrigins("http://localhost:5173", "https://multiplicados.net", "https://keyvaultloteria.vault.azure.net/")
                           .AllowCredentials()
                           .AllowAnyHeader()
                           .AllowAnyMethod();
@@ -83,7 +83,7 @@ namespace LoteriaWebApi
                 app.UseSwaggerUI();
             }
 
-            app.UseCors("PermitirFrontEnd");
+            app.UseCors("MultiplicaDOS");
 
             app.UseHttpsRedirection();
             app.UseHsts(); //esto es para ue solo permita coneccion por https - activan el htttp transport security 

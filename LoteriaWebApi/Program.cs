@@ -37,12 +37,14 @@ namespace LoteriaWebApi
 
             var secretClient = new SecretClient(new Uri(keyVaultUrl), new DefaultAzureCredential());
             
-            var jwtSecretKey = secretClient.GetSecret("Jwtkey").Value.Value; // Obtiene el secreto desde Key Vault
-            
+            var jwtSecretKey = secretClient.GetSecret("JwtKey").Value.Value; // Obtiene el secreto desde Key Vault
+
             var issuer = builder.Configuration["Jwt:Issuer"];
+            var audience = builder.Configuration["Jwt:Issuer"];
+
 
             // CONFIGURACIÓN DEL JWT 
-            
+
             builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddJwtBearer(options =>
                 {

@@ -45,7 +45,7 @@ namespace LoteriaWebApi.Controllers
 
             // Recuperar la clave desde el Key Vault
             var client = new SecretClient(new Uri(keyVaultUrl), new DefaultAzureCredential());
-            var secret = client.GetSecret("Jwtkey").Value.Value;
+            var secret = client.GetSecret("JwtKey").Value.Value;
             //var jwtSigningKey = secret.Value.Value;
 
 
@@ -54,20 +54,20 @@ namespace LoteriaWebApi.Controllers
             var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
 
             //test
-            /*
+            
             var claims = new[]
             {
                 new Claim(JwtRegisteredClaimNames.Sub , pUsuario.NombreUsuario),    
                 new Claim("Id", pUsuario.Id.ToString()),
                 new Claim("Rol", pUsuario.Rol.ToString())
             };
-            */
+            
 
 
             var token = new JwtSecurityToken(
                 issuer: lConfiguration["Jwt:Issuer"],
                 audience: lConfiguration["Jwt:Issuer"],
-                //claims: claims,
+                claims: claims,
                 expires: DateTime.Now.AddHours(1),
                 signingCredentials: credentials);
 

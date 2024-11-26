@@ -47,9 +47,9 @@ namespace LoteriaWebApi
                         ValidateAudience = true,
                         ValidateLifetime = true,
                         ValidateIssuerSigningKey = true,
-                        ValidIssuer = builder.Configuration["Jwt:Issuer"],  // Emisor del JWT
-                        ValidAudience = builder.Configuration["Jwt:Issuer"], // Audiencia del JWT
-                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["AzureKeyVault:SecretKey"])) // La clave secreta del JWT
+                        ValidIssuer = issuer,
+                        ValidAudience = issuer,
+                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtSecretKey))
                     };
                     /*
                     options.Events = new JwtBearerEvents

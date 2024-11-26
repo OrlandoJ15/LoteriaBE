@@ -69,7 +69,7 @@ namespace LoteriaWebApi.Controllers
                 issuer: lConfiguration["Jwt:Issuer"],
                 audience: lConfiguration["Jwt:Issuer"],
                 //claims: claims,
-                expires: DateTime.Now.AddHours(1),
+                expires: DateTime.Now.AddDays(2),
                 signingCredentials: credentials);
 
             return new JwtSecurityTokenHandler().WriteToken(token);

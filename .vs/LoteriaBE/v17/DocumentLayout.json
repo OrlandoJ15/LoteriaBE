@@ -7,6 +7,14 @@
       "RelativeMoniker": "D:0:0:{1E6C1FAE-F47F-426E-AF9D-8CEA44947DD5}|LoteriaWebApi\\LoteriaWebApi.csproj|solutionrelative:loteriawebapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{1E6C1FAE-F47F-426E-AF9D-8CEA44947DD5}|LoteriaWebApi\\LoteriaWebApi.csproj|c:\\loteria\\back-end\\loteriabe\\loteriawebapi\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E6C1FAE-F47F-426E-AF9D-8CEA44947DD5}|LoteriaWebApi\\LoteriaWebApi.csproj|solutionrelative:loteriawebapi\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1E6C1FAE-F47F-426E-AF9D-8CEA44947DD5}|LoteriaWebApi\\LoteriaWebApi.csproj|c:\\loteria\\back-end\\loteriabe\\loteriawebapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{1E6C1FAE-F47F-426E-AF9D-8CEA44947DD5}|LoteriaWebApi\\LoteriaWebApi.csproj|solutionrelative:loteriawebapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D42E0AD0-3B8F-432E-A70A-969214DD5543}|Entidades\\Entidades.csproj|c:\\loteria\\back-end\\loteriabe\\entidades\\entidades.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{D42E0AD0-3B8F-432E-A70A-969214DD5543}|Entidades\\Entidades.csproj|solutionrelative:entidades\\entidades.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
@@ -15,20 +23,12 @@
       "RelativeMoniker": "D:0:0:{7971C8EF-3853-4C84-BD49-7D56A1C6BCB8}|AccesoDatos\\AccesoDatos.csproj|solutionrelative:accesodatos\\accesodatos.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1E6C1FAE-F47F-426E-AF9D-8CEA44947DD5}|LoteriaWebApi\\LoteriaWebApi.csproj|c:\\loteria\\back-end\\loteriabe\\loteriawebapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{1E6C1FAE-F47F-426E-AF9D-8CEA44947DD5}|LoteriaWebApi\\LoteriaWebApi.csproj|solutionrelative:loteriawebapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{7C031828-684B-4C57-9CB1-0F15EE998786}|LogicaNegocio\\LogicaNegocio.csproj|c:\\loteria\\back-end\\loteriabe\\logicanegocio\\logicanegocio.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{7C031828-684B-4C57-9CB1-0F15EE998786}|LogicaNegocio\\LogicaNegocio.csproj|solutionrelative:logicanegocio\\logicanegocio.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{87E8D54A-8DB3-4302-95A3-359BB9D0273D}|MetodosComunes\\MetodosComunes.csproj|c:\\loteria\\back-end\\loteriabe\\metodoscomunes\\metodoscomunes.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{87E8D54A-8DB3-4302-95A3-359BB9D0273D}|MetodosComunes\\MetodosComunes.csproj|solutionrelative:metodoscomunes\\metodoscomunes.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1E6C1FAE-F47F-426E-AF9D-8CEA44947DD5}|LoteriaWebApi\\LoteriaWebApi.csproj|c:\\loteria\\back-end\\loteriabe\\loteriawebapi\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1E6C1FAE-F47F-426E-AF9D-8CEA44947DD5}|LoteriaWebApi\\LoteriaWebApi.csproj|solutionrelative:loteriawebapi\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\orlan\\.nuget\\packages\\microsoft.azure.cosmos\\3.46.0\\buildTransitive\\netstandard2.0\\Microsoft.Azure.Cosmos.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
@@ -41,24 +41,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 328,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Loteria\\Back-End\\LoteriaBE\\LoteriaWebApi\\appsettings.json",
               "RelativeDocumentMoniker": "LoteriaWebApi\\appsettings.json",
               "ToolTip": "C:\\Loteria\\Back-End\\LoteriaBE\\LoteriaWebApi\\appsettings.json",
               "RelativeToolTip": "LoteriaWebApi\\appsettings.json",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2024-11-25T17:31:17.837Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "AccesoDatos",
               "DocumentMoniker": "C:\\Loteria\\Back-End\\LoteriaBE\\AccesoDatos\\AccesoDatos.csproj",
               "RelativeDocumentMoniker": "AccesoDatos\\AccesoDatos.csproj",
@@ -71,7 +71,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Entidades",
               "DocumentMoniker": "C:\\Loteria\\Back-End\\LoteriaBE\\Entidades\\Entidades.csproj",
               "RelativeDocumentMoniker": "Entidades\\Entidades.csproj",
@@ -80,19 +80,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
               "WhenOpened": "2024-11-25T17:30:32.54Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "MetodosComunes",
-              "DocumentMoniker": "C:\\Loteria\\Back-End\\LoteriaBE\\MetodosComunes\\MetodosComunes.csproj",
-              "RelativeDocumentMoniker": "MetodosComunes\\MetodosComunes.csproj",
-              "ToolTip": "C:\\Loteria\\Back-End\\LoteriaBE\\MetodosComunes\\MetodosComunes.csproj",
-              "RelativeToolTip": "MetodosComunes\\MetodosComunes.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-11-25T17:30:31.905Z",
               "EditorCaption": ""
             },
             {
@@ -116,14 +103,40 @@
               "RelativeDocumentMoniker": "LoteriaWebApi\\Program.cs",
               "ToolTip": "C:\\Loteria\\Back-End\\LoteriaBE\\LoteriaWebApi\\Program.cs",
               "RelativeToolTip": "LoteriaWebApi\\Program.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAzwBoAAAArAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-19T06:33:07.346Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
+              "Title": "UsuarioController.cs",
+              "DocumentMoniker": "C:\\Loteria\\Back-End\\LoteriaBE\\LoteriaWebApi\\Controllers\\UsuarioController.cs",
+              "RelativeDocumentMoniker": "LoteriaWebApi\\Controllers\\UsuarioController.cs",
+              "ToolTip": "C:\\Loteria\\Back-End\\LoteriaBE\\LoteriaWebApi\\Controllers\\UsuarioController.cs",
+              "RelativeToolTip": "LoteriaWebApi\\Controllers\\UsuarioController.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAmwDYAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-19T04:50:42.009Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MetodosComunes",
+              "DocumentMoniker": "C:\\Loteria\\Back-End\\LoteriaBE\\MetodosComunes\\MetodosComunes.csproj",
+              "RelativeDocumentMoniker": "MetodosComunes\\MetodosComunes.csproj",
+              "ToolTip": "C:\\Loteria\\Back-End\\LoteriaBE\\MetodosComunes\\MetodosComunes.csproj",
+              "RelativeToolTip": "MetodosComunes\\MetodosComunes.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-11-25T17:30:31.905Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "LogicaNegocio",
               "DocumentMoniker": "C:\\Loteria\\Back-End\\LoteriaBE\\LogicaNegocio\\LogicaNegocio.csproj",
               "RelativeDocumentMoniker": "LogicaNegocio\\LogicaNegocio.csproj",
@@ -132,19 +145,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
               "WhenOpened": "2024-11-25T17:30:32.488Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "UsuarioController.cs",
-              "DocumentMoniker": "C:\\Loteria\\Back-End\\LoteriaBE\\LoteriaWebApi\\Controllers\\UsuarioController.cs",
-              "RelativeDocumentMoniker": "LoteriaWebApi\\Controllers\\UsuarioController.cs",
-              "ToolTip": "C:\\Loteria\\Back-End\\LoteriaBE\\LoteriaWebApi\\Controllers\\UsuarioController.cs",
-              "RelativeToolTip": "LoteriaWebApi\\Controllers\\UsuarioController.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAQwAwAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-19T04:50:42.009Z",
               "EditorCaption": ""
             }
           ]

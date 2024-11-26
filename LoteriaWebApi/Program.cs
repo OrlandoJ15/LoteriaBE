@@ -23,7 +23,6 @@ namespace LoteriaWebApi
                 {
 
                     policy.WithOrigins("http://localhost:5173", "https://multiplicados.net", "https://keyvaultloteria.vault.azure.net/")
-                          .AllowCredentials()
                           .AllowAnyHeader()
                           .AllowAnyMethod();
                 });

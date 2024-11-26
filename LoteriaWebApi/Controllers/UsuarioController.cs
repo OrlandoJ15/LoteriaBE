@@ -1,4 +1,6 @@
-﻿using Entidades.Models;
+﻿using Azure.Identity;
+using Azure.Security.KeyVault.Secrets;
+using Entidades.Models;
 using LogicaNegocio.Implementacion;
 using LogicaNegocio.Interfaz;
 using MetodosComunes;
@@ -36,8 +38,21 @@ namespace LoteriaWebApi.Controllers
 
         private string GenearJwtToken(Usuario pUsuario)
         {
-            var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(lConfiguration["AzureKeyVault:VaultUrl"]));
+
+            var keyVaultUrl = lConfiguration["AzureKeyVault:VaultUrl"];
+            
+            //var secretName = lConfiguration["Jwt:KeyName"];
+
+            // Recuperar la clave desde el Key Vault
+            var client = new SecretClient(new Uri(keyVaultUrl), new DefaultAzureCredential());
+            var secret = client.GetSecret("Jwtkey").Value.Value;
+            //var jwtSigningKey = secret.Value.Value;
+
+
+
+            var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secret));
             var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
+
             //test
             /*
             var claims = new[]

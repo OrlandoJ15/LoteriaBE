@@ -73,6 +73,19 @@ namespace LoteriaWebApi
                         }
                     };
                     */
+                    options.Events = new JwtBearerEvents
+                    {
+                        OnAuthenticationFailed = context =>
+                        {
+                            Console.WriteLine("Token no válido: " + context.Exception.Message);
+                            return Task.CompletedTask;
+                        },
+                        OnTokenValidated = context =>
+                        {
+                            Console.WriteLine("Token validado correctamente.");
+                            return Task.CompletedTask;
+                        }
+                    };
                 });
 
             // Configuración de controladores y servicios

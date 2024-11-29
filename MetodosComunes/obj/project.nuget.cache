@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "TXMiix1gzi4=",
+  "dgSpecHash": "lG3qrZEp+fo=",
   "success": true,
-  "projectFilePath": "C:\\Loteria1\\Back-End\\LoteriaBE\\MetodosComunes\\MetodosComunes.csproj",
+  "projectFilePath": "C:\\Loteria\\Back-End\\LoteriaBE\\MetodosComunes\\MetodosComunes.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\orlan\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\8.0.10\\microsoft.aspnetcore.authentication.jwtbearer.8.0.10.nupkg.sha512",
     "C:\\Users\\orlan\\.nuget\\packages\\microsoft.identitymodel.abstractions\\7.1.2\\microsoft.identitymodel.abstractions.7.1.2.nupkg.sha512",

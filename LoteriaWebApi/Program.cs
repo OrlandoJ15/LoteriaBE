@@ -111,7 +111,7 @@ namespace LoteriaWebApi
                 app.UseSwaggerUI();
             }
 
-            app.UseCors("MultiplicaDOS");
+            app.UseCors();
 
             app.UseHttpsRedirection();
             app.UseHsts(); //esto es para ue solo permita coneccion por https - activan el htttp transport security 

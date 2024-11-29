@@ -46,9 +46,9 @@ namespace LoteriaWebApi
                         ValidateAudience = true,
                         ValidateLifetime = true,
                         ValidateIssuerSigningKey = true,
-                        ValidIssuer = issuer,
-                        ValidAudience = audience,
-                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtSecretKey))
+                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtSecretKey)),
+                        ValidIssuer = issuer,  // Si usas un issuer válido, añádelo aquí
+                        ValidAudience = audience // Lo mismo para el audience
                     };
                     /*
                     options.Events = new JwtBearerEvents

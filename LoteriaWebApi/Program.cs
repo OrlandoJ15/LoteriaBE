@@ -14,12 +14,10 @@ namespace LoteriaWebApi
         {
             var builder = WebApplication.CreateBuilder(args);
 
-
-
             // CONFIGURACIÓN DE CORS 
             builder.Services.AddCors(options =>
             {
-                options.AddPolicy("LoteriaWebApiMVP", policy =>
+                options.AddPolicy("MultiplicaDOS", policy =>
                 {
 
                     policy.WithOrigins("http://localhost:5173", "https://multiplicados.net", "https://keyvaultloteria.vault.azure.net/")
@@ -28,19 +26,12 @@ namespace LoteriaWebApi
                 });
             });
 
-
             // CONFIGURACIÓN DE AZURE KEY VAULT
             var keyVaultUrl = builder.Configuration["AzureKeyVault:VaultUrl"];  //Url del key Vault
-
-
-
-            var secretClient = new SecretClient(new Uri(keyVaultUrl), new DefaultAzureCredential());
-            
+            var secretClient = new SecretClient(new Uri(keyVaultUrl), new DefaultAzureCredential());         
             var jwtSecretKey = secretClient.GetSecret("JwtKey").Value.Value; // Obtiene el secreto desde Key Vault
-
             var issuer = builder.Configuration["Jwt:Issuer"];
             var audience = builder.Configuration["Jwt:Audience"];
-
 
             // CONFIGURACIÓN DEL JWT 
 
@@ -92,16 +83,14 @@ namespace LoteriaWebApi
             builder.Services.AddAuthorization(options =>
             {
                 // Puedes agregar políticas personalizadas aquí si es necesario
-                options.AddPolicy("LoteriaWebApiMVP", policy => policy.RequireAuthenticatedUser());
+                options.AddPolicy("MultiplicaDOS", policy => 
+                    policy.RequireAuthenticatedUser());
             });
-
 
             // Configuración de controladores y servicios
             builder.Services.AddControllers();
-
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
-
             var app = builder.Build();
 
             // Configuración del entorno de desarrollo
@@ -111,7 +100,7 @@ namespace LoteriaWebApi
                 app.UseSwaggerUI();
             }
 
-            app.UseCors();
+            app.UseCors("MultiplicaDOS");
 
             app.UseHttpsRedirection();
             app.UseHsts(); //esto es para ue solo permita coneccion por https - activan el htttp transport security 

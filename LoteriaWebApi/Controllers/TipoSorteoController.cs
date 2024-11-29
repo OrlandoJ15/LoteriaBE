@@ -151,11 +151,6 @@ namespace LoteriaWebApi.Controllers
 
 
 
-
-
-
-
-
         //[Authorize]
         [Route("[action]")]
         [HttpPost]

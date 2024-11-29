@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Loteria\\LoteriaBE\\MetodosComunes\\MetodosComunes.csproj": {}
+    "C:\\Loteria\\Back-End\\LoteriaBE\\MetodosComunes\\MetodosComunes.csproj": {}
   },
   "projects": {
-    "C:\\Loteria\\LoteriaBE\\MetodosComunes\\MetodosComunes.csproj": {
+    "C:\\Loteria\\Back-End\\LoteriaBE\\MetodosComunes\\MetodosComunes.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Loteria\\LoteriaBE\\MetodosComunes\\MetodosComunes.csproj",
+        "projectUniqueName": "C:\\Loteria\\Back-End\\LoteriaBE\\MetodosComunes\\MetodosComunes.csproj",
         "projectName": "MetodosComunes",
-        "projectPath": "C:\\Loteria\\LoteriaBE\\MetodosComunes\\MetodosComunes.csproj",
-        "packagesPath": "C:\\Users\\andre\\.nuget\\packages\\",
-        "outputPath": "C:\\Loteria\\LoteriaBE\\MetodosComunes\\obj\\",
+        "projectPath": "C:\\Loteria\\Back-End\\LoteriaBE\\MetodosComunes\\MetodosComunes.csproj",
+        "packagesPath": "C:\\Users\\orlan\\.nuget\\packages\\",
+        "outputPath": "C:\\Loteria\\Back-End\\LoteriaBE\\MetodosComunes\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\andre\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\orlan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -71,7 +75,12 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.404/PortableRuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "linux-x64": {
+          "#import": []
         }
       }
     }

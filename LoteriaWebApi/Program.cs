@@ -14,8 +14,6 @@ namespace LoteriaWebApi
         {
             var builder = WebApplication.CreateBuilder(args);
 
-
-
             // CONFIGURACIÓN DE CORS 
             builder.Services.AddCors(options =>
             {
@@ -28,19 +26,12 @@ namespace LoteriaWebApi
                 });
             });
 
-
             // CONFIGURACIÓN DE AZURE KEY VAULT
             var keyVaultUrl = builder.Configuration["AzureKeyVault:VaultUrl"];  //Url del key Vault
-
-
-
-            var secretClient = new SecretClient(new Uri(keyVaultUrl), new DefaultAzureCredential());
-            
+            var secretClient = new SecretClient(new Uri(keyVaultUrl), new DefaultAzureCredential());         
             var jwtSecretKey = secretClient.GetSecret("JwtKey").Value.Value; // Obtiene el secreto desde Key Vault
-
             var issuer = builder.Configuration["Jwt:Issuer"];
             var audience = builder.Configuration["Jwt:Audience"];
-
 
             // CONFIGURACIÓN DEL JWT 
 
@@ -92,16 +83,14 @@ namespace LoteriaWebApi
             builder.Services.AddAuthorization(options =>
             {
                 // Puedes agregar políticas personalizadas aquí si es necesario
-                options.AddPolicy("MultiplicaDOS", policy => policy.RequireAuthenticatedUser());
+                options.AddPolicy("MultiplicaDOS", policy => 
+                    policy.RequireAuthenticatedUser());
             });
-
 
             // Configuración de controladores y servicios
             builder.Services.AddControllers();
-
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
-
             var app = builder.Build();
 
             // Configuración del entorno de desarrollo

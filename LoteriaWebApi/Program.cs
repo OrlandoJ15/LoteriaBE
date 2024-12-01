@@ -14,6 +14,22 @@ namespace LoteriaWebApi
         {
             var builder = WebApplication.CreateBuilder(args);
 
+            // Configuración de Kestrel para especificar el puerto
+            builder.WebHost.ConfigureKestrel(options =>
+            {
+                // Configuración para habilitar HTTP en el puerto 80 (si lo deseas)
+                options.ListenAnyIP(80); // HTTP - Puerto 80
+
+                // Configuración para habilitar HTTPS en el puerto 443
+                options.ListenAnyIP(443, listenOptions =>
+                {
+                    // Si tienes un certificado .pfx, puedes configurar el certificado SSL aquí
+                    // Puedes usar un certificado autofirmado durante el desarrollo
+                    listenOptions.UseHttps("path/to/certificate.pfx", "yourCertificatePassword"); // Configura el certificado SSL
+                });
+            });
+
+
             builder.Services.AddHealthChecks();
 
 

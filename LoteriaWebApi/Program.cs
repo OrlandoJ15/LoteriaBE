@@ -41,7 +41,8 @@ namespace LoteriaWebApi
 
                     policy.WithOrigins("http://localhost:5173", "https://multiplicados.net")
                           .AllowAnyHeader()
-                          .AllowAnyMethod();
+                          .AllowAnyMethod()
+                          .AllowCredentials();
                 });
             });
 

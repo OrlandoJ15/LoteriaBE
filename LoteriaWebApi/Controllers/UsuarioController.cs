@@ -53,6 +53,17 @@ namespace LoteriaWebApi.Controllers
             var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secret));
             var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
 
+            var claims = new List<Claim>
+            {
+                new Claim(JwtRegisteredClaimNames.Sub, pUsuario.NombreUsuario), // Nombre de usuario como 'sub'
+                new Claim("Id", pUsuario.Id.ToString()), // ID del usuario
+                new Claim("Rol", pUsuario.Rol.ToString()), // Rol del usuario
+                new Claim(JwtRegisteredClaimNames.Iss, lConfiguration["Jwt:Issuer"]), // Emisor del token
+                new Claim(JwtRegisteredClaimNames.Aud, lConfiguration["Jwt:Audience"]), // Audiencia
+                new Claim("Correo", pUsuario.Correo), // Agregar correo si lo necesitas
+                new Claim("FechaCreacion", DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")) // Ejemplo de claim adicional
+            };
+
             //test
             /*
             var claims = new[]
@@ -62,15 +73,16 @@ namespace LoteriaWebApi.Controllers
                 new Claim("Rol", pUsuario.Rol.ToString())
             };
             */
-            
+
 
 
             var token = new JwtSecurityToken(
-                //issuer: lConfiguration["Jwt:Issuer"],
-                //audience: lConfiguration["Jwt:Issuer"],
-                //claims: claims,
-                expires: DateTime.Now.AddDays(2),
-                signingCredentials: credentials);
+                issuer: lConfiguration["Jwt:Issuer"], // Emisor
+                audience: lConfiguration["Jwt:Audience"], // Audiencia
+                claims: claims, // Aquí pasamos los claims
+                expires: DateTime.Now.AddDays(2), // Expiración del token
+                signingCredentials: credentials // Firmado con las credenciales
+            );
 
             return new JwtSecurityTokenHandler().WriteToken(token);
 

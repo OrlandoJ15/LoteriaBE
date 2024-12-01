@@ -129,17 +129,24 @@ namespace LoteriaWebApi
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
+            else
+            {
+                app.UseExceptionHandler("/Home/Error");
+                app.UseHsts();
+            }
 
             app.MapHealthChecks("/api/health");
 
             app.UseCors();
 
             app.UseHttpsRedirection();
-            app.UseHsts(); //esto es para ue solo permita coneccion por https - activan el htttp transport security 
 
             // Autenticación y autorización
             app.UseAuthentication();
             app.UseAuthorization();
+
+            // Habilitar el enrutamiento de API
+            app.UseRouting();
 
             app.MapControllers();
 

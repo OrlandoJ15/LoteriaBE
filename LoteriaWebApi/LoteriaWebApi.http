@@ -1,4 +1,4 @@
-@LoteriaWebApi_HostAddress = http://loteriawebapimvp.azurewebsites.net
+@LoteriaWebApi_HostAddress = https://localhost:44318
 
 GET {{LoteriaWebApi_HostAddress}}/weatherforecast/
 Accept: application/json

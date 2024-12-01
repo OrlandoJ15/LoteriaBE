@@ -112,6 +112,12 @@ namespace LoteriaWebApi.Controllers
             return Ok(response); // Retorna 200 OK con la respuesta
         }
 
+        [HttpGet]
+        public IActionResult Get()
+        {
+            return Ok(new { message = "Hello" });
+        }
+
         // Endpoint de autenticación para generar token
 
         [AllowAnonymous]

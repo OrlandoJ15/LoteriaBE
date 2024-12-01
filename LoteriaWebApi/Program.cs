@@ -3,7 +3,7 @@ using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using Azure.Identity;
 using Azure.Security.KeyVault.Secrets;
-
+using Serilog;
 
 
 namespace LoteriaWebApi
@@ -23,7 +23,7 @@ namespace LoteriaWebApi
                 options.AddPolicy("LoteriaBackApi", policy =>
                 {
 
-                    policy.WithOrigins("http://localhost:5173", "https://multiplicados.net", "https://keyvaultloteria.vault.azure.net/")
+                    policy.WithOrigins("http://localhost:5173", "https://multiplicados.net")
                           .AllowAnyHeader()
                           .AllowAnyMethod();
                 });
@@ -46,15 +46,16 @@ namespace LoteriaWebApi
                     options.TokenValidationParameters = new TokenValidationParameters
                     {
                         ValidateIssuer = true,
-                        ValidateAudience = true,
+                        ValidateAudience = true,    
                         ValidateLifetime = true,
                         ValidateIssuerSigningKey = true,
                         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtSecretKey)),
                         ValidIssuer = issuer,  // Si usas un issuer válido, añádelo aquí
-                        ValidAudience = audience // Lo mismo para el audience
+                        ValidAudience = audience, // Lo mismo para el audience
+                        ClockSkew = TimeSpan.Zero,
                     };
-                    /*
-                    options.Events = new JwtBearerEvents
+                    
+                    /*options.Events = new JwtBearerEvents
                     {
                         OnMessageReceived = context =>
                         {
@@ -66,17 +67,19 @@ namespace LoteriaWebApi
                             }
                             return Task.CompletedTask;
                         }
-                    };
-                    */
+                    };*/
+                    
                     options.Events = new JwtBearerEvents
                     {
                         OnAuthenticationFailed = context =>
                         {
+                            //Log.Error("Autenticación fallida: {Error}", context.Exception.GetType().ToString());
                             Console.WriteLine("Token no válido: " + context.Exception.Message);
                             return Task.CompletedTask;
                         },
                         OnTokenValidated = context =>
                         {
+                            //Log.Information("Token validado correctamente para el usuario {UserId}", context.Principal.Identity.Name);
                             Console.WriteLine("Token validado correctamente.");
                             return Task.CompletedTask;
                         }   

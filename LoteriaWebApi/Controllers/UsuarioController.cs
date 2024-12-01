@@ -133,7 +133,6 @@ namespace LoteriaWebApi.Controllers
             }
         }
 
-        [Authorize]
         [Route("RecUsuario")]
         [HttpGet]
         public ActionResult<List<Usuario>> RecUsuario()
@@ -162,7 +161,6 @@ namespace LoteriaWebApi.Controllers
         }
 
 
-        [Authorize]
         [Route("[action]")]
         [HttpPost]
         public IActionResult? RecUsuarioXId([FromBody] Usuario pUsuario)

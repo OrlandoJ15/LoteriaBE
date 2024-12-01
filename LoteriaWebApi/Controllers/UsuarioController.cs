@@ -113,7 +113,7 @@ namespace LoteriaWebApi.Controllers
         }
 
         [HttpGet]
-        public IActionResult Get()
+        public IActionResult Getu()
         {
             return Ok(new { message = "Hello" });
         }

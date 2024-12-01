@@ -18,7 +18,7 @@ namespace LoteriaWebApi
             builder.WebHost.ConfigureKestrel(options =>
             {
                 // Configuración para habilitar HTTP en el puerto 80 (si lo deseas)
-                options.ListenAnyIP(80); // HTTP - Puerto 80
+                //options.ListenAnyIP(80); // HTTP - Puerto 80
 
                 // Configuración para habilitar HTTPS en el puerto 443
                 /*options.ListenAnyIP(443, listenOptions =>
@@ -131,7 +131,6 @@ namespace LoteriaWebApi
             }
             else
             {
-                app.UseExceptionHandler("/Home/Error");
                 app.UseHsts();
             }
 

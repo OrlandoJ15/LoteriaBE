@@ -14,6 +14,9 @@ namespace LoteriaWebApi
         {
             var builder = WebApplication.CreateBuilder(args);
 
+            builder.Services.AddHealthChecks();
+
+
             // CONFIGURACIÓN DE CORS 
             builder.Services.AddCors(options =>
             {
@@ -46,9 +49,9 @@ namespace LoteriaWebApi
                         ValidateAudience = true,
                         ValidateLifetime = true,
                         ValidateIssuerSigningKey = true,
-                        ValidIssuer = issuer,
-                        ValidAudience = audience,
-                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtSecretKey))
+                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtSecretKey)),
+                        ValidIssuer = issuer,  // Si usas un issuer válido, añádelo aquí
+                        ValidAudience = audience // Lo mismo para el audience
                     };
                     /*
                     options.Events = new JwtBearerEvents
@@ -76,16 +79,17 @@ namespace LoteriaWebApi
                         {
                             Console.WriteLine("Token validado correctamente.");
                             return Task.CompletedTask;
-                        }
+                        }   
                     };
                 });
 
             builder.Services.AddAuthorization(options =>
             {
                 // Puedes agregar políticas personalizadas aquí si es necesario
-                options.AddPolicy("LoteriaWebApiMVP", policy => 
+                options.AddPolicy("LoteriaWebApiMVP", policy =>
                     policy.RequireAuthenticatedUser());
             });
+
 
             // Configuración de controladores y servicios
             builder.Services.AddControllers();
@@ -99,6 +103,8 @@ namespace LoteriaWebApi
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
+
+            app.MapHealthChecks("/api/health");
 
             app.UseCors();
 

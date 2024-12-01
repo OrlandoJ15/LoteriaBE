@@ -14,6 +14,13 @@ namespace LoteriaWebApi
         {
             var builder = WebApplication.CreateBuilder(args);
 
+            // Configuración de Kestrel para especificar el puerto
+            builder.WebHost.ConfigureKestrel(options =>
+            {
+                options.ListenAnyIP(80); // Aquí configuras el puerto 80
+            });
+
+
             builder.Services.AddHealthChecks();
 
 

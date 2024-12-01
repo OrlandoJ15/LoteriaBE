@@ -33,6 +33,11 @@ namespace LoteriaWebApi.Controllers
             gObjUsuarioLN = new UsuarioLN(lConfiguration);
         }
 
+        [HttpGet]
+        public IActionResult Get()
+        {
+            return Ok(new { message = "Hello" });
+        }
 
         //METODO PARA GENERAR EL TOKEN JWT
 

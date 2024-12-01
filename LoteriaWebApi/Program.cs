@@ -21,12 +21,12 @@ namespace LoteriaWebApi
                 options.ListenAnyIP(80); // HTTP - Puerto 80
 
                 // Configuración para habilitar HTTPS en el puerto 443
-                options.ListenAnyIP(443, listenOptions =>
+                /*options.ListenAnyIP(443, listenOptions =>
                 {
                     // Si tienes un certificado .pfx, puedes configurar el certificado SSL aquí
                     // Puedes usar un certificado autofirmado durante el desarrollo
                     listenOptions.UseHttps("path/to/certificate.pfx", "yourCertificatePassword"); // Configura el certificado SSL
-                });
+                });*/
             });
 
 
@@ -114,6 +114,12 @@ namespace LoteriaWebApi
             builder.Services.AddControllers();
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+
+            builder.Services.AddHttpsRedirection(options =>
+            {
+                options.HttpsPort = 443; // Redirige el tráfico HTTP al puerto 443
+            });
+
             var app = builder.Build();
 
             // Configuración del entorno de desarrollo

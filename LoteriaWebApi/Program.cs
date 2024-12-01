@@ -41,7 +41,7 @@ namespace LoteriaWebApi
             builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddJwtBearer(options =>
                 {
-                    options.Authority = "https://loteriawebapimvp.azurewebsites.net"; // Aquí va la URL de tu servidor de autorización (por ejemplo, Auth0 o Azure AD)
+                    options.Authority = "https://loteriabackapi-djhxctfjhdg5csfm.centralus-01.azurewebsites.net"; // Aquí va la URL de tu servidor de autorización (por ejemplo, Auth0 o Azure AD)
                     options.Audience = audience; // Este es el público esperado por tu API (en Auth0 o AAD, es el identificador de tu API)
                     options.TokenValidationParameters = new TokenValidationParameters
                     {

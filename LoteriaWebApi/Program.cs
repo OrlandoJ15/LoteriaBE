@@ -50,8 +50,8 @@ namespace LoteriaWebApi
             var keyVaultUrl = builder.Configuration["AzureKeyVault:VaultUrl"];  //Url del key Vault
             var secretClient = new SecretClient(new Uri(keyVaultUrl), new DefaultAzureCredential());         
             var jwtSecretKey = secretClient.GetSecret("JwtKey").Value.Value; // Obtiene el secreto desde Key Vault
-            var issuer = builder.Configuration["Jwt:Issuer"];
-            var audience = builder.Configuration["Jwt:Audience"];
+            var issuer = builder.Configuration["JwtI:Issuer"];
+            var audience = builder.Configuration["JwtA:Audience"];
 
             // CONFIGURACIÓN DEL JWT 
 
@@ -68,8 +68,7 @@ namespace LoteriaWebApi
                         ValidateIssuerSigningKey = true,
                         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtSecretKey)),
                         ValidIssuer = issuer,  // Si usas un issuer válido, añádelo aquí
-                        ValidAudience = audience, // Lo mismo para el audience
-                        ClockSkew = TimeSpan.Zero,
+                        ValidAudience = audience // Lo mismo para el audience
                     };
                     
                     /*options.Events = new JwtBearerEvents

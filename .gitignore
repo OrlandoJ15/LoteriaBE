@@ -1,14 +1,3 @@
 
-/LoteriaWebApi/appsettings.json
-/LoteriaWebApi/appsettings.Development.json
-/LoteriaWebApi/obj
-/LoteriaWebApi/Properties
 .vs
-/AccesoDatos/obj
-/AccesoDatos/bin
-/Entidades/obj
-/Entidades/bin
-/LogicaNegocio/obj
 /.vs
-/.vs/LoteriaBE
-/.vs/LoteriaBE/FileContentIndex

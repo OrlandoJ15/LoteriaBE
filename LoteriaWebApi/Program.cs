@@ -127,16 +127,16 @@ namespace LoteriaWebApi
 
             var app = builder.Build();
 
-            // Configuración del entorno de desarrollo
-            if (app.Environment.IsDevelopment())
+            app.UseSwagger();
+            app.UseSwaggerUI(options =>
             {
-                app.UseSwagger();
-                app.UseSwaggerUI();
+                options.SwaggerEndpoint("/swagger/v1/swagger.json", "Web API V1");
+                if (app.Environment.IsDevelopment())
+                    options.RoutePrefix = "swagger";
+                else
+                    app.UseHsts();
             }
-            else
-            {
-                app.UseHsts();
-            }
+            );
 
             app.MapHealthChecks("/api/health");
 

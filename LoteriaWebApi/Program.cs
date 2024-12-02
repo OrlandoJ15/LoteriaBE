@@ -44,7 +44,7 @@ namespace LoteriaWebApi
                 options.AddPolicy("LoteriaBackApi", policy =>
                 {
 
-                    policy.WithOrigins("http://localhost:5173", "https://multiplicados.net")
+                    policy.WithOrigins("http://localhost:5173", "https://multiplicados.net", "https://portal.azure.com")
                           .AllowAnyHeader()
                           .AllowAnyMethod()
                           .AllowCredentials();

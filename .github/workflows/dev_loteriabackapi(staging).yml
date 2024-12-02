@@ -53,4 +53,4 @@ jobs:
           app-name: 'loteriabackapi'
           slot-name: 'staging'
           package: .
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_ABA45998A10D4B2FAC3CD923DA5F6F5E }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_709BBA6F42BB41BC95E23E7704AA5C74 }}

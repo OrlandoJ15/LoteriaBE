@@ -12,14 +12,10 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 
-using Serilog;
-using Microsoft.Extensions.Logging;  // No hace falta importar esto explícitamente, si lo tienes.
-
 // Alias para el ILogger de Serilog
 using SerilogLogger = Serilog.ILogger;
 
 // Alias para el ILogger de Microsoft.Extensions.Logging
-using MicrosoftLogger = Microsoft.Extensions.Logging.ILogger;
 
 namespace LoteriaWebApi.Controllers
 {

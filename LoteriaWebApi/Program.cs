@@ -12,6 +12,11 @@ namespace LoteriaWebApi
     {
         public static void Main(string[] args)
         {
+            Log.Logger = new LoggerConfiguration()
+                .WriteTo.Console() // Registrar en la consola
+                .WriteTo.File("logs/log.txt", rollingInterval: RollingInterval.Day) // Registrar en archivo
+                .CreateLogger();
+
             var builder = WebApplication.CreateBuilder(args);
 
             // Configuración de Kestrel para especificar el puerto

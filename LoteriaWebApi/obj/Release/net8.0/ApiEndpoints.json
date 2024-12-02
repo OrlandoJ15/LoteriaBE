@@ -1,0 +1,620 @@
+[
+  {
+    "ContainingType": "LoteriaWebApi.Controllers.DetalleSorteoController",
+    "Method": "DelDetalleSorteo",
+    "RelativePath": "DetalleSorteo/DelDetalleSorteo",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "IdDetalleSorteo",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LoteriaWebApi.Controllers.DetalleSorteoController",
+    "Method": "InsDetalleSorteo",
+    "RelativePath": "DetalleSorteo/InsDetalleSorteo",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pDetalleSorteo",
+        "Type": "Entidades.Models.DetalleSorteo",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LoteriaWebApi.Controllers.DetalleSorteoController",
+    "Method": "ModDetalleSorteo",
+    "RelativePath": "DetalleSorteo/ModDetalleSorteo",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pDetalleSorteo",
+        "Type": "Entidades.Models.DetalleSorteo",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LoteriaWebApi.Controllers.DetalleSorteoController",
+    "Method": "RecDetalleSorteo",
+    "RelativePath": "DetalleSorteo/RecDetalleSorteo",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Entidades.Models.DetalleSorteo, Entidades, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "LoteriaWebApi.Controllers.DetalleSorteoController",
+    "Method": "RecDetalleSorteoXId",
+    "RelativePath": "DetalleSorteo/RecDetalleSorteoXId",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pDetalleSorteo",
+        "Type": "Entidades.Models.DetalleSorteo",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LoteriaWebApi.Controllers.KardexController",
+    "Method": "DelKardex",
+    "RelativePath": "Kardex/DelKardex",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "IdKardex",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LoteriaWebApi.Controllers.KardexController",
+    "Method": "InsKardex",
+    "RelativePath": "Kardex/InsKardex",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pKardex",
+        "Type": "Entidades.Models.Kardex",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LoteriaWebApi.Controllers.KardexController",
+    "Method": "ModKardex",
+    "RelativePath": "Kardex/ModKardex",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pKardex",
+        "Type": "Entidades.Models.Kardex",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LoteriaWebApi.Controllers.KardexController",
+    "Method": "RecKardex",
+    "RelativePath": "Kardex/RecKardex",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Entidades.Models.Kardex, Entidades, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "LoteriaWebApi.Controllers.KardexController",
+    "Method": "RecKardexXId",
+    "RelativePath": "Kardex/RecKardexXId",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pKardex",
+        "Type": "Entidades.Models.Kardex",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LoteriaWebApi.Controllers.SorteoController",
+    "Method": "DelSorteo",
+    "RelativePath": "Sorteo/DelSorteo",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "IdSorteo",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LoteriaWebApi.Controllers.SorteoController",
+    "Method": "InsSorteo",
+    "RelativePath": "Sorteo/InsSorteo",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pSorteo",
+        "Type": "Entidades.Models.Sorteo",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LoteriaWebApi.Controllers.SorteoController",
+    "Method": "ModSorteo",
+    "RelativePath": "Sorteo/ModSorteo",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pSorteo",
+        "Type": "Entidades.Models.Sorteo",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LoteriaWebApi.Controllers.SorteoController",
+    "Method": "RecIdSorteoFromParametro",
+    "RelativePath": "Sorteo/RecIdSorteoFromParametro",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LoteriaWebApi.Controllers.SorteoController",
+    "Method": "RecSorteo",
+    "RelativePath": "Sorteo/RecSorteo",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Entidades.Models.Sorteo, Entidades, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "LoteriaWebApi.Controllers.SorteoController",
+    "Method": "RecSorteoXId",
+    "RelativePath": "Sorteo/RecSorteoXId",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pSorteo",
+        "Type": "Entidades.Models.Sorteo",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LoteriaWebApi.Controllers.TipoSorteoController",
+    "Method": "DelTipoSorteo",
+    "RelativePath": "TipoSorteo/DelTipoSorteo",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "IdTipoSorteo",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LoteriaWebApi.Controllers.TipoSorteoController",
+    "Method": "InsTipoSorteo",
+    "RelativePath": "TipoSorteo/InsTipoSorteo",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pTipoSorteo",
+        "Type": "Entidades.Models.TipoSorteo",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LoteriaWebApi.Controllers.TipoSorteoController",
+    "Method": "ModTipoSorteo",
+    "RelativePath": "TipoSorteo/ModTipoSorteo",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pTipoSorteo",
+        "Type": "Entidades.Models.TipoSorteo",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LoteriaWebApi.Controllers.TipoSorteoController",
+    "Method": "RecIdTipoSorteoFromTipoSorteoGeneral",
+    "RelativePath": "TipoSorteo/RecIdTipoSorteoFromTipoSorteoGeneral",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pTipoSorteoGeneral",
+        "Type": "Entidades.Models.TipoSorteoGeneral",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LoteriaWebApi.Controllers.TipoSorteoController",
+    "Method": "RecTipoSorteo",
+    "RelativePath": "TipoSorteo/RecTipoSorteo",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Entidades.Models.TipoSorteo, Entidades, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "LoteriaWebApi.Controllers.TipoSorteoController",
+    "Method": "RecTipoSorteoXId",
+    "RelativePath": "TipoSorteo/RecTipoSorteoXId",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pTipoSorteo",
+        "Type": "Entidades.Models.TipoSorteo",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LoteriaWebApi.Controllers.TipoSorteoGeneralController",
+    "Method": "DelTipoSorteoGeneral",
+    "RelativePath": "TipoSorteoGeneral/DelTipoSorteoGeneral",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "IdTipoSorteoGeneral",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LoteriaWebApi.Controllers.TipoSorteoGeneralController",
+    "Method": "InsTipoSorteoGeneral",
+    "RelativePath": "TipoSorteoGeneral/InsTipoSorteoGeneral",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pTipoSorteoGeneral",
+        "Type": "Entidades.Models.TipoSorteoGeneral",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LoteriaWebApi.Controllers.TipoSorteoGeneralController",
+    "Method": "ModTipoSorteoGeneral",
+    "RelativePath": "TipoSorteoGeneral/ModTipoSorteoGeneral",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pTipoSorteoGeneral",
+        "Type": "Entidades.Models.TipoSorteoGeneral",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LoteriaWebApi.Controllers.TipoSorteoGeneralController",
+    "Method": "RecTipoSorteoGeneral",
+    "RelativePath": "TipoSorteoGeneral/RecTipoSorteoGeneral",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Entidades.Models.TipoSorteoGeneral, Entidades, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "LoteriaWebApi.Controllers.TipoSorteoGeneralController",
+    "Method": "RecTipoSorteoGeneralXId",
+    "RelativePath": "TipoSorteoGeneral/RecTipoSorteoGeneralXId",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pTipoSorteoGeneral",
+        "Type": "Entidades.Models.TipoSorteoGeneral",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LoteriaWebApi.Controllers.UsuarioController",
+    "Method": "Get",
+    "RelativePath": "Usuario",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LoteriaWebApi.Controllers.UsuarioController",
+    "Method": "Getu",
+    "RelativePath": "Usuario",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LoteriaWebApi.Controllers.UsuarioController",
+    "Method": "DelUsuario",
+    "RelativePath": "Usuario/DelUsuario",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "IdUsuario",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LoteriaWebApi.Controllers.UsuarioController",
+    "Method": "eliminaCookie",
+    "RelativePath": "Usuario/eliminaCookie",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LoteriaWebApi.Controllers.UsuarioController",
+    "Method": "InsUsuario",
+    "RelativePath": "Usuario/InsUsuario",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pUsuario",
+        "Type": "Entidades.Models.Usuario",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LoteriaWebApi.Controllers.UsuarioController",
+    "Method": "Login",
+    "RelativePath": "Usuario/Login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pUsuario",
+        "Type": "Entidades.Models.Usuario",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LoteriaWebApi.Controllers.UsuarioController",
+    "Method": "Logout",
+    "RelativePath": "Usuario/Logout",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LoteriaWebApi.Controllers.UsuarioController",
+    "Method": "ModClaveUsuario",
+    "RelativePath": "Usuario/ModClaveUsuario",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pUsuario",
+        "Type": "Entidades.Models.Usuario",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LoteriaWebApi.Controllers.UsuarioController",
+    "Method": "ModUsuario",
+    "RelativePath": "Usuario/ModUsuario",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pUsuario",
+        "Type": "Entidades.Models.Usuario",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LoteriaWebApi.Controllers.UsuarioController",
+    "Method": "RecUsuario",
+    "RelativePath": "Usuario/RecUsuario",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Entidades.Models.Usuario, Entidades, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "LoteriaWebApi.Controllers.UsuarioController",
+    "Method": "RecUsuarioXId",
+    "RelativePath": "Usuario/RecUsuarioXId",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pUsuario",
+        "Type": "Entidades.Models.Usuario",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LoteriaWebApi.Controllers.UsuarioController",
+    "Method": "ValidarUsuarioLogin",
+    "RelativePath": "Usuario/ValidarUsuarioLogin",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pUsuario",
+        "Type": "Entidades.Models.Usuario",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

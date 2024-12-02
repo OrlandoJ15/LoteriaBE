@@ -18,15 +18,15 @@ namespace LoteriaWebApi
             builder.WebHost.ConfigureKestrel(options =>
             {
                 // Configuración para habilitar HTTP en el puerto 80 (si lo deseas)
-                options.ListenAnyIP(80); // HTTP - Puerto 80
+                //options.ListenAnyIP(80); // HTTP - Puerto 80
 
                 // Configuración para habilitar HTTPS en el puerto 443
-                options.ListenAnyIP(443, listenOptions =>
+                /*options.ListenAnyIP(443, listenOptions =>
                 {
                     // Si tienes un certificado .pfx, puedes configurar el certificado SSL aquí
                     // Puedes usar un certificado autofirmado durante el desarrollo
                     listenOptions.UseHttps("path/to/certificate.pfx", "yourCertificatePassword"); // Configura el certificado SSL
-                });
+                });*/
             });
 
 
@@ -41,7 +41,8 @@ namespace LoteriaWebApi
 
                     policy.WithOrigins("http://localhost:5173", "https://multiplicados.net")
                           .AllowAnyHeader()
-                          .AllowAnyMethod();
+                          .AllowAnyMethod()
+                          .AllowCredentials();
                 });
             });
 
@@ -49,8 +50,8 @@ namespace LoteriaWebApi
             var keyVaultUrl = builder.Configuration["AzureKeyVault:VaultUrl"];  //Url del key Vault
             var secretClient = new SecretClient(new Uri(keyVaultUrl), new DefaultAzureCredential());         
             var jwtSecretKey = secretClient.GetSecret("JwtKey").Value.Value; // Obtiene el secreto desde Key Vault
-            var issuer = builder.Configuration["Jwt:Issuer"];
-            var audience = builder.Configuration["Jwt:Audience"];
+            var issuer = builder.Configuration["JwtI:Issuer"];
+            var audience = builder.Configuration["JwtA:Audience"];
 
             // CONFIGURACIÓN DEL JWT 
 
@@ -67,8 +68,7 @@ namespace LoteriaWebApi
                         ValidateIssuerSigningKey = true,
                         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtSecretKey)),
                         ValidIssuer = issuer,  // Si usas un issuer válido, añádelo aquí
-                        ValidAudience = audience, // Lo mismo para el audience
-                        ClockSkew = TimeSpan.Zero,
+                        ValidAudience = audience // Lo mismo para el audience
                     };
                     
                     /*options.Events = new JwtBearerEvents
@@ -114,6 +114,12 @@ namespace LoteriaWebApi
             builder.Services.AddControllers();
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+
+            builder.Services.AddHttpsRedirection(options =>
+            {
+                options.HttpsPort = 443; // Redirige el tráfico HTTP al puerto 443
+            });
+
             var app = builder.Build();
 
             // Configuración del entorno de desarrollo
@@ -122,17 +128,23 @@ namespace LoteriaWebApi
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
+            else
+            {
+                app.UseHsts();
+            }
 
             app.MapHealthChecks("/api/health");
 
             app.UseCors();
 
             app.UseHttpsRedirection();
-            app.UseHsts(); //esto es para ue solo permita coneccion por https - activan el htttp transport security 
 
             // Autenticación y autorización
             app.UseAuthentication();
             app.UseAuthorization();
+
+            // Habilitar el enrutamiento de API
+            app.UseRouting();
 
             app.MapControllers();
 

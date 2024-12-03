@@ -21,6 +21,10 @@ jobs:
         with:
           dotnet-version: '8.x'
 
+      # Restaurar las dependencias de NuGet
+      - name: Restore dependencies
+        run: dotnet restore  # Este paso restaurará las dependencias      
+
       - name: Build with dotnet
         run: dotnet build --configuration Release
 

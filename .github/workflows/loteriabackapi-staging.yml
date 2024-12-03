@@ -1,14 +1,15 @@
-name: Build and deploy .NET Core application to Web App LoteriaBackApi
+name: Build and deploy .NET Core application to Web App loteriabackapi
 on:
   push:
     branches:
     - Dev
 env:
-  AZURE_WEBAPP_NAME: LoteriaBackApi
+  AZURE_WEBAPP_NAME: loteriabackapi
   AZURE_WEBAPP_PACKAGE_PATH: LoteriaWebApi/publish
   CONFIGURATION: Release
   DOTNET_CORE_VERSION: 8.0.x
   WORKING_DIRECTORY: LoteriaWebApi
+  AZURE_WEBAPP_SLOT_NAME: staging
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -44,5 +45,6 @@ jobs:
       uses: azure/webapps-deploy@v2
       with:
         app-name: ${{ env.AZURE_WEBAPP_NAME }}
-        publish-profile: ${{ secrets.LoteriaBackApi_F930 }}
+        publish-profile: ${{ secrets.loteriabackapi_staging_7B22 }}
         package: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
+        slot-name: ${{ env.AZURE_WEBAPP_SLOT_NAME }}

@@ -80,7 +80,7 @@ namespace AccesoDatos.DBContext
 
                 entity.Property(e => e.IdSorteo).HasColumnName("idSorteo");
 
-                entity.Property(e => e.IdUsuario).HasColumnName("idUsuario");
+                entity.Property(e => e.Id).HasColumnName("id");
 
                 entity.Property(e => e.Monto)
                     .HasColumnType("decimal(18, 2)")

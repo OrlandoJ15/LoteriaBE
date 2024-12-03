@@ -65,7 +65,7 @@ namespace AccesoDatos.Implementacion
                 using (LoteriaContext lobjCnn = new LoteriaContext(_configuration))
                 {
                     var lCmd = gObjSqlCommandAbrirCerrar.CrearComando(lobjCnn, "RecUsuarioXIdPA");
-                    lCmd.Parameters.Add(new SqlParameter("@idUsuario", pIdUsuario));
+                    lCmd.Parameters.Add(new SqlParameter("@id", pIdUsuario));
                     var lReader = lCmd.ExecuteReader();
 
                     // Si hay filas en el reader, creamos un nuevo objeto Usuario
@@ -73,7 +73,7 @@ namespace AccesoDatos.Implementacion
                     {
                         lObjRespuesta = new Usuario
                         {
-                            Id = Convert.ToInt32(lReader["idUsuario"]),
+                            Id = Convert.ToInt32(lReader["id"]),
                             Nombre = lReader["nombre"]?.ToString() ?? string.Empty,
                             NombreUsuario = lReader["nombreUsuario"]?.ToString() ?? string.Empty,
                             Rol = Convert.ToInt32(lReader["rol"]),
@@ -121,11 +121,11 @@ namespace AccesoDatos.Implementacion
 
                     if (procedimientoAlmacenado == "delUsuarioPA")
                     {
-                        lCmd.Parameters.Add(new SqlParameter("@idUsuario", pUsuario.Id));
+                        lCmd.Parameters.Add(new SqlParameter("@id", pUsuario.Id));
                     }
                     else
                     {
-                        lCmd.Parameters.Add(new SqlParameter("@idUsuario", pUsuario.Id));
+                        lCmd.Parameters.Add(new SqlParameter("@id", pUsuario.Id));
                         lCmd.Parameters.Add(new SqlParameter("@nombre", pUsuario.Nombre));
                         lCmd.Parameters.Add(new SqlParameter("@nombreUsuario", pUsuario.NombreUsuario));
                         lCmd.Parameters.Add(new SqlParameter("@rol", pUsuario.Rol));
@@ -163,7 +163,7 @@ namespace AccesoDatos.Implementacion
                 using (LoteriaContext lobjCnn = new LoteriaContext(_configuration))
                 {
                     var lCmd = gObjSqlCommandAbrirCerrar.CrearComando(lobjCnn, "ValidarLoginUsuarioPA");
-                    lCmd.Parameters.Add(new SqlParameter("@idUsuario", pId));
+                    lCmd.Parameters.Add(new SqlParameter("@id", pId));
                     lCmd.Parameters.Add(new SqlParameter("@clave", pClave));
 
                     using (var lReader = lCmd.ExecuteReader())
@@ -202,7 +202,7 @@ namespace AccesoDatos.Implementacion
                 using (LoteriaContext lobjCnn = new LoteriaContext(_configuration))
                 {
                     var lCmd = gObjSqlCommandAbrirCerrar.CrearComando(lobjCnn, "ModClaveUsuarioPA");
-                    lCmd.Parameters.Add(new SqlParameter("@idUsuario", pId));
+                    lCmd.Parameters.Add(new SqlParameter("@id", pId));
                     lCmd.Parameters.Add(new SqlParameter("@clave", pClave));
 
                     if (lCmd.ExecuteNonQuery() > 0)

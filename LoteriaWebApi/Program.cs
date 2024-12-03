@@ -118,16 +118,24 @@ namespace LoteriaWebApi
             // Configuración de controladores y servicios
             builder.Services.AddControllers();
             builder.Services.AddEndpointsApiExplorer();
-            builder.Services.AddSwaggerGen();
 
             builder.Services.AddHttpsRedirection(options =>
             {
                 options.HttpsPort = 443; // Redirige el tráfico HTTP al puerto 443
             });
 
+            builder.Services.AddSwaggerGen(options =>
+            {
+                options.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo
+                {
+                    Title = "Loteria API",
+                    Version = "v1"
+                });
+            });
+
             var app = builder.Build();
 
-            app.UseSwagger();
+            /*app.UseSwagger();
             app.UseSwaggerUI(options =>
             {
                 options.SwaggerEndpoint("/swagger/v1/swagger.json", "Web API V1");
@@ -136,7 +144,16 @@ namespace LoteriaWebApi
                 else
                     app.UseHsts();
             }
-            );
+            );*/
+
+            if (app.Environment.IsDevelopment())
+            {
+                app.UseSwagger(); // Generar el archivo swagger.json
+                app.UseSwaggerUI(c =>
+                {
+                    c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
+                });
+            }
 
             app.MapHealthChecks("/api/health");
 

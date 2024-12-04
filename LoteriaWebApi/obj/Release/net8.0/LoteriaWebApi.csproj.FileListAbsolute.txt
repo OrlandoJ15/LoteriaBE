@@ -1,3 +1,11 @@
+C:\Loteria\Back-End\LoteriaBE\LoteriaWebApi\obj\Release\net8.0\LoteriaWebApi.csproj.AssemblyReference.cache
+C:\Loteria\Back-End\LoteriaBE\LoteriaWebApi\obj\Release\net8.0\LoteriaWebApi.GeneratedMSBuildEditorConfig.editorconfig
+C:\Loteria\Back-End\LoteriaBE\LoteriaWebApi\obj\Release\net8.0\LoteriaWebApi.AssemblyInfoInputs.cache
+C:\Loteria\Back-End\LoteriaBE\LoteriaWebApi\obj\Release\net8.0\LoteriaWebApi.AssemblyInfo.cs
+C:\Loteria\Back-End\LoteriaBE\LoteriaWebApi\obj\Release\net8.0\LoteriaWebApi.csproj.CoreCompileInputs.cache
+C:\Loteria\Back-End\LoteriaBE\LoteriaWebApi\obj\Release\net8.0\LoteriaWebApi.MvcApplicationPartsAssemblyInfo.cs
+C:\Loteria\Back-End\LoteriaBE\LoteriaWebApi\obj\Release\net8.0\LoteriaWebApi.MvcApplicationPartsAssemblyInfo.cache
+C:\Loteria\Back-End\LoteriaBE\LoteriaWebApi\obj\Release\net8.0\LoteriaWebApi.sourcelink.json
 C:\Loteria\Back-End\LoteriaBE\LoteriaWebApi\bin\Release\net8.0\appsettings.Development.json
 C:\Loteria\Back-End\LoteriaBE\LoteriaWebApi\bin\Release\net8.0\appsettings.json
 C:\Loteria\Back-End\LoteriaBE\LoteriaWebApi\bin\Release\net8.0\LoteriaWebApi.exe
@@ -6,9 +14,11 @@ C:\Loteria\Back-End\LoteriaBE\LoteriaWebApi\bin\Release\net8.0\LoteriaWebApi.run
 C:\Loteria\Back-End\LoteriaBE\LoteriaWebApi\bin\Release\net8.0\LoteriaWebApi.dll
 C:\Loteria\Back-End\LoteriaBE\LoteriaWebApi\bin\Release\net8.0\LoteriaWebApi.pdb
 C:\Loteria\Back-End\LoteriaBE\LoteriaWebApi\bin\Release\net8.0\Azure.Core.dll
+C:\Loteria\Back-End\LoteriaBE\LoteriaWebApi\bin\Release\net8.0\Azure.Extensions.AspNetCore.Configuration.Secrets.dll
 C:\Loteria\Back-End\LoteriaBE\LoteriaWebApi\bin\Release\net8.0\Azure.Identity.dll
 C:\Loteria\Back-End\LoteriaBE\LoteriaWebApi\bin\Release\net8.0\Azure.Security.KeyVault.Secrets.dll
 C:\Loteria\Back-End\LoteriaBE\LoteriaWebApi\bin\Release\net8.0\Humanizer.dll
+C:\Loteria\Back-End\LoteriaBE\LoteriaWebApi\bin\Release\net8.0\jose-jwt.dll
 C:\Loteria\Back-End\LoteriaBE\LoteriaWebApi\bin\Release\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Loteria\Back-End\LoteriaBE\LoteriaWebApi\bin\Release\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Loteria\Back-End\LoteriaBE\LoteriaWebApi\bin\Release\net8.0\Microsoft.Data.SqlClient.dll
@@ -18,6 +28,7 @@ C:\Loteria\Back-End\LoteriaBE\LoteriaWebApi\bin\Release\net8.0\Microsoft.EntityF
 C:\Loteria\Back-End\LoteriaBE\LoteriaWebApi\bin\Release\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
 C:\Loteria\Back-End\LoteriaBE\LoteriaWebApi\bin\Release\net8.0\Microsoft.EntityFrameworkCore.SqlServer.dll
 C:\Loteria\Back-End\LoteriaBE\LoteriaWebApi\bin\Release\net8.0\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Loteria\Back-End\LoteriaBE\LoteriaWebApi\bin\Release\net8.0\Microsoft.Extensions.DependencyInjection.dll
 C:\Loteria\Back-End\LoteriaBE\LoteriaWebApi\bin\Release\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 C:\Loteria\Back-End\LoteriaBE\LoteriaWebApi\bin\Release\net8.0\Microsoft.Extensions.DependencyModel.dll
 C:\Loteria\Back-End\LoteriaBE\LoteriaWebApi\bin\Release\net8.0\Microsoft.Extensions.Diagnostics.Abstractions.dll
@@ -25,6 +36,7 @@ C:\Loteria\Back-End\LoteriaBE\LoteriaWebApi\bin\Release\net8.0\Microsoft.Extensi
 C:\Loteria\Back-End\LoteriaBE\LoteriaWebApi\bin\Release\net8.0\Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions.dll
 C:\Loteria\Back-End\LoteriaBE\LoteriaWebApi\bin\Release\net8.0\Microsoft.Extensions.FileProviders.Abstractions.dll
 C:\Loteria\Back-End\LoteriaBE\LoteriaWebApi\bin\Release\net8.0\Microsoft.Extensions.Hosting.Abstractions.dll
+C:\Loteria\Back-End\LoteriaBE\LoteriaWebApi\bin\Release\net8.0\Microsoft.Extensions.Logging.dll
 C:\Loteria\Back-End\LoteriaBE\LoteriaWebApi\bin\Release\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
 C:\Loteria\Back-End\LoteriaBE\LoteriaWebApi\bin\Release\net8.0\Microsoft.Extensions.Options.dll
 C:\Loteria\Back-End\LoteriaBE\LoteriaWebApi\bin\Release\net8.0\Microsoft.Extensions.Primitives.dll
@@ -81,14 +93,6 @@ C:\Loteria\Back-End\LoteriaBE\LoteriaWebApi\bin\Release\net8.0\Entidades.pdb
 C:\Loteria\Back-End\LoteriaBE\LoteriaWebApi\bin\Release\net8.0\LogicaNegocio.pdb
 C:\Loteria\Back-End\LoteriaBE\LoteriaWebApi\bin\Release\net8.0\MetodosComunes.pdb
 C:\Loteria\Back-End\LoteriaBE\LoteriaWebApi\bin\Release\net8.0\AccesoDatos.pdb
-C:\Loteria\Back-End\LoteriaBE\LoteriaWebApi\obj\Release\net8.0\LoteriaWebApi.csproj.AssemblyReference.cache
-C:\Loteria\Back-End\LoteriaBE\LoteriaWebApi\obj\Release\net8.0\LoteriaWebApi.GeneratedMSBuildEditorConfig.editorconfig
-C:\Loteria\Back-End\LoteriaBE\LoteriaWebApi\obj\Release\net8.0\LoteriaWebApi.AssemblyInfoInputs.cache
-C:\Loteria\Back-End\LoteriaBE\LoteriaWebApi\obj\Release\net8.0\LoteriaWebApi.AssemblyInfo.cs
-C:\Loteria\Back-End\LoteriaBE\LoteriaWebApi\obj\Release\net8.0\LoteriaWebApi.csproj.CoreCompileInputs.cache
-C:\Loteria\Back-End\LoteriaBE\LoteriaWebApi\obj\Release\net8.0\LoteriaWebApi.MvcApplicationPartsAssemblyInfo.cs
-C:\Loteria\Back-End\LoteriaBE\LoteriaWebApi\obj\Release\net8.0\LoteriaWebApi.MvcApplicationPartsAssemblyInfo.cache
-C:\Loteria\Back-End\LoteriaBE\LoteriaWebApi\obj\Release\net8.0\LoteriaWebApi.sourcelink.json
 C:\Loteria\Back-End\LoteriaBE\LoteriaWebApi\obj\Release\net8.0\staticwebassets.build.json
 C:\Loteria\Back-End\LoteriaBE\LoteriaWebApi\obj\Release\net8.0\staticwebassets.development.json
 C:\Loteria\Back-End\LoteriaBE\LoteriaWebApi\obj\Release\net8.0\staticwebassets\msbuild.LoteriaWebApi.Microsoft.AspNetCore.StaticWebAssets.props

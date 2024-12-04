@@ -5,7 +5,6 @@ using Microsoft.EntityFrameworkCore.Metadata;
 using AccesoDatos;
 using Microsoft.Extensions.Configuration;
 using Entidades.Models;
-using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace AccesoDatos.DBContext

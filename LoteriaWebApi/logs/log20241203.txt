@@ -1,0 +1,668 @@
+2024-12-03 00:12:26.184 -06:00 [INF] Recuperando la lista de usuarios
+2024-12-03 00:12:28.829 -06:00 [INF] Se recuperaron 0 usuarios
+2024-12-03 00:13:04.213 -06:00 [INF] Recuperando la lista de usuarios
+2024-12-03 00:13:04.301 -06:00 [INF] Se recuperaron 0 usuarios
+2024-12-03 00:13:26.544 -06:00 [INF] Recuperando la lista de usuarios
+2024-12-03 00:13:26.679 -06:00 [INF] Se recuperaron 0 usuarios
+2024-12-03 00:19:17.724 -06:00 [INF] Recuperando la lista de usuarios
+2024-12-03 00:19:19.539 -06:00 [INF] Se recuperaron 1 usuarios
+2024-12-03 00:20:17.940 -06:00 [INF] Recuperando la lista de usuarios
+2024-12-03 00:20:18.012 -06:00 [INF] Se recuperaron 1 usuarios
+2024-12-03 00:21:19.328 -06:00 [INF] Insertando nuevo usuario: Otro
+2024-12-03 00:21:19.441 -06:00 [INF] Usuario Otro insertado exitosamente
+2024-12-03 00:21:38.658 -06:00 [INF] Insertando nuevo usuario: Otro2
+2024-12-03 00:21:38.661 -06:00 [INF] Usuario Otro2 insertado exitosamente
+2024-12-03 00:22:38.613 -06:00 [INF] Recuperando la lista de usuarios
+2024-12-03 00:22:38.622 -06:00 [INF] Se recuperaron 3 usuarios
+2024-12-03 00:52:10.319 -06:00 [INF] Recuperando la lista de usuarios
+2024-12-03 00:52:13.816 -06:00 [INF] Se recuperaron 3 usuarios
+2024-12-03 01:00:24.931 -06:00 [INF] Recuperando la lista de usuarios
+2024-12-03 01:00:28.441 -06:00 [INF] Se recuperaron 3 usuarios
+2024-12-03 01:00:47.423 -06:00 [INF] Recuperando la lista de usuarios
+2024-12-03 01:00:47.464 -06:00 [INF] Se recuperaron 3 usuarios
+2024-12-03 01:00:53.474 -06:00 [INF] Intentando loguear al usuario: Otro2
+2024-12-03 01:00:53.705 -06:00 [INF] Generando token JWT para el usuario: Otro2
+2024-12-03 01:00:59.187 -06:00 [INF] Token JWT generado exitosamente
+2024-12-03 01:00:59.235 -06:00 [INF] Usuario Otro2 autenticado exitosamente
+2024-12-03 01:02:04.977 -06:00 [INF] Intentando loguear al usuario: Otro2
+2024-12-03 01:02:08.857 -06:00 [INF] Generando token JWT para el usuario: Otro2
+2024-12-03 01:02:17.512 -06:00 [INF] Token JWT generado exitosamente
+2024-12-03 01:02:17.544 -06:00 [INF] Usuario Otro2 autenticado exitosamente
+2024-12-03 01:05:19.495 -06:00 [INF] Intentando loguear al usuario: Otro2
+2024-12-03 01:05:23.038 -06:00 [INF] Generando token JWT para el usuario: Otro2
+2024-12-03 01:05:36.823 -06:00 [INF] Token JWT generado exitosamente
+2024-12-03 01:05:36.859 -06:00 [INF] Usuario Otro2 autenticado exitosamente
+2024-12-03 01:07:30.096 -06:00 [INF] Intentando loguear al usuario: Otro2
+2024-12-03 01:07:42.966 -06:00 [INF] Generando token JWT para el usuario: Otro2
+2024-12-03 01:09:43.008 -06:00 [INF] Intentando loguear al usuario: Otro2
+2024-12-03 01:09:58.744 -06:00 [INF] Generando token JWT para el usuario: Otro2
+2024-12-03 01:12:03.544 -06:00 [INF] Token JWT generado exitosamente
+2024-12-03 01:12:03.755 -06:00 [INF] Usuario Otro2 autenticado exitosamente
+2024-12-03 01:13:52.917 -06:00 [INF] Intentando loguear al usuario: Otro2
+2024-12-03 01:14:00.222 -06:00 [INF] Generando token JWT para el usuario: Otro2
+2024-12-03 01:17:40.309 -06:00 [INF] Intentando loguear al usuario: Otro2
+2024-12-03 01:17:51.662 -06:00 [INF] Generando token JWT para el usuario: Otro2
+2024-12-03 01:18:49.097 -06:00 [INF] Token JWT generado exitosamente
+2024-12-03 01:18:49.420 -06:00 [INF] Usuario Otro2 autenticado exitosamente
+2024-12-03 01:20:51.448 -06:00 [INF] Intentando loguear al usuario: Otro2
+2024-12-03 01:20:56.678 -06:00 [INF] Generando token JWT para el usuario: Otro2
+2024-12-03 01:22:30.559 -06:00 [INF] Token JWT generado exitosamente
+2024-12-03 01:22:36.628 -06:00 [INF] Usuario Otro2 autenticado exitosamente
+2024-12-03 01:26:51.957 -06:00 [INF] Intentando loguear al usuario: Otro2
+2024-12-03 01:27:03.141 -06:00 [INF] Generando token JWT para el usuario: Otro2
+2024-12-03 01:30:45.741 -06:00 [INF] Intentando loguear al usuario: Otro2
+2024-12-03 01:31:00.720 -06:00 [INF] Generando token JWT para el usuario: Otro2
+2024-12-03 01:31:54.794 -06:00 [INF] Token JWT generado exitosamente
+2024-12-03 01:31:54.919 -06:00 [INF] Usuario Otro2 autenticado exitosamente
+2024-12-03 01:43:40.078 -06:00 [INF] Intentando loguear al usuario: Otro2
+2024-12-03 01:43:47.300 -06:00 [INF] Generando token JWT para el usuario: Otro2
+2024-12-03 01:44:07.640 -06:00 [INF] Token JWT generado exitosamente
+2024-12-03 01:44:12.100 -06:00 [INF] Usuario Otro2 autenticado exitosamente
+2024-12-03 01:45:40.904 -06:00 [INF] Intentando loguear al usuario: Otro2
+2024-12-03 01:45:59.423 -06:00 [INF] Generando token JWT para el usuario: Otro2
+2024-12-03 01:46:05.808 -06:00 [INF] Token JWT generado exitosamente
+2024-12-03 01:46:05.900 -06:00 [INF] Usuario Otro2 autenticado exitosamente
+2024-12-03 01:47:00.908 -06:00 [INF] Intentando loguear al usuario: Otro2
+2024-12-03 01:47:07.780 -06:00 [INF] Generando token JWT para el usuario: Otro2
+2024-12-03 01:47:32.597 -06:00 [INF] Token JWT generado exitosamente
+2024-12-03 01:47:35.520 -06:00 [INF] Usuario Otro2 autenticado exitosamente
+2024-12-03 01:48:55.830 -06:00 [INF] Intentando loguear al usuario: Otro2
+2024-12-03 01:49:03.067 -06:00 [INF] Generando token JWT para el usuario: Otro2
+2024-12-03 01:49:08.922 -06:00 [INF] Token JWT generado exitosamente
+2024-12-03 01:49:08.944 -06:00 [INF] Usuario Otro2 autenticado exitosamente
+2024-12-03 01:58:41.775 -06:00 [INF] Intentando loguear al usuario: Otro2
+2024-12-03 01:58:49.388 -06:00 [INF] Generando token JWT para el usuario: Otro2
+2024-12-03 01:58:55.246 -06:00 [INF] Token JWT generado exitosamente
+2024-12-03 01:58:55.270 -06:00 [INF] Usuario Otro2 autenticado exitosamente
+2024-12-03 02:27:26.236 -06:00 [INF] Intentando loguear al usuario: Otro2
+2024-12-03 02:27:28.157 -06:00 [INF] Generando token JWT para el usuario: Otro2
+2024-12-03 02:27:33.839 -06:00 [INF] Token JWT generado exitosamente
+2024-12-03 02:27:33.864 -06:00 [INF] Usuario Otro2 autenticado exitosamente
+2024-12-03 02:57:38.956 -06:00 [INF] Intentando loguear al usuario: Otro2
+2024-12-03 02:57:41.075 -06:00 [INF] Generando token JWT para el usuario: Otro2
+2024-12-03 02:57:46.411 -06:00 [INF] Token JWT generado exitosamente
+2024-12-03 02:57:46.435 -06:00 [INF] Usuario Otro2 autenticado exitosamente
+2024-12-03 03:22:11.667 -06:00 [INF] Intentando loguear al usuario: Otro2
+2024-12-03 03:22:13.692 -06:00 [INF] Generando token JWT para el usuario: Otro2
+2024-12-03 03:22:20.726 -06:00 [INF] Token JWT generado exitosamente
+2024-12-03 03:22:20.753 -06:00 [INF] Usuario Otro2 autenticado exitosamente
+2024-12-03 03:33:57.549 -06:00 [INF] Intentando loguear al usuario: Otro2
+2024-12-03 03:34:02.602 -06:00 [INF] Generando token JWT para el usuario: Otro2
+2024-12-03 03:34:18.499 -06:00 [INF] Token JWT generado exitosamente
+2024-12-03 03:34:18.567 -06:00 [INF] Usuario Otro2 autenticado exitosamente
+2024-12-03 03:38:33.533 -06:00 [INF] Intentando loguear al usuario: Otro2
+2024-12-03 03:38:35.500 -06:00 [INF] Generando token JWT para el usuario: Otro2
+2024-12-03 03:38:41.151 -06:00 [INF] Token JWT generado exitosamente
+2024-12-03 03:38:41.179 -06:00 [INF] Usuario Otro2 autenticado exitosamente
+2024-12-03 03:51:12.359 -06:00 [INF] Intentando loguear al usuario: Otro2
+2024-12-03 03:51:12.791 -06:00 [INF] Generando token JWT para el usuario: Otro2
+2024-12-03 03:51:22.083 -06:00 [INF] Token JWT generado exitosamente
+2024-12-03 03:51:22.115 -06:00 [INF] Usuario Otro2 autenticado exitosamente
+2024-12-03 04:00:51.106 -06:00 [INF] Intentando loguear al usuario: Otro2
+2024-12-03 04:00:51.483 -06:00 [INF] Generando token JWT para el usuario: Otro2
+2024-12-03 04:00:59.456 -06:00 [INF] Token JWT generado exitosamente
+2024-12-03 04:00:59.466 -06:00 [INF] Usuario Otro2 autenticado exitosamente
+2024-12-03 04:02:49.813 -06:00 [INF] Intentando loguear al usuario: Otro2
+2024-12-03 04:02:50.039 -06:00 [INF] Generando token JWT para el usuario: Otro2
+2024-12-03 04:02:56.683 -06:00 [INF] Token JWT generado exitosamente
+2024-12-03 04:02:56.735 -06:00 [INF] Usuario Otro2 autenticado exitosamente
+2024-12-03 04:07:38.846 -06:00 [INF] Intentando loguear al usuario: Otro2
+2024-12-03 04:07:39.125 -06:00 [INF] Generando token JWT para el usuario: Otro2
+2024-12-03 04:07:44.954 -06:00 [INF] Token JWT generado exitosamente
+2024-12-03 04:07:44.961 -06:00 [INF] Usuario Otro2 autenticado exitosamente
+2024-12-03 04:18:05.703 -06:00 [INF] Intentando loguear al usuario: Otro2
+2024-12-03 04:18:06.063 -06:00 [INF] Generando token JWT para el usuario: Otro2
+2024-12-03 04:18:13.394 -06:00 [INF] Token JWT generado exitosamente
+2024-12-03 04:18:13.413 -06:00 [INF] Usuario Otro2 autenticado exitosamente
+2024-12-03 04:22:09.349 -06:00 [INF] Intentando loguear al usuario: Otro2
+2024-12-03 04:22:09.437 -06:00 [INF] Generando token JWT para el usuario: Otro2
+2024-12-03 04:22:14.774 -06:00 [INF] Token JWT generado exitosamente
+2024-12-03 04:22:14.776 -06:00 [INF] Usuario Otro2 autenticado exitosamente
+2024-12-03 04:28:53.464 -06:00 [INF] Intentando loguear al usuario: Otro2
+2024-12-03 04:28:56.509 -06:00 [INF] Generando token JWT para el usuario: Otro2
+2024-12-03 04:29:02.026 -06:00 [INF] Token JWT generado exitosamente
+2024-12-03 04:29:02.070 -06:00 [INF] Usuario Otro2 autenticado exitosamente
+2024-12-03 04:36:53.153 -06:00 [INF] Intentando loguear al usuario: Otro2
+2024-12-03 04:36:53.493 -06:00 [INF] Generando token JWT para el usuario: Otro2
+2024-12-03 04:37:01.080 -06:00 [INF] Token JWT generado exitosamente
+2024-12-03 04:37:01.100 -06:00 [INF] Usuario Otro2 autenticado exitosamente
+2024-12-03 04:41:00.496 -06:00 [INF] Intentando loguear al usuario: Otro2
+2024-12-03 04:41:03.116 -06:00 [INF] Generando token JWT para el usuario: Otro2
+2024-12-03 04:41:08.695 -06:00 [INF] Token JWT generado exitosamente
+2024-12-03 04:41:08.726 -06:00 [INF] Usuario Otro2 autenticado exitosamente
+2024-12-03 04:44:31.955 -06:00 [INF] Intentando loguear al usuario: Otro2
+2024-12-03 04:44:34.585 -06:00 [INF] Generando token JWT para el usuario: Otro2
+2024-12-03 04:44:52.875 -06:00 [INF] Token JWT generado exitosamente
+2024-12-03 04:44:53.043 -06:00 [INF] Usuario Otro2 autenticado exitosamente
+2024-12-03 04:52:31.844 -06:00 [INF] Intentando loguear al usuario: Otro2
+2024-12-03 04:52:34.424 -06:00 [INF] Generando token JWT para el usuario: Otro2
+2024-12-03 05:03:46.279 -06:00 [INF] Intentando loguear al usuario: Otro2
+2024-12-03 05:03:48.597 -06:00 [INF] Generando token JWT para el usuario: Otro2
+2024-12-03 05:04:27.432 -06:00 [INF] Token JWT generado exitosamente
+2024-12-03 05:04:27.662 -06:00 [INF] Usuario Otro2 autenticado exitosamente
+2024-12-03 05:08:09.329 -06:00 [INF] Intentando loguear al usuario: Otro2
+2024-12-03 05:08:11.376 -06:00 [INF] Generando token JWT para el usuario: Otro2
+2024-12-03 05:08:16.667 -06:00 [INF] Intentando loguear al usuario: Otro2
+2024-12-03 05:08:16.723 -06:00 [INF] Generando token JWT para el usuario: Otro2
+2024-12-03 05:08:26.248 -06:00 [INF] Token JWT generado exitosamente
+2024-12-03 05:08:27.197 -06:00 [INF] Usuario Otro2 autenticado exitosamente
+2024-12-03 05:08:50.985 -06:00 [INF] Token JWT generado exitosamente
+2024-12-03 05:08:51.137 -06:00 [INF] Usuario Otro2 autenticado exitosamente
+2024-12-03 05:09:22.239 -06:00 [ERR] Autenticación fallida: Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException
+2024-12-03 05:10:09.386 -06:00 [ERR] Autenticación fallida: Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException
+2024-12-03 05:13:57.305 -06:00 [INF] Intentando loguear al usuario: Otro2
+2024-12-03 05:13:59.924 -06:00 [INF] Generando token JWT para el usuario: Otro2
+2024-12-03 05:14:25.974 -06:00 [INF] Token JWT generado exitosamente
+2024-12-03 05:14:26.004 -06:00 [INF] Usuario Otro2 autenticado exitosamente
+2024-12-03 05:15:06.215 -06:00 [ERR] Autenticación fallida: Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException
+2024-12-03 05:16:22.143 -06:00 [ERR] Autenticación fallida: Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException
+2024-12-03 05:17:13.428 -06:00 [ERR] Autenticación fallida: Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException
+2024-12-03 05:17:37.909 -06:00 [ERR] Autenticación fallida: Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException
+2024-12-03 05:23:46.194 -06:00 [INF] Intentando loguear al usuario: Otro2
+2024-12-03 05:23:51.218 -06:00 [INF] Generando token JWT para el usuario: Otro2
+2024-12-03 05:24:04.219 -06:00 [INF] Token JWT generado exitosamente
+2024-12-03 05:24:04.303 -06:00 [INF] Usuario Otro2 autenticado exitosamente
+2024-12-03 05:24:54.596 -06:00 [INF] Intentando loguear al usuario: Otro2
+2024-12-03 05:24:54.797 -06:00 [INF] Generando token JWT para el usuario: Otro2
+2024-12-03 05:25:05.490 -06:00 [INF] Token JWT generado exitosamente
+2024-12-03 05:25:05.492 -06:00 [INF] Usuario Otro2 autenticado exitosamente
+2024-12-03 05:25:20.474 -06:00 [ERR] Error de autenticación: Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException - IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2024-12-03 05:25:20.477 -06:00 [ERR] Detalles del error:
+2024-12-03 05:25:39.365 -06:00 [ERR] Error de autenticación: Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException - IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2024-12-03 05:25:39.365 -06:00 [ERR] Detalles del error:
+2024-12-03 05:25:39.412 -06:00 [WRN] Desafío de autenticación:  - 
+2024-12-03 05:30:52.972 -06:00 [INF] Intentando loguear al usuario: Otro2
+2024-12-03 05:30:55.732 -06:00 [INF] Generando token JWT para el usuario: Otro2
+2024-12-03 05:31:01.259 -06:00 [INF] Token JWT generado exitosamente
+2024-12-03 05:31:01.309 -06:00 [INF] Usuario Otro2 autenticado exitosamente
+2024-12-03 05:31:13.956 -06:00 [ERR] Error de autenticación: Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException - IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2024-12-03 05:31:13.959 -06:00 [ERR] Detalles del error:
+2024-12-03 05:31:13.961 -06:00 [ERR] Token recibido: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MzMzOTgyNjEsImlzcyI6ImVjYmVlY2U1LTkwYTctNDFhYS1iNTExLTc2ZTY5ZDQxZTUzNCJ9.bGo7yKUSmT8durKQYUShNr7_JgByOgsWOuEo5skLBv8
+2024-12-03 05:31:13.961 -06:00 [ERR] Error de autenticación: Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException - IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2024-12-03 05:31:23.521 -06:00 [ERR] Error de autenticación: Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException - IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2024-12-03 05:31:23.521 -06:00 [ERR] Detalles del error:
+2024-12-03 05:31:23.521 -06:00 [ERR] Token recibido: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MzMzOTgyNjEsImlzcyI6ImVjYmVlY2U1LTkwYTctNDFhYS1iNTExLTc2ZTY5ZDQxZTUzNCJ9.bGo7yKUSmT8durKQYUShNr7_JgByOgsWOuEo5skLBv8
+2024-12-03 05:31:23.521 -06:00 [ERR] Error de autenticación: Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException - IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2024-12-03 05:31:23.550 -06:00 [WRN] Desafío de autenticación:  - 
+2024-12-03 05:40:18.472 -06:00 [INF] Intentando loguear al usuario: Otro2
+2024-12-03 05:40:21.296 -06:00 [INF] Generando token JWT para el usuario: Otro2
+2024-12-03 05:40:26.737 -06:00 [INF] Token JWT generado exitosamente
+2024-12-03 05:40:26.784 -06:00 [INF] Usuario Otro2 autenticado exitosamente
+2024-12-03 05:40:44.979 -06:00 [ERR] Error de autenticación: Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException - IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2024-12-03 05:40:44.981 -06:00 [ERR] Detalles del error:
+2024-12-03 05:40:44.982 -06:00 [ERR] Token recibido: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MzMzOTg4MjYsImlzcyI6ImVjYmVlY2U1LTkwYTctNDFhYS1iNTExLTc2ZTY5ZDQxZTUzNCJ9.Icb6Vg-_0EVlRzy4hTHMuQCLYIFv3q0Kz6bvAerPMQU
+2024-12-03 05:40:44.983 -06:00 [ERR] Error de autenticación: Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException - IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2024-12-03 05:40:56.685 -06:00 [ERR] Error de autenticación: Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException - IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2024-12-03 05:40:56.685 -06:00 [ERR] Detalles del error:
+2024-12-03 05:40:56.685 -06:00 [ERR] Token recibido: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MzMzOTg4MjYsImlzcyI6ImVjYmVlY2U1LTkwYTctNDFhYS1iNTExLTc2ZTY5ZDQxZTUzNCJ9.Icb6Vg-_0EVlRzy4hTHMuQCLYIFv3q0Kz6bvAerPMQU
+2024-12-03 05:40:56.685 -06:00 [ERR] Error de autenticación: Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException - IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2024-12-03 05:40:56.706 -06:00 [WRN] Desafío de autenticación:  - 
+2024-12-03 06:05:34.376 -06:00 [ERR] Error al desencriptar el token: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+2024-12-03 06:09:24.300 -06:00 [ERR] Error al desencriptar el token: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+2024-12-03 06:10:17.865 -06:00 [ERR] Error al desencriptar el token: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+2024-12-03 06:10:19.135 -06:00 [INF] Intentando loguear al usuario: Otro2
+2024-12-03 06:10:22.660 -06:00 [INF] Generando token JWT para el usuario: Otro2
+2024-12-03 06:10:27.908 -06:00 [INF] Token JWT generado exitosamente
+2024-12-03 06:10:27.956 -06:00 [INF] Usuario Otro2 autenticado exitosamente
+2024-12-03 06:10:54.601 -06:00 [ERR] Error al desencriptar el token: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+2024-12-03 06:10:54.689 -06:00 [ERR] Error de autenticación: Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException - IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2024-12-03 06:11:04.925 -06:00 [ERR] Error al desencriptar el token: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+2024-12-03 06:11:04.966 -06:00 [ERR] Error de autenticación: Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException - IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2024-12-03 06:11:04.999 -06:00 [WRN] Desafío de autenticación:  - 
+2024-12-03 06:19:12.460 -06:00 [ERR] Error al desencriptar el token: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+2024-12-03 06:19:25.846 -06:00 [ERR] Error al desencriptar el token: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+2024-12-03 06:19:48.608 -06:00 [ERR] Error al desencriptar el token: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+2024-12-03 06:19:48.815 -06:00 [ERR] Error de autenticación: Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException - IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2024-12-03 06:20:02.543 -06:00 [ERR] Error al desencriptar el token: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+2024-12-03 06:20:02.590 -06:00 [ERR] Error de autenticación: Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException - IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2024-12-03 06:20:02.606 -06:00 [WRN] Desafío de autenticación:  - 
+2024-12-03 06:51:40.290 -06:00 [ERR] Error de autenticación: Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException - IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2024-12-03 06:51:49.962 -06:00 [ERR] Error de autenticación: Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException - IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2024-12-03 06:51:49.996 -06:00 [WRN] Desafío de autenticación:  - 
+2024-12-03 06:57:59.156 -06:00 [ERR] Error de autenticación: Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException - IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2024-12-03 06:58:11.416 -06:00 [ERR] Error de autenticación: Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException - IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2024-12-03 06:58:11.432 -06:00 [WRN] Desafío de autenticación:  - 
+2024-12-03 07:24:16.606 -06:00 [ERR]  PROGRAM Error al desencriptar el token: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+2024-12-03 07:24:30.070 -06:00 [ERR]  PROGRAM Error al desencriptar el token: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+2024-12-03 07:24:30.264 -06:00 [INF] Intentando loguear al usuario: Otro2
+2024-12-03 07:24:31.767 -06:00 [INF] Generando token JWT para el usuario: Otro2
+2024-12-03 07:24:38.216 -06:00 [INF] Token JWT generado exitosamente
+2024-12-03 07:24:38.426 -06:00 [INF] Usuario Otro2 autenticado exitosamente
+2024-12-03 07:24:57.546 -06:00 [ERR]  PROGRAM Error al desencriptar el token: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+2024-12-03 07:24:57.587 -06:00 [ERR] PROGRAM Error de autenticación: Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException - IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2024-12-03 07:25:06.304 -06:00 [ERR]  PROGRAM Error al desencriptar el token: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+2024-12-03 07:25:06.339 -06:00 [ERR] PROGRAM Error de autenticación: Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException - IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2024-12-03 07:25:06.351 -06:00 [WRN]  PROGRAMDesafío de autenticación:  - 
+2024-12-03 07:36:59.798 -06:00 [ERR]  PROGRAM Error al desencriptar el token: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+2024-12-03 07:38:24.367 -06:00 [ERR]  PROGRAM Error al desencriptar el token: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+2024-12-03 07:38:24.684 -06:00 [INF] Intentando loguear al usuario: Otro2
+2024-12-03 07:38:27.078 -06:00 [INF] Generando token JWT para el usuario: Otro2
+2024-12-03 07:38:34.386 -06:00 [ERR] Error ocurrido: A secret with (name/id) JwtLoteriaVault was not found in this key vault. If you recently deleted this secret you may be able to recover it using the correct recovery command. For help resolving this issue, please see https://go.microsoft.com/fwlink/?linkid=2125182
+Status: 404 (Not Found)
+ErrorCode: SecretNotFound
+
+Content:
+{"error":{"code":"SecretNotFound","message":"A secret with (name/id) JwtLoteriaVault was not found in this key vault. If you recently deleted this secret you may be able to recover it using the correct recovery command. For help resolving this issue, please see https://go.microsoft.com/fwlink/?linkid=2125182"}}
+
+Headers:
+Cache-Control: no-cache
+Pragma: no-cache
+x-ms-keyvault-region: centralus
+x-ms-client-request-id: a883286f-b111-420b-99e5-8ad8f2cb89ed
+x-ms-request-id: 0010164b-c547-414c-9888-65feab198c55
+x-ms-keyvault-service-version: 1.9.1864.2
+x-ms-keyvault-network-info: conn_type=Ipv4;addr=201.191.218.185;act_addr_fam=InterNetwork;
+X-Content-Type-Options: REDACTED
+Strict-Transport-Security: REDACTED
+Date: Tue, 03 Dec 2024 13:38:33 GMT
+Content-Length: 312
+Content-Type: application/json; charset=utf-8
+Expires: -1
+
+2024-12-03 07:40:45.962 -06:00 [ERR]  PROGRAM Error al desencriptar el token: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+2024-12-03 07:40:45.962 -06:00 [ERR]  PROGRAM Error al desencriptar el token: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+2024-12-03 07:40:46.380 -06:00 [INF] Intentando loguear al usuario: Otro2
+2024-12-03 07:40:49.287 -06:00 [INF] Generando token JWT para el usuario: Otro2
+2024-12-03 07:40:54.788 -06:00 [INF] Token JWT generado exitosamente
+2024-12-03 07:40:54.836 -06:00 [INF] Usuario Otro2 autenticado exitosamente
+2024-12-03 07:44:55.917 -06:00 [ERR]  PROGRAM Error al desencriptar el token: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+2024-12-03 07:44:56.013 -06:00 [ERR] PROGRAM Error de autenticación: Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException - IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2024-12-03 07:45:03.762 -06:00 [ERR]  PROGRAM Error al desencriptar el token: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+2024-12-03 07:45:03.798 -06:00 [ERR] PROGRAM Error de autenticación: Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException - IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2024-12-03 07:45:03.821 -06:00 [WRN]  PROGRAMDesafío de autenticación:  - 
+2024-12-03 08:17:46.052 -06:00 [INF] Intentando loguear al usuario: Otro2
+2024-12-03 08:17:48.691 -06:00 [INF] Generando token JWT para el usuario: Otro2
+2024-12-03 08:17:54.045 -06:00 [ERR] Error ocurrido: A secret with (name/id) JwtLoteriaVault was not found in this key vault. If you recently deleted this secret you may be able to recover it using the correct recovery command. For help resolving this issue, please see https://go.microsoft.com/fwlink/?linkid=2125182
+Status: 404 (Not Found)
+ErrorCode: SecretNotFound
+
+Content:
+{"error":{"code":"SecretNotFound","message":"A secret with (name/id) JwtLoteriaVault was not found in this key vault. If you recently deleted this secret you may be able to recover it using the correct recovery command. For help resolving this issue, please see https://go.microsoft.com/fwlink/?linkid=2125182"}}
+
+Headers:
+Cache-Control: no-cache
+Pragma: no-cache
+x-ms-keyvault-region: centralus
+x-ms-client-request-id: b80cf351-f6d7-4f29-b195-266dad757ded
+x-ms-request-id: 0f4cf7ff-10e9-419f-b86a-712c5b471219
+x-ms-keyvault-service-version: 1.9.1864.2
+x-ms-keyvault-network-info: conn_type=Ipv4;addr=201.191.218.185;act_addr_fam=InterNetwork;
+X-Content-Type-Options: REDACTED
+Strict-Transport-Security: REDACTED
+Date: Tue, 03 Dec 2024 14:17:53 GMT
+Content-Length: 312
+Content-Type: application/json; charset=utf-8
+Expires: -1
+
+2024-12-03 08:18:55.456 -06:00 [INF] Intentando loguear al usuario: Otro2
+2024-12-03 08:18:57.256 -06:00 [INF] Generando token JWT para el usuario: Otro2
+2024-12-03 08:19:03.287 -06:00 [INF] Token JWT generado exitosamente
+2024-12-03 08:19:03.315 -06:00 [INF] Usuario Otro2 autenticado exitosamente
+2024-12-03 08:19:17.523 -06:00 [ERR] PROGRAM Error de autenticación: Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException - IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2024-12-03 08:19:28.264 -06:00 [ERR] PROGRAM Error de autenticación: Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException - IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2024-12-03 08:19:28.277 -06:00 [WRN]  PROGRAM Desafío de autenticación:  - 
+2024-12-03 08:25:55.408 -06:00 [INF] Intentando loguear al usuario: Otro2
+2024-12-03 08:25:58.332 -06:00 [INF] Generando token JWT para el usuario: Otro2
+2024-12-03 08:26:03.752 -06:00 [INF] Token JWT generado exitosamente
+2024-12-03 08:26:03.784 -06:00 [INF] Usuario Otro2 autenticado exitosamente
+2024-12-03 08:28:53.597 -06:00 [ERR] PROGRAM Error de autenticación: Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException - IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2024-12-03 08:29:10.446 -06:00 [ERR] PROGRAM Error de autenticación: Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException - IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2024-12-03 08:31:51.346 -06:00 [INF] Intentando loguear al usuario: Otro2
+2024-12-03 08:31:54.026 -06:00 [INF] Generando token JWT para el usuario: Otro2
+2024-12-03 08:32:00.263 -06:00 [INF] Token JWT generado exitosamente
+2024-12-03 08:32:00.297 -06:00 [INF] Usuario Otro2 autenticado exitosamente
+2024-12-03 08:32:23.575 -06:00 [ERR] PROGRAM Error de autenticación: Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException - IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2024-12-03 08:32:39.007 -06:00 [ERR] PROGRAM Error de autenticación: Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException - IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2024-12-03 08:33:02.749 -06:00 [ERR] PROGRAM Error de autenticación: Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException - IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2024-12-03 08:33:02.762 -06:00 [WRN]  PROGRAM Desafío de autenticación:  - 
+2024-12-03 08:41:17.125 -06:00 [INF] Intentando loguear al usuario: Otro2
+2024-12-03 08:41:19.860 -06:00 [INF] Generando token JWT para el usuario: Otro2
+2024-12-03 08:41:25.456 -06:00 [INF] Token JWT generado exitosamente
+2024-12-03 08:41:25.506 -06:00 [INF] Usuario Otro2 autenticado exitosamente
+2024-12-03 08:41:50.354 -06:00 [ERR] PROGRAM Error de autenticación: Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException - IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2024-12-03 08:42:01.147 -06:00 [ERR] PROGRAM Error de autenticación: Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException - IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2024-12-03 08:42:01.166 -06:00 [WRN]  PROGRAM Desafío de autenticación:  - 
+2024-12-03 08:58:49.136 -06:00 [ERR]  PROGRAM Error al desencriptar el token: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+2024-12-03 08:58:49.136 -06:00 [ERR]  PROGRAM Error al desencriptar el token: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+2024-12-03 08:58:49.136 -06:00 [ERR]  PROGRAM Error al desencriptar el token: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+2024-12-03 08:58:49.596 -06:00 [INF] Intentando loguear al usuario: Otro2
+2024-12-03 08:58:49.596 -06:00 [INF] Intentando loguear al usuario: Otro2
+2024-12-03 08:58:53.420 -06:00 [INF] Generando token JWT para el usuario: Otro2
+2024-12-03 08:58:53.420 -06:00 [INF] Generando token JWT para el usuario: Otro2
+2024-12-03 08:59:00.136 -06:00 [INF] Token JWT generado exitosamente
+2024-12-03 08:59:00.180 -06:00 [INF] Usuario Otro2 autenticado exitosamente
+2024-12-03 08:59:00.334 -06:00 [INF] Token JWT generado exitosamente
+2024-12-03 08:59:00.409 -06:00 [INF] Usuario Otro2 autenticado exitosamente
+2024-12-03 08:59:18.216 -06:00 [ERR]  PROGRAM Error al desencriptar el token: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+2024-12-03 08:59:18.283 -06:00 [ERR] PROGRAM Error de autenticación: Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException - IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2024-12-03 08:59:28.089 -06:00 [ERR]  PROGRAM Error al desencriptar el token: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+2024-12-03 08:59:28.140 -06:00 [ERR] PROGRAM Error de autenticación: Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException - IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2024-12-03 08:59:28.159 -06:00 [WRN]  PROGRAM Desafío de autenticación:  - 
+2024-12-03 09:15:40.480 -06:00 [ERR]  PROGRAM Error al desencriptar el token: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+2024-12-03 09:15:55.482 -06:00 [ERR]  PROGRAM Error al desencriptar el token: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+2024-12-03 09:15:55.811 -06:00 [INF] Intentando loguear al usuario: Otro2
+2024-12-03 09:15:57.973 -06:00 [INF] Generando token JWT para el usuario: Otro2
+2024-12-03 09:16:03.793 -06:00 [INF] Token JWT generado exitosamente
+2024-12-03 09:16:03.828 -06:00 [INF] Usuario Otro2 autenticado exitosamente
+2024-12-03 09:16:22.647 -06:00 [ERR]  PROGRAM Error al desencriptar el token: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+2024-12-03 09:16:22.718 -06:00 [ERR] PROGRAM Error de autenticación: Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException - IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2024-12-03 09:16:27.830 -06:00 [ERR]  PROGRAM Error al desencriptar el token: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+2024-12-03 09:16:27.878 -06:00 [ERR] PROGRAM Error de autenticación: Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException - IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2024-12-03 09:16:58.060 -06:00 [ERR]  PROGRAM Error al desencriptar el token: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+2024-12-03 09:16:58.105 -06:00 [ERR] PROGRAM Error de autenticación: Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException - IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2024-12-03 09:16:58.132 -06:00 [WRN]  PROGRAM Desafío de autenticación:  - 
+2024-12-03 09:17:23.236 -06:00 [ERR]  PROGRAM Error al desencriptar el token: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+2024-12-03 09:17:23.265 -06:00 [ERR] PROGRAM Error de autenticación: Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException - IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2024-12-03 09:17:23.269 -06:00 [WRN]  PROGRAM Desafío de autenticación:  - 
+2024-12-03 09:21:21.262 -06:00 [ERR]  PROGRAM Error al desencriptar el token: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+2024-12-03 09:21:27.978 -06:00 [ERR]  PROGRAM Error al desencriptar el token: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+2024-12-03 09:21:28.210 -06:00 [INF] Intentando loguear al usuario: Otro2
+2024-12-03 09:21:29.777 -06:00 [INF] Generando token JWT para el usuario: Otro2
+2024-12-03 09:21:36.159 -06:00 [INF] Token JWT generado exitosamente
+2024-12-03 09:21:36.174 -06:00 [INF] Usuario Otro2 autenticado exitosamente
+2024-12-03 09:21:59.300 -06:00 [ERR]  PROGRAM Error al desencriptar el token: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+2024-12-03 09:21:59.375 -06:00 [ERR] PROGRAM Error de autenticación: Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException - IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2024-12-03 09:26:53.940 -06:00 [ERR]  PROGRAM Error al desencriptar el token: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+2024-12-03 09:26:54.003 -06:00 [ERR] PROGRAM Error de autenticación: Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException - IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2024-12-03 09:26:59.123 -06:00 [ERR]  PROGRAM Error al desencriptar el token: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+2024-12-03 09:26:59.165 -06:00 [INF] Intentando loguear al usuario: Otro2
+2024-12-03 09:26:59.335 -06:00 [INF] Generando token JWT para el usuario: Otro2
+2024-12-03 09:27:06.151 -06:00 [INF] Token JWT generado exitosamente
+2024-12-03 09:27:06.170 -06:00 [INF] Usuario Otro2 autenticado exitosamente
+2024-12-03 09:55:55.705 -06:00 [ERR] PROGRAM Error al validar el token: IDX10000: The parameter 'token' cannot be a 'null' or an empty object.  (Parameter 'token')
+2024-12-03 09:56:06.969 -06:00 [ERR] PROGRAM Error al validar el token: IDX10000: The parameter 'token' cannot be a 'null' or an empty object.  (Parameter 'token')
+2024-12-03 09:56:07.868 -06:00 [INF] Intentando loguear al usuario: Otro2
+2024-12-03 09:56:09.776 -06:00 [INF] Generando token JWT para el usuario: Otro2
+2024-12-03 09:56:15.278 -06:00 [INF] Token JWT generado exitosamente
+2024-12-03 09:56:15.295 -06:00 [INF] Usuario Otro2 autenticado exitosamente
+2024-12-03 09:56:29.848 -06:00 [ERR] PROGRAM Error al validar el token: IDX10225: Lifetime validation failed. The token is missing an Expiration Time. Tokentype: 'System.IdentityModel.Tokens.Jwt.JwtSecurityToken'.
+2024-12-03 09:56:29.917 -06:00 [ERR] PROGRAM Error de autenticación: Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException - IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2024-12-03 09:56:40.632 -06:00 [ERR] PROGRAM Error al validar el token: IDX10225: Lifetime validation failed. The token is missing an Expiration Time. Tokentype: 'System.IdentityModel.Tokens.Jwt.JwtSecurityToken'.
+2024-12-03 09:56:40.662 -06:00 [ERR] PROGRAM Error de autenticación: Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException - IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2024-12-03 09:56:40.672 -06:00 [WRN]  PROGRAM Desafío de autenticación:  - 
+2024-12-03 10:19:13.725 -06:00 [ERR] PROGRAM Error al validar el token: IDX10000: The parameter 'token' cannot be a 'null' or an empty object.  (Parameter 'token')
+2024-12-03 10:19:30.998 -06:00 [ERR] PROGRAM Error al validar el token: IDX10000: The parameter 'token' cannot be a 'null' or an empty object.  (Parameter 'token')
+2024-12-03 10:19:31.192 -06:00 [INF] Intentando loguear al usuario: Otro2
+2024-12-03 10:19:32.854 -06:00 [INF] Generando token JWT para el usuario: Otro2
+2024-12-03 10:19:38.404 -06:00 [INF] Token JWT generado exitosamente
+2024-12-03 10:19:38.432 -06:00 [INF] Usuario Otro2 autenticado exitosamente
+2024-12-03 10:20:59.185 -06:00 [ERR] PROGRAM Error al validar el token: IDX10225: Lifetime validation failed. The token is missing an Expiration Time. Tokentype: 'System.IdentityModel.Tokens.Jwt.JwtSecurityToken'.
+2024-12-03 10:20:59.278 -06:00 [ERR] PROGRAM Error de autenticación: Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException - IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2024-12-03 10:21:11.183 -06:00 [ERR] PROGRAM Error al validar el token: IDX10225: Lifetime validation failed. The token is missing an Expiration Time. Tokentype: 'System.IdentityModel.Tokens.Jwt.JwtSecurityToken'.
+2024-12-03 10:21:11.238 -06:00 [ERR] PROGRAM Error de autenticación: Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException - IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2024-12-03 10:21:11.264 -06:00 [WRN]  PROGRAM Desafío de autenticación:  - 
+2024-12-03 10:23:30.808 -06:00 [ERR] PROGRAM Error al validar el token: IDX10000: The parameter 'token' cannot be a 'null' or an empty object.  (Parameter 'token')
+2024-12-03 10:23:41.175 -06:00 [ERR] PROGRAM Error al validar el token: IDX10000: The parameter 'token' cannot be a 'null' or an empty object.  (Parameter 'token')
+2024-12-03 10:23:41.403 -06:00 [INF] Intentando loguear al usuario: Otro2
+2024-12-03 10:23:46.084 -06:00 [INF] Generando token JWT para el usuario: Otro2
+2024-12-03 10:23:56.990 -06:00 [INF] Token JWT generado exitosamente
+2024-12-03 10:23:57.028 -06:00 [INF] Usuario Otro2 autenticado exitosamente
+2024-12-03 10:24:14.762 -06:00 [ERR] PROGRAM Error al validar el token: IDX10211: Unable to validate issuer. The 'issuer' parameter is null or whitespace.
+2024-12-03 10:24:14.866 -06:00 [ERR] PROGRAM Error de autenticación: Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException - IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2024-12-03 10:24:46.542 -06:00 [ERR] PROGRAM Error al validar el token: IDX10211: Unable to validate issuer. The 'issuer' parameter is null or whitespace.
+2024-12-03 10:24:46.599 -06:00 [ERR] PROGRAM Error de autenticación: Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException - IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2024-12-03 10:24:46.632 -06:00 [WRN]  PROGRAM Desafío de autenticación:  - 
+2024-12-03 10:31:49.033 -06:00 [ERR] PROGRAM Error al validar el token: IDX10000: The parameter 'token' cannot be a 'null' or an empty object.  (Parameter 'token')
+2024-12-03 10:32:04.141 -06:00 [ERR] PROGRAM Error al validar el token: IDX10000: The parameter 'token' cannot be a 'null' or an empty object.  (Parameter 'token')
+2024-12-03 10:32:04.565 -06:00 [INF] Intentando loguear al usuario: Otro2
+2024-12-03 10:32:07.988 -06:00 [INF] Generando token JWT para el usuario: Otro2
+2024-12-03 10:32:14.012 -06:00 [INF] Token JWT generado exitosamente
+2024-12-03 10:32:14.058 -06:00 [INF] Usuario Otro2 autenticado exitosamente
+2024-12-03 10:32:38.860 -06:00 [ERR] PROGRAM Error al validar el token: IDX10211: Unable to validate issuer. The 'issuer' parameter is null or whitespace.
+2024-12-03 10:32:38.963 -06:00 [ERR] PROGRAM Error de autenticación: Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException - IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2024-12-03 10:32:53.183 -06:00 [ERR] PROGRAM Error al validar el token: IDX10211: Unable to validate issuer. The 'issuer' parameter is null or whitespace.
+2024-12-03 10:32:53.236 -06:00 [ERR] PROGRAM Error de autenticación: Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException - IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2024-12-03 10:32:53.260 -06:00 [WRN]  PROGRAM Desafío de autenticación:  - 
+2024-12-03 10:43:10.039 -06:00 [ERR] PROGRAM Error al validar el token: 
+2024-12-03 10:43:10.206 -06:00 [ERR] PROGRAM Error al validar el token: IDX10000: The parameter 'token' cannot be a 'null' or an empty object.  (Parameter 'token')
+2024-12-03 10:43:30.260 -06:00 [ERR] PROGRAM Error al validar el token: 
+2024-12-03 10:43:30.325 -06:00 [ERR] PROGRAM Error al validar el token: IDX10000: The parameter 'token' cannot be a 'null' or an empty object.  (Parameter 'token')
+2024-12-03 10:43:30.747 -06:00 [INF] Intentando loguear al usuario: Otro2
+2024-12-03 10:43:34.281 -06:00 [INF] Generando token JWT para el usuario: Otro2
+2024-12-03 10:43:40.190 -06:00 [INF] Token JWT generado exitosamente
+2024-12-03 10:43:40.249 -06:00 [INF] Usuario Otro2 autenticado exitosamente
+2024-12-03 10:43:58.426 -06:00 [ERR] PROGRAM Error al validar el token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIzIiwiSWQiOiIzIiwiUm9sIjoiMSIsImlzcyI6ImVjYmVlY2U1LTkwYTctNDFhYS1iNTExLTc2ZTY5ZDQxZTUzNCIsImF1ZCI6IjQyMmM0ZmVhLTgyNjUtNDk3MC1iYjE0LTVhMDg1MDU1Yjg1NyIsIkNvcnJlbyI6Im90cm8yQGdtaWFsLmNvbSIsIkZlY2hhQ3JlYWNpb24iOiIyMDI0LTEyLTAzIDEwOjQzOjQwIn0.zWjsqJE2hqitBf18rO-ds488eVB4B9Kc-juZ3tp_20M
+2024-12-03 10:43:58.491 -06:00 [ERR] PROGRAM Error al validar el token: IDX12741: JWT must have three segments (JWS) or five segments (JWE).
+2024-12-03 10:43:58.595 -06:00 [ERR] PROGRAM Error de autenticación: Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException - IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2024-12-03 10:44:11.617 -06:00 [ERR] PROGRAM Error al validar el token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIzIiwiSWQiOiIzIiwiUm9sIjoiMSIsImlzcyI6ImVjYmVlY2U1LTkwYTctNDFhYS1iNTExLTc2ZTY5ZDQxZTUzNCIsImF1ZCI6IjQyMmM0ZmVhLTgyNjUtNDk3MC1iYjE0LTVhMDg1MDU1Yjg1NyIsIkNvcnJlbyI6Im90cm8yQGdtaWFsLmNvbSIsIkZlY2hhQ3JlYWNpb24iOiIyMDI0LTEyLTAzIDEwOjQzOjQwIn0.zWjsqJE2hqitBf18rO-ds488eVB4B9Kc-juZ3tp_20M
+2024-12-03 10:44:11.923 -06:00 [ERR] PROGRAM Error al validar el token: IDX10211: Unable to validate issuer. The 'issuer' parameter is null or whitespace.
+2024-12-03 10:44:11.986 -06:00 [ERR] PROGRAM Error de autenticación: Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException - IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2024-12-03 10:44:12.025 -06:00 [WRN]  PROGRAM Desafío de autenticación:  - 
+2024-12-03 10:52:13.925 -06:00 [ERR] PROGRAM Error al validar el token: 
+2024-12-03 10:52:14.161 -06:00 [ERR] PROGRAM Error al validar el token: IDX10000: The parameter 'token' cannot be a 'null' or an empty object.  (Parameter 'token')
+2024-12-03 10:52:38.572 -06:00 [ERR] PROGRAM Error al validar el token: 
+2024-12-03 10:52:38.662 -06:00 [ERR] PROGRAM Error al validar el token: IDX10000: The parameter 'token' cannot be a 'null' or an empty object.  (Parameter 'token')
+2024-12-03 10:52:39.051 -06:00 [INF] Intentando loguear al usuario: Otro2
+2024-12-03 10:52:42.307 -06:00 [INF] Generando token JWT para el usuario: Otro2
+2024-12-03 10:52:48.242 -06:00 [INF] Token JWT generado exitosamente
+2024-12-03 10:52:48.291 -06:00 [INF] Usuario Otro2 autenticado exitosamente
+2024-12-03 10:53:15.259 -06:00 [ERR] PROGRAM Error al validar el token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIzIiwiSWQiOiIzIiwiUm9sIjoiMSIsImlzcyI6ImVjYmVlY2U1LTkwYTctNDFhYS1iNTExLTc2ZTY5ZDQxZTUzNCIsImF1ZCI6IjQyMmM0ZmVhLTgyNjUtNDk3MC1iYjE0LTVhMDg1MDU1Yjg1NyIsIkNvcnJlbyI6Im90cm8yQGdtaWFsLmNvbSIsIkZlY2hhQ3JlYWNpb24iOiIyMDI0LTEyLTAzIDEwOjUyOjQ4In0.nKxhav4zBj2kbKI7_bPcges5pIyQRVPUTOFIZOK-lg8
+2024-12-03 10:53:15.519 -06:00 [ERR] PROGRAM Error al validar el token: IDX10211: Unable to validate issuer. The 'issuer' parameter is null or whitespace.
+2024-12-03 10:53:15.622 -06:00 [ERR] PROGRAM Error de autenticación: Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException - IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2024-12-03 10:53:15.661 -06:00 [WRN]  PROGRAM Desafío de autenticación:  - 
+2024-12-03 10:53:28.198 -06:00 [ERR] PROGRAM Error al validar el token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIzIiwiSWQiOiIzIiwiUm9sIjoiMSIsImlzcyI6ImVjYmVlY2U1LTkwYTctNDFhYS1iNTExLTc2ZTY5ZDQxZTUzNCIsImF1ZCI6IjQyMmM0ZmVhLTgyNjUtNDk3MC1iYjE0LTVhMDg1MDU1Yjg1NyIsIkNvcnJlbyI6Im90cm8yQGdtaWFsLmNvbSIsIkZlY2hhQ3JlYWNpb24iOiIyMDI0LTEyLTAzIDEwOjUyOjQ4In0.nKxhav4zBj2kbKI7_bPcges5pIyQRVPUTOFIZOK-lg8
+2024-12-03 10:53:28.354 -06:00 [ERR] PROGRAM Error al validar el token: IDX10211: Unable to validate issuer. The 'issuer' parameter is null or whitespace.
+2024-12-03 10:53:28.412 -06:00 [ERR] PROGRAM Error de autenticación: Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException - IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2024-12-03 10:53:28.416 -06:00 [WRN]  PROGRAM Desafío de autenticación:  - 
+2024-12-03 11:07:36.909 -06:00 [ERR] PROGRAM Error al validar el token: 
+2024-12-03 11:07:37.140 -06:00 [ERR] PROGRAM Error al validar el token: IDX10000: The parameter 'token' cannot be a 'null' or an empty object.  (Parameter 'token')
+2024-12-03 11:07:57.576 -06:00 [ERR] PROGRAM Error al validar el token: 
+2024-12-03 11:07:57.651 -06:00 [ERR] PROGRAM Error al validar el token: IDX10000: The parameter 'token' cannot be a 'null' or an empty object.  (Parameter 'token')
+2024-12-03 11:07:58.069 -06:00 [INF] Intentando loguear al usuario: Otro2
+2024-12-03 11:08:01.603 -06:00 [INF] Generando token JWT para el usuario: Otro2
+2024-12-03 11:08:07.971 -06:00 [INF] System.Collections.Generic.List`1[System.Security.Claims.Claim]
+2024-12-03 11:08:07.995 -06:00 [INF] {"alg":"HS256","typ":"JWT"}.{"sub":"3","Id":"3","Rol":"1","iss":"ecbeece5-90a7-41aa-b511-76e69d41e534","aud":"422c4fea-8265-4970-bb14-5a085055b857","Correo":"otro2@gmial.com"}
+2024-12-03 11:08:07.995 -06:00 [INF] Token JWT generado exitosamente
+2024-12-03 11:08:08.038 -06:00 [INF] Usuario Otro2 autenticado exitosamente
+2024-12-03 11:08:41.409 -06:00 [ERR] PROGRAM Error al validar el token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIzIiwiSWQiOiIzIiwiUm9sIjoiMSIsImlzcyI6ImVjYmVlY2U1LTkwYTctNDFhYS1iNTExLTc2ZTY5ZDQxZTUzNCIsImF1ZCI6IjQyMmM0ZmVhLTgyNjUtNDk3MC1iYjE0LTVhMDg1MDU1Yjg1NyIsIkNvcnJlbyI6Im90cm8yQGdtaWFsLmNvbSJ9.4bY3IVvuR1m5jSq8egircAWhAAGd5I09wSxH83fOA8g
+2024-12-03 11:08:41.696 -06:00 [ERR] PROGRAM Error al validar el token: IDX10211: Unable to validate issuer. The 'issuer' parameter is null or whitespace.
+2024-12-03 11:08:41.801 -06:00 [ERR] PROGRAM Error de autenticación: Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException - IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2024-12-03 11:08:41.834 -06:00 [WRN]  PROGRAM Desafío de autenticación:  - 
+2024-12-03 11:08:50.806 -06:00 [ERR] PROGRAM Error al validar el token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIzIiwiSWQiOiIzIiwiUm9sIjoiMSIsImlzcyI6ImVjYmVlY2U1LTkwYTctNDFhYS1iNTExLTc2ZTY5ZDQxZTUzNCIsImF1ZCI6IjQyMmM0ZmVhLTgyNjUtNDk3MC1iYjE0LTVhMDg1MDU1Yjg1NyIsIkNvcnJlbyI6Im90cm8yQGdtaWFsLmNvbSJ9.4bY3IVvuR1m5jSq8egircAWhAAGd5I09wSxH83fOA8g
+2024-12-03 11:08:50.985 -06:00 [ERR] PROGRAM Error al validar el token: IDX10211: Unable to validate issuer. The 'issuer' parameter is null or whitespace.
+2024-12-03 11:08:51.044 -06:00 [ERR] PROGRAM Error de autenticación: Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException - IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2024-12-03 11:08:51.051 -06:00 [WRN]  PROGRAM Desafío de autenticación:  - 
+2024-12-03 11:22:17.353 -06:00 [ERR] PROGRAM Error al validar el token: 
+2024-12-03 11:22:17.353 -06:00 [ERR] PROGRAM Error al validar el token: 
+2024-12-03 11:22:17.715 -06:00 [ERR] PROGRAM Error al validar el token: IDX10000: The parameter 'token' cannot be a 'null' or an empty object.  (Parameter 'token')
+2024-12-03 11:22:17.715 -06:00 [ERR] PROGRAM Error al validar el token: IDX10000: The parameter 'token' cannot be a 'null' or an empty object.  (Parameter 'token')
+2024-12-03 11:22:18.281 -06:00 [INF] Intentando loguear al usuario: Otro2
+2024-12-03 11:22:22.944 -06:00 [INF] Generando token JWT para el usuario: Otro2
+2024-12-03 11:22:30.086 -06:00 [INF] Token JWT generado exitosamente
+2024-12-03 11:22:30.103 -06:00 [INF] {"alg":"HS256","typ":"JWT"}.{"sub":"3","Id":"3","Rol":"1","iss":"ecbeece5-90a7-41aa-b511-76e69d41e534","aud":["422c4fea-8265-4970-bb14-5a085055b857","422c4fea-8265-4970-bb14-5a085055b857"],"Correo":"otro2@gmial.com","nbf":1733246550,"exp":1733250150}
+2024-12-03 11:22:30.104 -06:00 [INF] Token JWT generado exitosamente
+2024-12-03 11:22:30.143 -06:00 [INF] Usuario Otro2 autenticado exitosamente
+2024-12-03 11:22:45.828 -06:00 [ERR] PROGRAM Error al validar el token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIzIiwiSWQiOiIzIiwiUm9sIjoiMSIsImlzcyI6ImVjYmVlY2U1LTkwYTctNDFhYS1iNTExLTc2ZTY5ZDQxZTUzNCIsImF1ZCI6WyI0MjJjNGZlYS04MjY1LTQ5NzAtYmIxNC01YTA4NTA1NWI4NTciLCI0MjJjNGZlYS04MjY1LTQ5NzAtYmIxNC01YTA4NTA1NWI4NTciXSwiQ29ycmVvIjoib3RybzJAZ21pYWwuY29tIiwibmJmIjoxNzMzMjQ2NTUwLCJleHAiOjE3MzMyNTAxNTB9.3Hg9gteXosfjsS5tIrluj4q7PiHyhkcJrLbpY7W35u4
+2024-12-03 11:22:46.090 -06:00 [ERR] PROGRAM Error al validar el token: IDX10211: Unable to validate issuer. The 'issuer' parameter is null or whitespace.
+2024-12-03 11:22:46.194 -06:00 [ERR] PROGRAM Error de autenticación: Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException - IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2024-12-03 11:22:46.221 -06:00 [WRN]  PROGRAM Desafío de autenticación:  - 
+2024-12-03 11:23:03.833 -06:00 [ERR] PROGRAM Error al validar el token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIzIiwiSWQiOiIzIiwiUm9sIjoiMSIsImlzcyI6ImVjYmVlY2U1LTkwYTctNDFhYS1iNTExLTc2ZTY5ZDQxZTUzNCIsImF1ZCI6WyI0MjJjNGZlYS04MjY1LTQ5NzAtYmIxNC01YTA4NTA1NWI4NTciLCI0MjJjNGZlYS04MjY1LTQ5NzAtYmIxNC01YTA4NTA1NWI4NTciXSwiQ29ycmVvIjoib3RybzJAZ21pYWwuY29tIiwibmJmIjoxNzMzMjQ2NTUwLCJleHAiOjE3MzMyNTAxNTB9.3Hg9gteXosfjsS5tIrluj4q7PiHyhkcJrLbpY7W35u4
+2024-12-03 11:23:04.008 -06:00 [ERR] PROGRAM Error al validar el token: IDX10211: Unable to validate issuer. The 'issuer' parameter is null or whitespace.
+2024-12-03 11:23:04.069 -06:00 [ERR] PROGRAM Error de autenticación: Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException - IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2024-12-03 11:23:04.075 -06:00 [WRN]  PROGRAM Desafío de autenticación:  - 
+2024-12-03 11:56:34.636 -06:00 [ERR] PROGRAM Error al validar el token: 
+2024-12-03 11:56:34.867 -06:00 [ERR] PROGRAM Error al validar el token: IDX10000: The parameter 'token' cannot be a 'null' or an empty object.  (Parameter 'token')
+2024-12-03 11:58:19.288 -06:00 [ERR] PROGRAM Error al validar el token: 
+2024-12-03 11:58:19.400 -06:00 [ERR] PROGRAM Error al validar el token: IDX10000: The parameter 'token' cannot be a 'null' or an empty object.  (Parameter 'token')
+2024-12-03 11:58:19.986 -06:00 [INF] Intentando loguear al usuario: Otro2
+2024-12-03 11:58:23.727 -06:00 [INF] Generando token JWT para el usuario: Otro2
+2024-12-03 11:58:31.110 -06:00 [INF] Token JWT generado exitosamente
+2024-12-03 11:58:31.125 -06:00 [INF] {"alg":"HS256","typ":"JWT"}.{"sub":"3","Id":"3","Rol":"1","iss":"ecbeece5-90a7-41aa-b511-76e69d41e534","aud":["422c4fea-8265-4970-bb14-5a085055b857","422c4fea-8265-4970-bb14-5a085055b857"],"Correo":"otro2@gmial.com","nbf":1733248711,"exp":1733252311}
+2024-12-03 11:58:31.126 -06:00 [INF] Token JWT generado exitosamente
+2024-12-03 11:58:31.166 -06:00 [INF] Usuario Otro2 autenticado exitosamente
+2024-12-03 11:59:15.426 -06:00 [ERR] PROGRAM Error al validar el token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIzIiwiSWQiOiIzIiwiUm9sIjoiMSIsImlzcyI6ImVjYmVlY2U1LTkwYTctNDFhYS1iNTExLTc2ZTY5ZDQxZTUzNCIsImF1ZCI6WyI0MjJjNGZlYS04MjY1LTQ5NzAtYmIxNC01YTA4NTA1NWI4NTciLCI0MjJjNGZlYS04MjY1LTQ5NzAtYmIxNC01YTA4NTA1NWI4NTciXSwiQ29ycmVvIjoib3RybzJAZ21pYWwuY29tIiwibmJmIjoxNzMzMjQ4NzExLCJleHAiOjE3MzMyNTIzMTF9.A_vcz-pxx9B8rQM5dtia_w1o8I8CJBDja4Dz1mcn75w
+2024-12-03 11:59:15.672 -06:00 [ERR] PROGRAM Error al validar el token: IDX10211: Unable to validate issuer. The 'issuer' parameter is null or whitespace.
+2024-12-03 11:59:15.772 -06:00 [ERR] PROGRAM Error de autenticación: Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException - IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2024-12-03 11:59:15.801 -06:00 [WRN]  PROGRAM Desafío de autenticación:  - 
+2024-12-03 11:59:40.714 -06:00 [ERR] PROGRAM Error al validar el token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIzIiwiSWQiOiIzIiwiUm9sIjoiMSIsImlzcyI6ImVjYmVlY2U1LTkwYTctNDFhYS1iNTExLTc2ZTY5ZDQxZTUzNCIsImF1ZCI6WyI0MjJjNGZlYS04MjY1LTQ5NzAtYmIxNC01YTA4NTA1NWI4NTciLCI0MjJjNGZlYS04MjY1LTQ5NzAtYmIxNC01YTA4NTA1NWI4NTciXSwiQ29ycmVvIjoib3RybzJAZ21pYWwuY29tIiwibmJmIjoxNzMzMjQ4NzExLCJleHAiOjE3MzMyNTIzMTF9.A_vcz-pxx9B8rQM5dtia_w1o8I8CJBDja4Dz1mcn75w
+2024-12-03 11:59:40.889 -06:00 [ERR] PROGRAM Error al validar el token: IDX10211: Unable to validate issuer. The 'issuer' parameter is null or whitespace.
+2024-12-03 11:59:40.950 -06:00 [ERR] PROGRAM Error de autenticación: Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException - IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2024-12-03 11:59:40.955 -06:00 [WRN]  PROGRAM Desafío de autenticación:  - 
+2024-12-03 12:05:19.758 -06:00 [ERR] PROGRAM Error al validar el token: 
+2024-12-03 12:05:19.854 -06:00 [ERR] PROGRAM Error al validar el token: IDX10000: The parameter 'token' cannot be a 'null' or an empty object.  (Parameter 'token')
+2024-12-03 12:06:16.110 -06:00 [ERR] PROGRAM Error al validar el token: 
+2024-12-03 12:06:16.189 -06:00 [ERR] PROGRAM Error al validar el token: IDX10000: The parameter 'token' cannot be a 'null' or an empty object.  (Parameter 'token')
+2024-12-03 12:06:16.470 -06:00 [INF] Intentando loguear al usuario: Otro2
+2024-12-03 12:06:18.552 -06:00 [INF] Generando token JWT para el usuario: Otro2
+2024-12-03 12:06:24.651 -06:00 [ERR] Error ocurrido: A secret with (name/id) JwtKey was not found in this key vault. If you recently deleted this secret you may be able to recover it using the correct recovery command. For help resolving this issue, please see https://go.microsoft.com/fwlink/?linkid=2125182
+Status: 404 (Not Found)
+ErrorCode: SecretNotFound
+
+Content:
+{"error":{"code":"SecretNotFound","message":"A secret with (name/id) JwtKey was not found in this key vault. If you recently deleted this secret you may be able to recover it using the correct recovery command. For help resolving this issue, please see https://go.microsoft.com/fwlink/?linkid=2125182"}}
+
+Headers:
+Cache-Control: no-cache
+Pragma: no-cache
+x-ms-keyvault-region: centralus
+x-ms-client-request-id: b118b839-c9a6-455a-966f-f0ef9a6d95df
+x-ms-request-id: dc39f64a-7bc9-4da5-b838-091d40923f3d
+x-ms-keyvault-service-version: 1.9.1864.2
+x-ms-keyvault-network-info: conn_type=Ipv4;addr=201.191.218.185;act_addr_fam=InterNetwork;
+X-Content-Type-Options: REDACTED
+Strict-Transport-Security: REDACTED
+Date: Tue, 03 Dec 2024 18:06:23 GMT
+Content-Length: 303
+Content-Type: application/json; charset=utf-8
+Expires: -1
+
+2024-12-03 12:12:30.023 -06:00 [ERR] PROGRAM Error al validar el token: 
+2024-12-03 12:12:30.270 -06:00 [ERR] PROGRAM Error al validar el token: IDX10000: The parameter 'token' cannot be a 'null' or an empty object.  (Parameter 'token')
+2024-12-03 12:12:49.464 -06:00 [ERR] PROGRAM Error al validar el token: 
+2024-12-03 12:12:49.564 -06:00 [ERR] PROGRAM Error al validar el token: IDX10000: The parameter 'token' cannot be a 'null' or an empty object.  (Parameter 'token')
+2024-12-03 12:12:49.840 -06:00 [INF] Intentando loguear al usuario: Otro2
+2024-12-03 12:12:51.984 -06:00 [INF] Generando token JWT para el usuario: Otro2
+2024-12-03 12:12:58.547 -06:00 [INF] Token JWT generado exitosamente
+2024-12-03 12:12:58.561 -06:00 [INF] {"alg":"HS256","typ":"JWT"}.{"sub":"3","Id":"3","Rol":"1","iss":"ecbeece5-90a7-41aa-b511-76e69d41e534","aud":["422c4fea-8265-4970-bb14-5a085055b857","422c4fea-8265-4970-bb14-5a085055b857"],"Correo":"otro2@gmial.com","nbf":1733249578,"exp":1733253178}
+2024-12-03 12:12:58.561 -06:00 [INF] Token JWT generado exitosamente
+2024-12-03 12:12:58.575 -06:00 [INF] Usuario Otro2 autenticado exitosamente
+2024-12-03 12:13:56.014 -06:00 [ERR] PROGRAM Error al validar el token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIzIiwiSWQiOiIzIiwiUm9sIjoiMSIsImlzcyI6ImVjYmVlY2U1LTkwYTctNDFhYS1iNTExLTc2ZTY5ZDQxZTUzNCIsImF1ZCI6WyI0MjJjNGZlYS04MjY1LTQ5NzAtYmIxNC01YTA4NTA1NWI4NTciLCI0MjJjNGZlYS04MjY1LTQ5NzAtYmIxNC01YTA4NTA1NWI4NTciXSwiQ29ycmVvIjoib3RybzJAZ21pYWwuY29tIiwibmJmIjoxNzMzMjQ5NTc4LCJleHAiOjE3MzMyNTMxNzh9.o3wsFgAye2d2HDfenRffJOhOmOmLIh-VZ9X9tCaNSwQ
+2024-12-03 12:13:56.273 -06:00 [ERR] PROGRAM Error al validar el token: IDX10211: Unable to validate issuer. The 'issuer' parameter is null or whitespace.
+2024-12-03 12:13:56.375 -06:00 [ERR] PROGRAM Error de autenticación: Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException - IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2024-12-03 12:13:56.391 -06:00 [WRN]  PROGRAM Desafío de autenticación:  - 
+2024-12-03 12:14:29.729 -06:00 [ERR] PROGRAM Error al validar el token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIzIiwiSWQiOiIzIiwiUm9sIjoiMSIsImlzcyI6ImVjYmVlY2U1LTkwYTctNDFhYS1iNTExLTc2ZTY5ZDQxZTUzNCIsImF1ZCI6WyI0MjJjNGZlYS04MjY1LTQ5NzAtYmIxNC01YTA4NTA1NWI4NTciLCI0MjJjNGZlYS04MjY1LTQ5NzAtYmIxNC01YTA4NTA1NWI4NTciXSwiQ29ycmVvIjoib3RybzJAZ21pYWwuY29tIiwibmJmIjoxNzMzMjQ5NTc4LCJleHAiOjE3MzMyNTMxNzh9.o3wsFgAye2d2HDfenRffJOhOmOmLIh-VZ9X9tCaNSwQ
+2024-12-03 12:14:29.913 -06:00 [ERR] PROGRAM Error al validar el token: IDX10211: Unable to validate issuer. The 'issuer' parameter is null or whitespace.
+2024-12-03 12:14:29.970 -06:00 [ERR] PROGRAM Error de autenticación: Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException - IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2024-12-03 12:14:29.981 -06:00 [WRN]  PROGRAM Desafío de autenticación:  - 
+2024-12-03 12:21:07.429 -06:00 [ERR] PROGRAM Error al validar el token: 
+2024-12-03 12:21:07.681 -06:00 [ERR] PROGRAM Error al validar el token: IDX10000: The parameter 'token' cannot be a 'null' or an empty object.  (Parameter 'token')
+2024-12-03 12:21:30.554 -06:00 [ERR] PROGRAM Error al validar el token: 
+2024-12-03 12:21:30.621 -06:00 [ERR] PROGRAM Error al validar el token: IDX10000: The parameter 'token' cannot be a 'null' or an empty object.  (Parameter 'token')
+2024-12-03 12:21:30.892 -06:00 [INF] Intentando loguear al usuario: Otro2
+2024-12-03 12:21:32.930 -06:00 [INF] Generando token JWT para el usuario: Otro2
+2024-12-03 12:21:39.614 -06:00 [INF] Token JWT generado exitosamente
+2024-12-03 12:21:39.628 -06:00 [INF] {"alg":"HS256","typ":"JWT"}.{"sub":"3","Id":"3","Rol":"1","iss":"ecbeece5-90a7-41aa-b511-76e69d41e534","aud":["422c4fea-8265-4970-bb14-5a085055b857","422c4fea-8265-4970-bb14-5a085055b857"],"Correo":"otro2@gmial.com","nbf":1733250099,"exp":1733253699}
+2024-12-03 12:21:39.628 -06:00 [INF] Token JWT generado exitosamente
+2024-12-03 12:21:40.095 -06:00 [INF] Usuario Otro2 autenticado exitosamente
+2024-12-03 12:22:16.593 -06:00 [ERR] PROGRAM Error al validar el token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIzIiwiSWQiOiIzIiwiUm9sIjoiMSIsImlzcyI6ImVjYmVlY2U1LTkwYTctNDFhYS1iNTExLTc2ZTY5ZDQxZTUzNCIsImF1ZCI6WyI0MjJjNGZlYS04MjY1LTQ5NzAtYmIxNC01YTA4NTA1NWI4NTciLCI0MjJjNGZlYS04MjY1LTQ5NzAtYmIxNC01YTA4NTA1NWI4NTciXSwiQ29ycmVvIjoib3RybzJAZ21pYWwuY29tIiwibmJmIjoxNzMzMjUwMDk5LCJleHAiOjE3MzMyNTM2OTl9.jN0jaL10cRmkkaVTlneaFy2AILVSnh-d-beEr_rFbVY
+2024-12-03 12:22:16.810 -06:00 [ERR] PROGRAM Error al validar el token: IDX10211: Unable to validate issuer. The 'issuer' parameter is null or whitespace.
+2024-12-03 12:22:16.878 -06:00 [ERR] PROGRAM Error de autenticación: Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException - IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2024-12-03 12:22:16.891 -06:00 [WRN]  PROGRAM Desafío de autenticación:  - 
+2024-12-03 12:22:30.351 -06:00 [ERR] PROGRAM Error al validar el token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIzIiwiSWQiOiIzIiwiUm9sIjoiMSIsImlzcyI6ImVjYmVlY2U1LTkwYTctNDFhYS1iNTExLTc2ZTY5ZDQxZTUzNCIsImF1ZCI6WyI0MjJjNGZlYS04MjY1LTQ5NzAtYmIxNC01YTA4NTA1NWI4NTciLCI0MjJjNGZlYS04MjY1LTQ5NzAtYmIxNC01YTA4NTA1NWI4NTciXSwiQ29ycmVvIjoib3RybzJAZ21pYWwuY29tIiwibmJmIjoxNzMzMjUwMDk5LCJleHAiOjE3MzMyNTM2OTl9.jN0jaL10cRmkkaVTlneaFy2AILVSnh-d-beEr_rFbVY
+2024-12-03 12:22:30.524 -06:00 [ERR] PROGRAM Error al validar el token: IDX10211: Unable to validate issuer. The 'issuer' parameter is null or whitespace.
+2024-12-03 12:22:30.583 -06:00 [ERR] PROGRAM Error de autenticación: Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException - IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2024-12-03 12:22:30.586 -06:00 [WRN]  PROGRAM Desafío de autenticación:  - 
+2024-12-03 12:24:54.429 -06:00 [ERR] PROGRAM Error al validar el token: 
+2024-12-03 12:24:54.700 -06:00 [ERR] PROGRAM Error al validar el token: IDX10000: The parameter 'token' cannot be a 'null' or an empty object.  (Parameter 'token')
+2024-12-03 12:25:04.634 -06:00 [ERR] PROGRAM Error al validar el token: 
+2024-12-03 12:25:04.708 -06:00 [ERR] PROGRAM Error al validar el token: IDX10000: The parameter 'token' cannot be a 'null' or an empty object.  (Parameter 'token')
+2024-12-03 12:25:05.083 -06:00 [INF] Intentando loguear al usuario: Otro2
+2024-12-03 12:25:08.891 -06:00 [INF] Generando token JWT para el usuario: Otro2
+2024-12-03 12:25:16.342 -06:00 [INF] Token JWT generado exitosamente
+2024-12-03 12:25:16.362 -06:00 [INF] {"alg":"HS256","typ":"JWT"}.{"sub":"3","Id":"3","Rol":"1","iss":"https://localhost:44366/Usuario/Login","aud":["422c4fea-8265-4970-bb14-5a085055b857","422c4fea-8265-4970-bb14-5a085055b857"],"Correo":"otro2@gmial.com","nbf":1733250316,"exp":1733253916}
+2024-12-03 12:25:16.363 -06:00 [INF] Token JWT generado exitosamente
+2024-12-03 12:25:16.406 -06:00 [INF] Usuario Otro2 autenticado exitosamente
+2024-12-03 12:25:55.247 -06:00 [ERR] PROGRAM Error al validar el token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIzIiwiSWQiOiIzIiwiUm9sIjoiMSIsImlzcyI6Imh0dHBzOi8vbG9jYWxob3N0OjQ0MzY2L1VzdWFyaW8vTG9naW4iLCJhdWQiOlsiNDIyYzRmZWEtODI2NS00OTcwLWJiMTQtNWEwODUwNTViODU3IiwiNDIyYzRmZWEtODI2NS00OTcwLWJiMTQtNWEwODUwNTViODU3Il0sIkNvcnJlbyI6Im90cm8yQGdtaWFsLmNvbSIsIm5iZiI6MTczMzI1MDMxNiwiZXhwIjoxNzMzMjUzOTE2fQ.equ6yrgL7QFRJ4_EjLxMFRvPDSSg3TCnUGi4QEIB4EM
+2024-12-03 12:25:55.557 -06:00 [ERR] PROGRAM Error al validar el token: IDX10211: Unable to validate issuer. The 'issuer' parameter is null or whitespace.
+2024-12-03 12:25:55.667 -06:00 [ERR] PROGRAM Error de autenticación: Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException - IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2024-12-03 12:25:55.701 -06:00 [WRN]  PROGRAM Desafío de autenticación:  - 
+2024-12-03 12:26:10.855 -06:00 [ERR] PROGRAM Error al validar el token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIzIiwiSWQiOiIzIiwiUm9sIjoiMSIsImlzcyI6Imh0dHBzOi8vbG9jYWxob3N0OjQ0MzY2L1VzdWFyaW8vTG9naW4iLCJhdWQiOlsiNDIyYzRmZWEtODI2NS00OTcwLWJiMTQtNWEwODUwNTViODU3IiwiNDIyYzRmZWEtODI2NS00OTcwLWJiMTQtNWEwODUwNTViODU3Il0sIkNvcnJlbyI6Im90cm8yQGdtaWFsLmNvbSIsIm5iZiI6MTczMzI1MDMxNiwiZXhwIjoxNzMzMjUzOTE2fQ.equ6yrgL7QFRJ4_EjLxMFRvPDSSg3TCnUGi4QEIB4EM
+2024-12-03 12:26:11.042 -06:00 [ERR] PROGRAM Error al validar el token: IDX10211: Unable to validate issuer. The 'issuer' parameter is null or whitespace.
+2024-12-03 12:26:11.101 -06:00 [ERR] PROGRAM Error de autenticación: Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException - IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2024-12-03 12:26:11.107 -06:00 [WRN]  PROGRAM Desafío de autenticación:  - 
+2024-12-03 13:22:08.228 -06:00 [ERR] Error al validar el token: IDX10000: The parameter 'token' cannot be a 'null' or an empty object.  (Parameter 'token')
+2024-12-03 13:26:36.885 -06:00 [ERR] Error al validar el token: IDX10000: The parameter 'token' cannot be a 'null' or an empty object.  (Parameter 'token')
+2024-12-03 13:26:37.629 -06:00 [INF] Intentando loguear al usuario: Otro2
+2024-12-03 13:26:40.479 -06:00 [INF] Generando token JWT para el usuario: Otro2
+2024-12-03 13:26:48.267 -06:00 [INF] Token JWT generado exitosamente
+2024-12-03 13:26:48.285 -06:00 [INF] {"alg":"HS256","typ":"JWT"}.{"sub":"3","Id":"3","Rol":"1","iss":"https://localhost:44366/Usuario/Login","aud":["422c4fea-8265-4970-bb14-5a085055b857","422c4fea-8265-4970-bb14-5a085055b857"],"Correo":"otro2@gmial.com","nbf":1733254008,"exp":1733257608}
+2024-12-03 13:26:48.285 -06:00 [INF] Token JWT generado exitosamente
+2024-12-03 13:26:48.336 -06:00 [INF] Usuario Otro2 autenticado exitosamente
+2024-12-03 13:28:25.059 -06:00 [ERR] Error al validar el token: IDX10000: The parameter 'token' cannot be a 'null' or an empty object.  (Parameter 'token')
+2024-12-03 13:28:25.104 -06:00 [INF] Intentando loguear al usuario: Otro2
+2024-12-03 13:28:25.365 -06:00 [INF] Generando token JWT para el usuario: Otro2
+2024-12-03 13:28:31.358 -06:00 [INF] Token JWT generado exitosamente
+2024-12-03 13:28:31.359 -06:00 [INF] {"alg":"HS256","typ":"JWT"}.{"sub":"3","Id":"3","Rol":"1","iss":"https://localhost:44366/Usuario/Login","aud":["422c4fea-8265-4970-bb14-5a085055b857","422c4fea-8265-4970-bb14-5a085055b857"],"Correo":"otro2@gmial.com","nbf":1733254111,"exp":1733257711}
+2024-12-03 13:28:31.359 -06:00 [INF] Token JWT generado exitosamente
+2024-12-03 13:28:31.364 -06:00 [INF] Usuario Otro2 autenticado exitosamente
+2024-12-03 13:29:14.544 -06:00 [ERR] Error al validar el token: IDX10211: Unable to validate issuer. The 'issuer' parameter is null or whitespace.
+2024-12-03 13:29:14.648 -06:00 [ERR] Error de autenticación: Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException - IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2024-12-03 13:29:14.699 -06:00 [WRN] Desafío de autenticación:  - 
+2024-12-03 13:30:33.388 -06:00 [ERR] Error al validar el token: IDX10211: Unable to validate issuer. The 'issuer' parameter is null or whitespace.
+2024-12-03 13:30:33.435 -06:00 [ERR] Error de autenticación: Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException - IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2024-12-03 13:30:33.438 -06:00 [WRN] Desafío de autenticación:  - 

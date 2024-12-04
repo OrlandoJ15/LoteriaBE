@@ -4,7 +4,8 @@ using System.Text;
 using Azure.Identity;
 using Azure.Security.KeyVault.Secrets;
 using Serilog;
-
+using System.IdentityModel.Tokens.Jwt;
+using Microsoft.AspNetCore.DataProtection;
 
 namespace LoteriaWebApi
 {
@@ -12,118 +13,193 @@ namespace LoteriaWebApi
     {
         public static void Main(string[] args)
         {
+            // Configuración de logging
             Log.Logger = new LoggerConfiguration()
-                .WriteTo.Console() // Registrar en la consola
+                .WriteTo.Console() // Registrar en consola
                 .WriteTo.File("logs/log.txt", rollingInterval: RollingInterval.Day) // Registrar en archivo
                 .CreateLogger();
 
             var builder = WebApplication.CreateBuilder(args);
 
-            // Configuración de Kestrel para especificar el puerto
+            // Configuración de Kestrel para manejar HTTPS y puertos
+            ConfigureKestrel(builder);
+
+            // Configuración de servicios
+            builder.Services.AddHealthChecks();
+            ConfigureHttpClient(builder);
+            ConfigureCors(builder);
+            ConfigureAzureKeyVault(builder);
+            ConfigureJwtAuthentication(builder);
+            ConfigureAuthorization(builder);
+            ConfigureSwagger(builder);
+
+            // Configuración de controladores y servicios
+            builder.Services.AddControllers();
+            builder.Services.AddEndpointsApiExplorer();
+            builder.Services.AddHttpsRedirection(options => options.HttpsPort = 443); // Redirige tráfico HTTP a HTTPS
+
+            var app = builder.Build();
+
+            // Configuración de Swagger y enrutamiento
+            if (app.Environment.IsDevelopment() || app.Environment.IsProduction())
+            {
+                app.UseSwagger();
+                app.UseSwaggerUI(c =>
+                {
+                    c.SwaggerEndpoint("/swagger/v1/swagger.json", "Lotería API V1");
+                    c.RoutePrefix = string.Empty;
+                });
+            }
+
+            // Mapeo de rutas y middleware
+            app.MapHealthChecks("/api/health");
+            app.UseCors();
+            app.UseHttpsRedirection();
+
+            app.UseRouting(); // Necesario para que los controladores usen las rutas
+            app.UseAuthentication(); // Habilita la autenticación
+            app.UseAuthorization(); // Habilita la autorización
+
+            app.MapControllers(); // Mapea los controladores
+
+            app.Run();
+        }
+
+        // Configuración de Kestrel
+        private static void ConfigureKestrel(WebApplicationBuilder builder)
+        {
             builder.WebHost.ConfigureKestrel(options =>
             {
-                // Configuración para habilitar HTTP en el puerto 80 (si lo deseas)
-                //options.ListenAnyIP(80); // HTTP - Puerto 80
-
-                // Configuración para habilitar HTTPS en el puerto 443
-                /*options.ListenAnyIP(443, listenOptions =>
+                options.ListenLocalhost(44366, listenOptions =>
                 {
-                    // Si tienes un certificado .pfx, puedes configurar el certificado SSL aquí
-                    // Puedes usar un certificado autofirmado durante el desarrollo
-                    listenOptions.UseHttps("path/to/certificate.pfx", "yourCertificatePassword"); // Configura el certificado SSL
-                });*/
+                    listenOptions.UseHttps(httpsOptions =>
+                    {
+                        httpsOptions.SslProtocols = System.Security.Authentication.SslProtocols.Tls12 | System.Security.Authentication.SslProtocols.Tls13;
+                    });
+                });
             });
+        }
 
+        // Configuración del HttpClient
+        private static void ConfigureHttpClient(WebApplicationBuilder builder)
+        {
+            builder.Services.AddHttpClient("HttpClientWithCertValidation")
+                .ConfigurePrimaryHttpMessageHandler(() => new HttpClientHandler
+                {
+                    ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) =>
+                        builder.Environment.IsDevelopment() ? true : sslPolicyErrors == System.Net.Security.SslPolicyErrors.None
+                });
+        }
 
-            builder.Services.AddHealthChecks();
-
-
-            // CONFIGURACIÓN DE CORS 
+        // Configuración de CORS
+        private static void ConfigureCors(WebApplicationBuilder builder)
+        {
             builder.Services.AddCors(options =>
             {
-                options.AddPolicy("LoteriaBackApi", policy =>
+                options.AddPolicy("loteriabackapi/slots/staging", policy =>
                 {
-
-                    policy.WithOrigins("http://localhost:5173", "https://multiplicados.net", "https://portal.azure.com")
+                    policy.WithOrigins("https://localhost:44366", "https://multiplicados.net", "https://portal.azure.com")
                           .AllowAnyHeader()
                           .AllowAnyMethod()
                           .AllowCredentials();
                 });
             });
+        }
 
-            // CONFIGURACIÓN DE AZURE KEY VAULT
-            var keyVaultUrl = builder.Configuration["AzureKeyVault:VaultUrl"];  //Url del key Vault
-            var secretClient = new SecretClient(new Uri(keyVaultUrl), new DefaultAzureCredential());         
-            var jwtSecretKey = secretClient.GetSecret("JwtKey").Value.Value; // Obtiene el secreto desde Key Vault
+        // Configuración de Azure Key Vault
+        private static void ConfigureAzureKeyVault(WebApplicationBuilder builder)
+        {
+            var keyVaultUrl = builder.Configuration["AzureKeyVault:VaultUrl"];
+            var secretClient = new SecretClient(new Uri(keyVaultUrl ?? ""), new DefaultAzureCredential());
+            var jwtSecretKey = secretClient.GetSecret("KeyStagingLoteria").Value.Value;
+            builder.Services.AddSingleton(jwtSecretKey);
+        }
+
+        // Configuración de JWT Authentication
+        private static void ConfigureJwtAuthentication(WebApplicationBuilder builder)
+        {
+            var jwtSecretKey = builder.Services.BuildServiceProvider().GetService<string>();
             var issuer = builder.Configuration["JwtI:Issuer"];
             var audience = builder.Configuration["JwtA:Audience"];
-
-            // CONFIGURACIÓN DEL JWT 
+            var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtSecretKey));
+            var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
 
             builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddJwtBearer(options =>
                 {
-                    options.Authority = "https://loteriabackapi-djhxctfjhdg5csfm.centralus-01.azurewebsites.net"; // Aquí va la URL de tu servidor de autorización (por ejemplo, Auth0 o Azure AD)
-                    options.Audience = audience; // Este es el público esperado por tu API (en Auth0 o AAD, es el identificador de tu API)
+                    options.Authority = "https://localhost:44366";
+                    options.Audience = audience;
                     options.TokenValidationParameters = new TokenValidationParameters
                     {
                         ValidateIssuer = true,
-                        ValidateAudience = true,    
-                        ValidateLifetime = true,
+                        ValidateAudience = true,
+                        ValidateLifetime = false,
                         ValidateIssuerSigningKey = true,
-                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtSecretKey)),
-                        ValidIssuer = issuer,  // Si usas un issuer válido, añádelo aquí
-                        ValidAudience = audience // Lo mismo para el audience
+                        IssuerSigningKey = credentials.Key,
+                        ValidIssuer = issuer,
+                        ValidAudience = audience
                     };
-                    
-                    /*options.Events = new JwtBearerEvents
-                    {
-                        OnMessageReceived = context =>
-                        {
-                            // Leer el token desde la cookie
-                            var accessToken = context.Request.Cookies["Token"];
-                            if (!string.IsNullOrEmpty(accessToken))
-                            {
-                                context.Token = accessToken;
-                            }
-                            return Task.CompletedTask;
-                        }
-                    };*/
-                    
+
                     options.Events = new JwtBearerEvents
                     {
                         OnAuthenticationFailed = context =>
                         {
-                            //Log.Error("Autenticación fallida: {Error}", context.Exception.GetType().ToString());
-                            Console.WriteLine("Token no válido: " + context.Exception.Message);
+                            Log.Error($"Error de autenticación: {context.Exception.GetType()} - {context.Exception.Message}");
                             return Task.CompletedTask;
                         },
                         OnTokenValidated = context =>
                         {
-                            //Log.Information("Token validado correctamente para el usuario {UserId}", context.Principal.Identity.Name);
-                            Console.WriteLine("Token validado correctamente.");
+                            var user = context.Principal?.Identity?.Name ?? "Unknown User";
+                            Log.Information($"Token validado correctamente para el usuario: {user}");
                             return Task.CompletedTask;
-                        }   
+                        },
+                        OnChallenge = context =>
+                        {
+                            Log.Warning($"Desafío de autenticación: {context.ErrorDescription} - {context.ErrorUri}");
+                            return Task.CompletedTask;
+                        },
+                        OnMessageReceived = context =>
+                        {
+                            var token = context.Request.Headers["Authorization"].ToString().Replace("Bearer ", "");
+                            try
+                            {
+                                var jwtSecurityTokenHandler = new JwtSecurityTokenHandler();
+                                var tokenValidationParameters = new TokenValidationParameters
+                                {
+                                    ValidateIssuer = true,
+                                    ValidateAudience = true,
+                                    ValidateLifetime = false,
+                                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtSecretKey)),
+                                    ValidIssuer = builder.Configuration["JwtI:Issuer"],
+                                    ValidAudience = builder.Configuration["JwtA:Audience"]
+                                };
+                                context.Principal = jwtSecurityTokenHandler.ValidateToken(token, tokenValidationParameters, out _);
+                            }
+                            catch (Exception ex)
+                            {
+                                Log.Error($"Error al validar el token: {ex.Message}");
+                            }
+                            return Task.CompletedTask;
+                        }
                     };
                 });
+        }
 
+        // Configuración de Autorización
+        private static void ConfigureAuthorization(WebApplicationBuilder builder)
+        {
             builder.Services.AddAuthorization(options =>
             {
-                // Puedes agregar políticas personalizadas aquí si es necesario
-                options.AddPolicy("LoteriaBackApi", policy =>
-                    policy.RequireAuthenticatedUser());
+                options.AddPolicy("loteriabackapi/slots/staging", policy =>
+                {
+                    policy.RequireAuthenticatedUser(); // Solo permite acceso a usuarios autenticados
+                });
             });
+        }
 
-
-            // Configuración de controladores y servicios
-            builder.Services.AddControllers();
-            builder.Services.AddEndpointsApiExplorer();
-
-            builder.Services.AddHttpsRedirection(options =>
-            {
-                options.HttpsPort = 443; // Redirige el tráfico HTTP al puerto 443
-            });
-
+        // Configuración de Swagger
+        private static void ConfigureSwagger(WebApplicationBuilder builder)
+        {
             builder.Services.AddSwaggerGen(options =>
             {
                 options.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo
@@ -132,45 +208,6 @@ namespace LoteriaWebApi
                     Version = "v1"
                 });
             });
-
-            var app = builder.Build();
-
-            /*app.UseSwagger();
-            app.UseSwaggerUI(options =>
-            {
-                options.SwaggerEndpoint("/swagger/v1/swagger.json", "Web API V1");
-                if (app.Environment.IsDevelopment())
-                    options.RoutePrefix = "swagger";
-                else
-                    app.UseHsts();
-            }
-            );*/
-
-            if (app.Environment.IsDevelopment())
-            {
-                app.UseSwagger(); // Generar el archivo swagger.json
-                app.UseSwaggerUI(c =>
-                {
-                    c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
-                });
-            }
-
-            app.MapHealthChecks("/api/health");
-
-            app.UseCors();
-
-            app.UseHttpsRedirection();
-
-            // Autenticación y autorización
-            app.UseAuthentication();
-            app.UseAuthorization();
-
-            // Habilitar el enrutamiento de API
-            app.UseRouting();
-
-            app.MapControllers();
-
-            app.Run();
         }
     }
 }

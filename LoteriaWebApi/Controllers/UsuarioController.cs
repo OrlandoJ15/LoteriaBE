@@ -6,6 +6,7 @@ using LogicaNegocio.Interfaz;
 using MetodosComunes;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using Serilog;
 using System.IdentityModel.Tokens.Jwt;
@@ -25,116 +26,122 @@ namespace LoteriaWebApi.Controllers
     public class UsuarioController : ControllerBase
     {
 
-        private readonly IConfiguration lConfiguration;
+    
+        //private readonly ILogger<UsuarioController> _logger;
+
+        public IConfiguration lConfiguration;
 
         private readonly IUsuarioLN gObjUsuarioLN;
 
-        private readonly Excepciones gObjExcepciones = new Excepciones();
+        public Excepciones gObjExcepciones = new Excepciones();
 
-        private readonly SerilogLogger _logger;
+        private readonly SerilogLogger _logger = Log.ForContext<UsuarioController>();
 
 
-        public UsuarioController(IConfiguration lConfig, ILogger<UsuarioController> logger)
+
+        public UsuarioController(IConfiguration lConfig)
         {
             lConfiguration = lConfig;
             string? lCadenaConexcion = lConfiguration.GetConnectionString("LoteriaBD");
 
             gObjUsuarioLN = new UsuarioLN(lConfiguration);
-            _logger = Log.ForContext<UsuarioController>();  // Inicializar el logger de Serilog // Asignamos el logger
         }
 
-        [HttpGet]
-        public IActionResult Get()
+        private string GenerarJwtToken(Usuario usuario)
         {
-            _logger.Information("GET request to /Usuario endpoint");
-
-            return Ok(new { message = "Hello" });
-        }
-
-        private string GenearJwtToken(Usuario pUsuario)
-        {
-            _logger.Information($"Generando token JWT para el usuario: {pUsuario.NombreUsuario}");
+            _logger.Information($"Generando token JWT para el usuario: {usuario.NombreUsuario}");
 
             var keyVaultUrl = lConfiguration["AzureKeyVault:VaultUrl"];
-
             var client = new SecretClient(new Uri(keyVaultUrl), new DefaultAzureCredential());
-            var secret = client.GetSecret("JwtKey").Value.Value;
+            var secret = client.GetSecret("KeyStagingLoteria").Value.Value;
 
             var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secret));
             var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
 
+            var issuer = lConfiguration["JwtI:Issuer"];
+            var audience = lConfiguration["JwtA:Audience"];
+
+            // --- Header ---
+            var header = new JwtHeader(credentials);
+
+            // --- Payload ---
             var claims = new List<Claim>
             {
-                new Claim(JwtRegisteredClaimNames.Sub, pUsuario.NombreUsuario),
-                new Claim("Id", pUsuario.Id.ToString()),
-                new Claim("Rol", pUsuario.Rol.ToString()),
-                new Claim(JwtRegisteredClaimNames.Iss, lConfiguration["Jwt:Issuer"]),
-                new Claim(JwtRegisteredClaimNames.Aud, lConfiguration["Jwt:Audience"]),
-                new Claim("Correo", pUsuario.Correo),
-                new Claim("FechaCreacion", DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"))
+                new Claim(JwtRegisteredClaimNames.Sub, usuario.Id.ToString()),
+                new Claim("Id", usuario.Id.ToString()),
+                new Claim("Rol", usuario.Rol.ToString()),
+                new Claim(JwtRegisteredClaimNames.Iss, issuer),
+                new Claim(JwtRegisteredClaimNames.Aud, audience),
+                new Claim("Correo", usuario.Correo)
             };
 
-            var token = new JwtSecurityToken(
-                issuer: lConfiguration["Jwt:Issuer"],
-                audience: lConfiguration["Jwt:Audience"],
-                claims: claims,
-                expires: DateTime.Now.AddDays(2),
-                signingCredentials: credentials
+            var payload = new JwtPayload(
+                issuer,               // Issuer
+                audience,             // Audience
+                claims,               // Claims
+                DateTime.UtcNow,      // NotBefore (Inicio de validez)
+                DateTime.UtcNow.AddHours(1) // Expiration (Expiración en 1 hora)
             );
+
+            // --- Combine Header and Payload ---
+            var token = new JwtSecurityToken(header, payload);
 
             _logger.Information("Token JWT generado exitosamente");
 
+            _logger.Information(token.ToString());
+            _logger.Information("Token JWT generado exitosamente");
             return new JwtSecurityTokenHandler().WriteToken(token);
         }
 
-        private ActionResult ManejoError(Exception Ex)
+        // Manejo de errores
+        private ActionResult ManejoError(Exception ex)
         {
-            _logger.Error($"Error ocurrido: {Ex.Message}");
-            gObjExcepciones.LogError(Ex);
-            return StatusCode(StatusCodes.Status500InternalServerError, Ex.Message);
+            _logger.Error($"Error ocurrido: {ex.Message}");
+            if (ex.InnerException != null)
+            {
+                _logger.Warning($"Causa del error: {ex.InnerException.Message}");
+            }
+
+            gObjExcepciones.LogError(ex);
+            return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
         }
 
+        // Manejo de respuestas
         private IActionResult HandleResponse<T>(T response)
         {
             if (response == null)
             {
                 _logger.Warning("Respuesta no encontrada, retornando 404");
-                return new JsonResult(null);
+                return NotFound();
             }
 
             _logger.Information("Respuesta exitosa, retornando 200 OK");
             return Ok(response);
         }
 
-        [HttpGet]
-        public IActionResult Getu()
-        {
-            _logger.Information("GET request to /Usuario/Getu endpoint");
-            return Ok(new { message = "Hello" });
-        }
-
+        // Endpoint de login
         [AllowAnonymous]
         [Route("Login")]
         [HttpPost]
-        public IActionResult Login([FromBody] Usuario pUsuario)
+        public IActionResult Login([FromBody] Usuario usuario)
         {
-            if (pUsuario == null || string.IsNullOrEmpty(pUsuario.Clave))
+            if (usuario == null || string.IsNullOrEmpty(usuario.Clave))
             {
                 _logger.Warning("Credenciales inválidas proporcionadas");
-                return BadRequest("Credenciales Invalidas");
+                return BadRequest("Credenciales inválidas");
             }
 
-            try
-            {
-                _logger.Information($"Intentando loguear al usuario: {pUsuario.NombreUsuario}");
-                var user = gObjUsuarioLN.ValidarLoginUsuario(pUsuario.Id, pUsuario.Clave);
+            try { 
+            
+                _logger.Information($"Intentando loguear al usuario: {usuario.NombreUsuario}");
+                var user = gObjUsuarioLN.ValidarLoginUsuario(usuario.Id, usuario.Clave);
                 if (user == null)
                 {
                     _logger.Warning("Usuario o Clave Incorrecta");
                     return Unauthorized("Usuario o Clave Incorrecta");
                 }
 
-                var token = GenearJwtToken(user);
+                var token = GenerarJwtToken(user);
                 _logger.Information($"Usuario {user.NombreUsuario} autenticado exitosamente");
 
                 return Ok(new { Token = token, user });
@@ -145,172 +152,99 @@ namespace LoteriaWebApi.Controllers
             }
         }
 
-        [Authorize]
+        // Endpoint para obtener los usuarios (restringido)
+        [Authorize(Policy = "loteriabackapi/slots/staging")]
         [Route("RecUsuario")]
         [HttpGet]
         public ActionResult<List<Usuario>> RecUsuario()
         {
-            List<Usuario> lObjRespuesta = new List<Usuario>();
+            List<Usuario> usuarios = new List<Usuario>();
 
             try
             {
                 _logger.Information("Recuperando la lista de usuarios");
-                lObjRespuesta = gObjUsuarioLN.RecUsuario();
+                usuarios = gObjUsuarioLN.RecUsuario();
 
-                var Usuario = lObjRespuesta.Select(u => new Usuario
-                {
-                    Id = u.Id,
-                    Nombre = u.Nombre,
-                    NombreUsuario = u.NombreUsuario,
-                    Rol = u.Rol,
-                    Correo = u.Correo
-                }).ToList();
-
-                _logger.Information($"Se recuperaron {Usuario.Count} usuarios");
-                return Ok(Usuario);
+                _logger.Information($"Se recuperaron {usuarios.Count} usuarios");
+                return Ok(usuarios);
             }
-            catch (Exception lEx)
+            catch (Exception ex)
             {
-                return ManejoError(lEx);
+                return ManejoError(ex);
             }
         }
 
-        [Authorize]
-        [Route("[action]")]
+        // Endpoint para obtener usuario por ID (restringido)
+        [Authorize(Policy = "loteriabackapi/slots/staging")]
+        [Route("RecUsuarioXId")]
         [HttpPost]
-        public IActionResult? RecUsuarioXId([FromBody] Usuario pUsuario)
+        public IActionResult RecUsuarioXId([FromBody] Usuario usuario)
         {
             try
             {
-                _logger.Information($"Recuperando usuario con ID: {pUsuario.Id}");
-                var lObjRespuesta = gObjUsuarioLN.RecUsuarioXId(pUsuario.Id);
-                return HandleResponse(lObjRespuesta);
+                _logger.Information($"Recuperando usuario con ID: {usuario.Id}");
+                var user = gObjUsuarioLN.RecUsuarioXId(usuario.Id);
+                return HandleResponse(user);
             }
-            catch (Exception lEx)
+            catch (Exception ex)
             {
-                return ManejoError(lEx);
+                return ManejoError(ex);
             }
         }
 
+        // Endpoint para insertar usuario (restringido)
         [Authorize]
-        [Route("[action]")]
+        [Route("InsUsuario")]
         [HttpPost]
-        public IActionResult InsUsuario([FromBody] Usuario pUsuario)
+        public IActionResult InsUsuario([FromBody] Usuario usuario)
         {
             if (!ModelState.IsValid)
             {
                 _logger.Warning("Modelo de usuario inválido");
-                return BadRequest("Modelo Invalido");
+                return BadRequest("Modelo Inválido");
             }
 
             try
             {
-                _logger.Information($"Insertando nuevo usuario: {pUsuario.NombreUsuario}");
-                gObjUsuarioLN.InsUsuario(pUsuario);
-                _logger.Information($"Usuario {pUsuario.NombreUsuario} insertado exitosamente");
-                return CreatedAtAction(nameof(RecUsuarioXId), new { pIdUsuario = pUsuario.Id }, pUsuario);
+                _logger.Information($"Insertando nuevo usuario: {usuario.NombreUsuario}");
+                gObjUsuarioLN.InsUsuario(usuario);
+                _logger.Information($"Usuario {usuario.NombreUsuario} insertado exitosamente");
+                return CreatedAtAction(nameof(RecUsuarioXId), new { id = usuario.Id }, usuario);
             }
-            catch (Exception lEx)
+            catch (Exception ex)
             {
-                return ManejoError(lEx);
+                return ManejoError(ex);
             }
         }
 
+        // Endpoint para eliminar usuario (restringido)
         [Authorize]
-        [Route("[action]")]
-        [HttpPut]
-        public IActionResult ModUsuario([FromBody] Usuario pUsuario)
-        {
-            if (!ModelState.IsValid)
-            {
-                _logger.Warning("Modelo de usuario inválido para modificación");
-                return BadRequest("Modelo Invalido");
-            }
-
-            try
-            {
-                _logger.Information($"Modificando usuario con ID: {pUsuario.Id}");
-                gObjUsuarioLN.ModUsuario(pUsuario);
-                _logger.Information($"Usuario {pUsuario.Id} modificado exitosamente");
-                return Ok(pUsuario);
-            }
-            catch (Exception lEx)
-            {
-                return ManejoError(lEx);
-            }
-        }
-
-        [Authorize]
-        [Route("[action]")]
+        [Route("DelUsuario")]
         [HttpDelete]
-        public IActionResult DelUsuario([FromBody] int IdUsuario)
+        public IActionResult DelUsuario([FromBody] int idUsuario)
         {
             try
             {
-                _logger.Information($"Eliminando usuario con ID: {IdUsuario}");
-                var lUsuario = gObjUsuarioLN.RecUsuarioXId(IdUsuario);
-                if (lUsuario == null)
+                _logger.Information($"Eliminando usuario con ID: {idUsuario}");
+                var usuario = gObjUsuarioLN.RecUsuarioXId(idUsuario);
+                if (usuario == null)
                 {
-                    _logger.Warning($"Usuario con ID {IdUsuario} no encontrado");
+                    _logger.Warning($"Usuario con ID {idUsuario} no encontrado");
                     return BadRequest("Usuario No Encontrado");
                 }
-                gObjUsuarioLN.DelUsuario(lUsuario);
-                _logger.Information($"Usuario con ID {IdUsuario} eliminado exitosamente");
-                return Ok(lUsuario);
+
+                gObjUsuarioLN.DelUsuario(usuario);
+                _logger.Information($"Usuario con ID {idUsuario} eliminado exitosamente");
+                return Ok(usuario);
             }
-            catch (Exception lEx)
+            catch (Exception ex)
             {
-                return ManejoError(lEx);
+                return ManejoError(ex);
             }
         }
 
-        [Route("[action]")]
-        [HttpPost]
-        public IActionResult? ValidarUsuarioLogin([FromBody] Usuario pUsuario)
-        {
-            if (!ModelState.IsValid || pUsuario == null || string.IsNullOrEmpty(pUsuario.Clave))
-            {
-                _logger.Warning("Datos inválidos o incompletos para validación de login");
-                return BadRequest("Datos inválidos o incompletos");
-            }
-
-            try
-            {
-                _logger.Information($"Validando login para el usuario con ID: {pUsuario.Id}");
-                var lUsuario = gObjUsuarioLN.ValidarLoginUsuario(pUsuario.Id, pUsuario.Clave);
-                return HandleResponse(lUsuario);
-            }
-            catch (Exception lEx)
-            {
-                return ManejoError(lEx);
-            }
-        }
-
-        [Authorize]
-        [Route("[action]")]
-        [HttpPut]
-        public IActionResult ModClaveUsuario([FromBody] Usuario pUsuario)
-        {
-            if (!ModelState.IsValid || string.IsNullOrEmpty(pUsuario.Clave))
-            {
-                _logger.Warning("Modelo de usuario inválido para modificación de clave");
-                return BadRequest("Modelo Invalido");
-            }
-
-            try
-            {
-                _logger.Information($"Modificando clave del usuario con ID: {pUsuario.Id}");
-                gObjUsuarioLN.ModClaveUsuario(pUsuario.Id, pUsuario.Clave);
-                _logger.Information($"Clave del usuario con ID {pUsuario.Id} modificada exitosamente");
-                return Ok();
-            }
-            catch (Exception lEx)
-            {
-                return ManejoError(lEx);
-            }
-        }
-
-        [Route("[action]")]
+        // Logout del usuario
+        [Route("Logout")]
         [HttpPost]
         public IActionResult Logout()
         {
@@ -326,9 +260,10 @@ namespace LoteriaWebApi.Controllers
             return Ok(new { message = "Usuario deslogueado exitosamente" });
         }
 
-        [Route("[action]")]
+        // Eliminar cookie de sesión
+        [Route("EliminaCookie")]
         [HttpPost]
-        public IActionResult eliminaCookie()
+        public IActionResult EliminaCookie()
         {
             _logger.Information("Eliminando cookie de sesión");
             Response.Cookies.Delete("Token");

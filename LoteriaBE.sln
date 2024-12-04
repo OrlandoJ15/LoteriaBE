@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LogicaNegocio", "LogicaNego
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LoteriaWebApi", "LoteriaWebApi\LoteriaWebApi.csproj", "{1E6C1FAE-F47F-426E-AF9D-8CEA44947DD5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MetodosComunes", "MetodosComunes\MetodosComunes.csproj", "{87E8D54A-8DB3-4302-95A3-359BB9D0273D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MetodosComunes", "MetodosComunes\MetodosComunes.csproj", "{87E8D54A-8DB3-4302-95A3-359BB9D0273D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

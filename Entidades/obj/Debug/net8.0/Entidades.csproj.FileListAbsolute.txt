@@ -36,3 +36,16 @@ C:\Loteria\LoteriaBE\Entidades\obj\Debug\net8.0\Entidades.dll
 C:\Loteria\LoteriaBE\Entidades\obj\Debug\net8.0\refint\Entidades.dll
 C:\Loteria\LoteriaBE\Entidades\obj\Debug\net8.0\Entidades.pdb
 C:\Loteria\LoteriaBE\Entidades\obj\Debug\net8.0\ref\Entidades.dll
+C:\Loteria\Back-End\LoteriaBE\Entidades\bin\Debug\net8.0\Entidades.deps.json
+C:\Loteria\Back-End\LoteriaBE\Entidades\bin\Debug\net8.0\Entidades.dll
+C:\Loteria\Back-End\LoteriaBE\Entidades\bin\Debug\net8.0\Entidades.pdb
+C:\Loteria\Back-End\LoteriaBE\Entidades\obj\Debug\net8.0\Entidades.csproj.AssemblyReference.cache
+C:\Loteria\Back-End\LoteriaBE\Entidades\obj\Debug\net8.0\Entidades.GeneratedMSBuildEditorConfig.editorconfig
+C:\Loteria\Back-End\LoteriaBE\Entidades\obj\Debug\net8.0\Entidades.AssemblyInfoInputs.cache
+C:\Loteria\Back-End\LoteriaBE\Entidades\obj\Debug\net8.0\Entidades.AssemblyInfo.cs
+C:\Loteria\Back-End\LoteriaBE\Entidades\obj\Debug\net8.0\Entidades.csproj.CoreCompileInputs.cache
+C:\Loteria\Back-End\LoteriaBE\Entidades\obj\Debug\net8.0\Entidades.sourcelink.json
+C:\Loteria\Back-End\LoteriaBE\Entidades\obj\Debug\net8.0\Entidades.dll
+C:\Loteria\Back-End\LoteriaBE\Entidades\obj\Debug\net8.0\refint\Entidades.dll
+C:\Loteria\Back-End\LoteriaBE\Entidades\obj\Debug\net8.0\Entidades.pdb
+C:\Loteria\Back-End\LoteriaBE\Entidades\obj\Debug\net8.0\ref\Entidades.dll

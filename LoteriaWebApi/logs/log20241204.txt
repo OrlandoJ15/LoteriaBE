@@ -1,0 +1,24 @@
+2024-12-04 15:41:34.822 -06:00 [ERR] Error al validar el token: IDX10000: The parameter 'token' cannot be a 'null' or an empty object.  (Parameter 'token')
+2024-12-04 15:42:45.108 -06:00 [ERR] Error al validar el token: IDX10000: The parameter 'token' cannot be a 'null' or an empty object.  (Parameter 'token')
+2024-12-04 15:42:46.372 -06:00 [INF] Intentando loguear al usuario: Otro2
+2024-12-04 15:42:50.276 -06:00 [INF] Generando token JWT para el usuario: Otro2
+2024-12-04 15:42:58.303 -06:00 [INF] Token JWT generado exitosamente
+2024-12-04 15:42:58.318 -06:00 [INF] {"alg":"HS256","typ":"JWT"}.{"sub":"3","Id":"3","Rol":"1","iss":"https://localhost:44366/Usuario/Login","aud":["422c4fea-8265-4970-bb14-5a085055b857","422c4fea-8265-4970-bb14-5a085055b857"],"Correo":"otro2@gmial.com","nbf":1733348578,"exp":1733352178}
+2024-12-04 15:42:58.319 -06:00 [INF] Token JWT generado exitosamente
+2024-12-04 15:42:58.363 -06:00 [INF] Usuario Otro2 autenticado exitosamente
+2024-12-04 15:43:46.868 -06:00 [ERR] Error al validar el token: IDX10211: Unable to validate issuer. The 'issuer' parameter is null or whitespace.
+2024-12-04 15:43:46.978 -06:00 [ERR] Error de autenticación: Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException - IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2024-12-04 15:43:47.014 -06:00 [WRN] Desafío de autenticación:  - 
+2024-12-04 16:43:58.709 -06:00 [ERR] Error al validar el token: IDX10000: The parameter 'token' cannot be a 'null' or an empty object.  (Parameter 'token')
+2024-12-04 16:44:42.294 -06:00 [ERR] Error al validar el token: IDX10000: The parameter 'token' cannot be a 'null' or an empty object.  (Parameter 'token')
+2024-12-04 16:44:42.820 -06:00 [INF] Intentando loguear al usuario: Otro2
+2024-12-04 16:44:47.150 -06:00 [INF] Generando token JWT para el usuario: Otro2
+2024-12-04 16:44:57.105 -06:00 [INF] Token JWT generado exitosamente
+2024-12-04 16:44:57.120 -06:00 [INF] {"alg":"HS256","typ":"JWT"}.{"sub":"3","Id":"3","Rol":"1","iss":"https://localhost:44366/Usuario/Login","aud":["422c4fea-8265-4970-bb14-5a085055b857","422c4fea-8265-4970-bb14-5a085055b857"],"Correo":"otro2@gmial.com","nbf":1733352297,"exp":1733355897}
+2024-12-04 16:44:57.121 -06:00 [INF] Token JWT generado exitosamente
+2024-12-04 16:44:57.170 -06:00 [INF] Usuario Otro2 autenticado exitosamente
+2024-12-04 16:45:44.459 -06:00 [ERR] Error al validar el token: IDX10211: Unable to validate issuer. The 'issuer' parameter is null or whitespace.
+2024-12-04 16:45:44.642 -06:00 [ERR] Error de autenticación: Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException - IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EndcodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2024-12-04 16:45:44.666 -06:00 [WRN] Desafío de autenticación:  - 

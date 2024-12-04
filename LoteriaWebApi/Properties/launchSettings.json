@@ -5,7 +5,9 @@
       "launchBrowser": true,
       "launchUrl": "swagger",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "VaultUri": "https://keyvaultloteriaa.vault.azure.net/",
+        "AZURE_USERNAME": "orlando.org.1994@gmail.com"
       },
       "dotnetRunMessages": true,
       "applicationUrl": "http://localhost:5112"
@@ -15,17 +17,27 @@
       "launchBrowser": true,
       "launchUrl": "swagger",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "ASPNETCORE_ENVIRONMENT": "Deve0.m  lopment",
+        "VaultUri": "https://keyvaultloteriaa.vault.azure.net/",
+        "AZURE_USERNAME": "orlando.org.1994@gmail.com"
       },
       "dotnetRunMessages": true,
-      "applicationUrl": "https://localhost:44366;http://localhost:5112"
+      "applicationUrl": "https://localhost:5000;http://localhost:5112"
     },
     "IIS Express": {
       "commandName": "IISExpress",
       "launchBrowser": true,
       "launchUrl": "swagger",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "VaultUri": "https://keyvaultloteriaa.vault.azure.net/",
+        "AZURE_USERNAME": "orlando.org.1994@gmail.com"
+      },
+      "ProjectName": {
+        "environmentVariables": {
+          "ASPNETCORE_ENVIRONMENT": "Development"
+        },
+        "applicationUrl": "https://localhost:44318"
       }
     }
   },

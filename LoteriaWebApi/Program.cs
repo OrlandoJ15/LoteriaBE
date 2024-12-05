@@ -70,13 +70,13 @@ namespace LoteriaWebApi
         {
             builder.WebHost.ConfigureKestrel(options =>
             {
-                options.ListenLocalhost(44366, listenOptions =>
+                /*options.ListenLocalhost(44366, listenOptions =>
                 {
                     listenOptions.UseHttps(httpsOptions =>
                     {
                         httpsOptions.SslProtocols = System.Security.Authentication.SslProtocols.Tls12 | System.Security.Authentication.SslProtocols.Tls13;
                     });
-                });
+                });*/
             });
         }
 

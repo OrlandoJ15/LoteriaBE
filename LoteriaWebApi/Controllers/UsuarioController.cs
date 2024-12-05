@@ -153,8 +153,7 @@ namespace LoteriaWebApi.Controllers
         }
 
         // Endpoint para obtener los usuarios (restringido)
-        [Route("RecUsuario")]
-        [HttpGet]
+        [HttpGet("RecUsuario")]
         public ActionResult<List<Usuario>> RecUsuario()
         {
             List<Usuario> usuarios = new List<Usuario>();

@@ -53,7 +53,7 @@ namespace LoteriaWebApi
 
             // Mapeo de rutas y middleware
             app.MapHealthChecks("/api/health");
-            app.UseCors();
+            app.UseCors("AllowAnyOrigin");
             app.UseHttpsRedirection();
 
             app.UseRouting(); // Necesario para que los controladores usen las rutas
@@ -96,9 +96,10 @@ namespace LoteriaWebApi
         {
             builder.Services.AddCors(options =>
             {
-                options.AddPolicy("loteriabackapi/slots/staging", policy =>
+                options.AddPolicy("AllowAnyOrigin ", policy =>
                 {
-                    policy.WithOrigins("https://localhost:44366", "https://multiplicados.net", "https://portal.azure.com")
+                      policy.AllowAnyOrigin()
+                   // policy.WithOrigins("https://localhost:44366", "https://multiplicados.net", "https://portal.azure.com")
                           .AllowAnyHeader()
                           .AllowAnyMethod()
                           .AllowCredentials();
@@ -127,7 +128,7 @@ namespace LoteriaWebApi
             builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddJwtBearer(options =>
                 {
-                    options.Authority = "https://loteriabackapi-staging-cjfvdcc9e6g4gwap.centralus-01.azurewebsites.net";
+                    options.Authority = null;
                     options.Audience = audience;
                     options.TokenValidationParameters = new TokenValidationParameters
                     {
@@ -190,7 +191,7 @@ namespace LoteriaWebApi
         {
             builder.Services.AddAuthorization(options =>
             {
-                options.AddPolicy("loteriabackapi/slots/staging", policy =>
+                options.AddPolicy("AllowAnyOrigin", policy =>
                 {
                     policy.RequireAuthenticatedUser(); // Solo permite acceso a usuarios autenticados
                 });

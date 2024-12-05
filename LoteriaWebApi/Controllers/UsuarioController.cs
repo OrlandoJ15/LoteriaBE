@@ -153,7 +153,6 @@ namespace LoteriaWebApi.Controllers
         }
 
         // Endpoint para obtener los usuarios (restringido)
-        [Authorize(Policy = "loteriabackapi/slots/staging")]
         [Route("RecUsuario")]
         [HttpGet]
         public ActionResult<List<Usuario>> RecUsuario()
@@ -175,7 +174,6 @@ namespace LoteriaWebApi.Controllers
         }
 
         // Endpoint para obtener usuario por ID (restringido)
-        [Authorize(Policy = "loteriabackapi/slots/staging")]
         [Route("RecUsuarioXId")]
         [HttpPost]
         public IActionResult RecUsuarioXId([FromBody] Usuario usuario)

@@ -127,7 +127,7 @@ namespace LoteriaWebApi
             builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddJwtBearer(options =>
                 {
-                    options.Authority = "https://localhost:44366";
+                    options.Authority = "https://loteriabackapi-staging-cjfvdcc9e6g4gwap.centralus-01.azurewebsites.net";
                     options.Audience = audience;
                     options.TokenValidationParameters = new TokenValidationParameters
                     {

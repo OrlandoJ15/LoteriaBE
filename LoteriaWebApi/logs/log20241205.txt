@@ -1,0 +1,7 @@
+2024-12-05 00:20:32.155 -06:00 [ERR] Error al validar el token: IDX10000: The parameter 'token' cannot be a 'null' or an empty object.  (Parameter 'token')
+2024-12-05 00:20:32.552 -06:00 [INF] Intentando loguear al usuario: Otro2
+2024-12-05 00:20:33.384 -06:00 [INF] Generando token JWT para el usuario: Otro2
+2024-12-05 00:20:57.901 -06:00 [INF] Token JWT generado exitosamente
+2024-12-05 00:20:57.918 -06:00 [INF] {"alg":"HS256","typ":"JWT"}.{"sub":"3","Id":"3","Rol":"1","iss":"https://localhost:44366/Usuario/Login","aud":["422c4fea-8265-4970-bb14-5a085055b857","422c4fea-8265-4970-bb14-5a085055b857"],"Correo":"otro2@gmial.com","nbf":1733379657,"exp":1733383257}
+2024-12-05 00:20:57.919 -06:00 [INF] Token JWT generado exitosamente
+2024-12-05 00:20:57.928 -06:00 [INF] Usuario Otro2 autenticado exitosamente

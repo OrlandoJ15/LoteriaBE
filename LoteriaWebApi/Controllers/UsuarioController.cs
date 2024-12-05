@@ -21,7 +21,7 @@ using SerilogLogger = Serilog.ILogger;
 namespace LoteriaWebApi.Controllers
 {
 
-    [Route("Usuario")]
+    [Route("api/[controller]")]
     [ApiController]
     public class UsuarioController : ControllerBase
     {

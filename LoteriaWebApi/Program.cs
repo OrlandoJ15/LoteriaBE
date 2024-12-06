@@ -78,6 +78,8 @@ namespace LoteriaWebApi
                         httpsOptions.SslProtocols = System.Security.Authentication.SslProtocols.Tls12 | System.Security.Authentication.SslProtocols.Tls13;
                     });
                 });
+
+                options.ListenLocalhost(8080);
             });
         }
 

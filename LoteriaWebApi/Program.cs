@@ -100,7 +100,7 @@ namespace LoteriaWebApi
                 options.AddPolicy("AllowAnyOrigin ", policy =>
                 {
                       policy.AllowAnyOrigin()
-                   // policy.WithOrigins("https://localhost:44366", "https://multiplicados.net", "https://portal.azure.com")
+                   // policy.WithOrigins("https://localhost:8080", "https://multiplicados.net", "https://portal.azure.com")
                           .AllowAnyHeader()
                           .AllowAnyMethod()
                           .AllowCredentials();

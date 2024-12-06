@@ -1,4 +1,4 @@
 {
-    "appService.defaultWebAppToDeploy": "/subscriptions/185da99b-9e35-4e9d-8d44-f0cf51f8b395/resourceGroups/LoteriaMVP/providers/Microsoft.Web/sites/LoteriaBackApi",
+    "appService.defaultWebAppToDeploy": "",
     "appService.deploySubpath": "."
 }

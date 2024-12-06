@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LoteriaWebApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d75be82003f6fc9d80f0e7a6f77cd79c38971bbe")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+128f70e334651e980962873051472742cd79e96d")]
 [assembly: System.Reflection.AssemblyProductAttribute("LoteriaWebApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LoteriaWebApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -53,7 +53,7 @@ namespace LoteriaWebApi
 
             // Mapeo de rutas y middleware
             app.MapHealthChecks("/api/health");
-            app.UseCors("AllowAnyOrigin");
+            app.UseCors("AllowSpecificOrigins");
             app.UseHttpsRedirection();
 
             app.UseRouting(); // Necesario para que los controladores usen las rutas
@@ -99,10 +99,10 @@ namespace LoteriaWebApi
         {
             builder.Services.AddCors(options =>
             {
-                options.AddPolicy("AllowAnyOrigin ", policy =>
+                
+                options.AddPolicy("AllowSpecificOrigins ", policy =>
                 {
-                      policy.AllowAnyOrigin()
-                   // policy.WithOrigins("https://localhost:8080", "https://multiplicados.net", "https://portal.azure.com")
+                      policy.WithOrigins("https://localhost:8080", "https://multiplicados.net", "https://portal.azure.com")
                           .AllowAnyHeader()
                           .AllowAnyMethod()
                           .AllowCredentials();

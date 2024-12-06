@@ -52,14 +52,14 @@ namespace LoteriaWebApi.Controllers
             _logger.Information($"Generando token JWT para el usuario: {usuario.NombreUsuario}");
 
             var keyVaultUrl = lConfiguration["AzureKeyVault:VaultUrl"];
-            var client = new SecretClient(new Uri(keyVaultUrl), new DefaultAzureCredential());
-            var secret = client.GetSecret("KeyStagingLoteria").Value.Value;
+            var client = new SecretClient(new Uri(keyVaultUrl ?? ""), new DefaultAzureCredential());
+            var secret = client.GetSecret("KeyVaultLoteriaLO").Value.Value;
 
             var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secret));
             var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
 
-            var issuer = lConfiguration["JwtI:Issuer"];
-            var audience = lConfiguration["JwtA:Audience"];
+            var issuer = lConfiguration["JwtI:Issuer"] ?? "";
+            var audience = lConfiguration["JwtA:Audience"] ?? "";
 
             // --- Header ---
             var header = new JwtHeader(credentials);
@@ -70,7 +70,7 @@ namespace LoteriaWebApi.Controllers
                 new Claim(JwtRegisteredClaimNames.Sub, usuario.Id.ToString()),
                 new Claim("Id", usuario.Id.ToString()),
                 new Claim("Rol", usuario.Rol.ToString()),
-                new Claim(JwtRegisteredClaimNames.Iss, issuer),
+                new Claim(JwtRegisteredClaimNames.Iss, issuer ),
                 new Claim(JwtRegisteredClaimNames.Aud, audience),
                 new Claim("Correo", usuario.Correo)
             };

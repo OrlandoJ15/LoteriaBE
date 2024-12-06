@@ -1,10 +1,6 @@
 .vs
 /AccesoDatos/obj
-/AccesoDatos/bin
 /Entidades/obj
-/Entidades/bin
 /LogicaNegocio/obj
-/LogicaNegocio/bin
 /.vs
-/LoteriaWebApi/bin
 /LoteriaWebApi/obj

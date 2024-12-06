@@ -1,0 +1,319 @@
+2024-12-06T03:00:34.321309951Z    _____                               
+2024-12-06T03:00:34.321334419Z   /  _  \ __________ _________   ____  
+2024-12-06T03:00:34.321337829Z  /  /_\  \\___   /  |  \_  __ \_/ __ \ 
+2024-12-06T03:00:34.321340766Z /    |    \/    /|  |  /|  | \/\  ___/ 
+2024-12-06T03:00:34.321343834Z \____|__  /_____ \____/ |__|    \___  >
+2024-12-06T03:00:34.321346768Z         \/      \/                  \/ 
+2024-12-06T03:00:34.321349612Z A P P   S E R V I C E   O N   L I N U X
+2024-12-06T03:00:34.321352397Z 
+2024-12-06T03:00:34.321354906Z Documentation: http://aka.ms/webapp-linux
+2024-12-06T03:00:34.321357741Z Dotnet quickstart: https://aka.ms/dotnet-qs
+2024-12-06T03:00:34.321360445Z ASP .NETCore Version: 8.0.10
+2024-12-06T03:00:34.321363205Z Note: Any data outside '/home' is not persisted
+2024-12-06T03:00:35.451596545Z Starting OpenBSD Secure Shell server: sshd.
+2024-12-06T03:00:35.510166420Z WEBSITES_INCLUDE_CLOUD_CERTS is not set to true.
+2024-12-06T03:00:36.129645378Z Starting periodic command scheduler: cron.
+2024-12-06T03:00:36.130908387Z Running oryx create-script -appPath /home/site/wwwroot -output /opt/startup/startup.sh -defaultAppFilePath /defaulthome/hostingstart/hostingstart.dll     -bindPort 8080 -bindPort2 '' -userStartupCommand '' 
+2024-12-06T03:00:36.140775415Z Could not find build manifest file at '/home/site/wwwroot/oryx-manifest.toml'
+2024-12-06T03:00:36.140797311Z Could not find operation ID in manifest. Generating an operation id...
+2024-12-06T03:00:36.140801665Z Build Operation ID: a2069aa8-c59b-4b38-af2d-5e1e35891acd
+2024-12-06T03:00:36.353033089Z 
+2024-12-06T03:00:36.353099773Z Agent extension 
+2024-12-06T03:00:36.353104812Z Before if loop >> DotNet Runtime 
+2024-12-06T03:00:36.393011799Z DotNet Runtime 8.0Writing output script to '/opt/startup/startup.sh'
+2024-12-06T03:00:36.445906858Z Trying to find the startup DLL name...
+2024-12-06T03:00:36.445930723Z Found the startup D name: LoteriaWebApi.dll
+2024-12-06T03:00:36.445935022Z Running the command: dotnet "LoteriaWebApi.dll"
+2024-12-06T03:00:36.467050130Z A JSON parsing exception occurred in [/home/site/wwwroot/LoteriaWebApi.deps.json], offset 0 (line 1, column 1): The document is empty.
+2024-12-06T03:00:36.467451332Z Error initializing the dependency resolver: An error occurred while parsing: /home/site/wwwroot/LoteriaWebApi.deps.json
+
+2024-12-06T03:06:46.339256336Z    _____                               
+2024-12-06T03:06:46.339305020Z   /  _  \ __________ _________   ____  
+2024-12-06T03:06:46.339310220Z  /  /_\  \\___   /  |  \_  __ \_/ __ \ 
+2024-12-06T03:06:46.339313825Z /    |    \/    /|  |  /|  | \/\  ___/ 
+2024-12-06T03:06:46.339317180Z \____|__  /_____ \____/ |__|    \___  >
+2024-12-06T03:06:46.339320524Z         \/      \/                  \/ 
+2024-12-06T03:06:46.339323730Z A P P   S E R V I C E   O N   L I N U X
+2024-12-06T03:06:46.339326950Z 
+2024-12-06T03:06:46.339329971Z Documentation: http://aka.ms/webapp-linux
+2024-12-06T03:06:46.339333334Z Dotnet quickstart: https://aka.ms/dotnet-qs
+2024-12-06T03:06:46.339336676Z ASP .NETCore Version: 8.0.10
+2024-12-06T03:06:46.339339730Z Note: Any data outside '/home' is not persisted
+2024-12-06T03:06:48.577469520Z Starting OpenBSD Secure Shell server: sshd.
+2024-12-06T03:06:48.591025390Z WEBSITES_INCLUDE_CLOUD_CERTS is not set to true.
+2024-12-06T03:06:48.745717794Z Starting periodic command scheduler: cron.
+2024-12-06T03:06:48.748738895Z Running oryx create-script -appPath /home/site/wwwroot -output /opt/startup/startup.sh -defaultAppFilePath /defaulthome/hostingstart/hostingstart.dll     -bindPort 8080 -bindPort2 '' -userStartupCommand '' 
+2024-12-06T03:06:49.082650411Z Could not find build manifest file at '/home/site/wwwroot/oryx-manifest.toml'
+2024-12-06T03:06:49.083031952Z Could not find operation ID in manifest. Generating an operation id...
+2024-12-06T03:06:49.083045777Z Build Operation ID: 90d3d091-d278-4731-a8b2-8bbd736ed605
+2024-12-06T03:06:49.443287846Z 
+2024-12-06T03:06:49.443319534Z Agent extension 
+2024-12-06T03:06:49.443324063Z Before if loop >> DotNet Runtime 
+2024-12-06T03:06:49.486608200Z DotNet Runtime 8.0Writing output script to '/opt/startup/startup.sh'
+2024-12-06T03:06:49.527388023Z Trying to find the startup DLL name...
+2024-12-06T03:06:49.529578175Z Found the startup D name: LoteriaWebApi.dll
+2024-12-06T03:06:49.530926423Z Running the command: dotnet "LoteriaWebApi.dll"
+2024-12-06T03:06:49.820704729Z A JSON parsing exception occurred in [/home/site/wwwroot/LoteriaWebApi.deps.json], offset 0 (line 1, column 1): The document is empty.
+2024-12-06T03:06:49.821491241Z Error initializing the dependency resolver: An error occurred while parsing: /home/site/wwwroot/LoteriaWebApi.deps.json
+
+2024-12-06T03:14:19.846414511Z    _____                               
+2024-12-06T03:14:19.855278401Z   /  _  \ __________ _________   ____  
+2024-12-06T03:14:19.855300785Z  /  /_\  \\___   /  |  \_  __ \_/ __ \ 
+2024-12-06T03:14:19.855305709Z /    |    \/    /|  |  /|  | \/\  ___/ 
+2024-12-06T03:14:19.855309332Z \____|__  /_____ \____/ |__|    \___  >
+2024-12-06T03:14:19.855313174Z         \/      \/                  \/ 
+2024-12-06T03:14:19.855316722Z A P P   S E R V I C E   O N   L I N U X
+2024-12-06T03:14:19.855320285Z 
+2024-12-06T03:14:19.855323596Z Documentation: http://aka.ms/webapp-linux
+2024-12-06T03:14:19.855326852Z Dotnet quickstart: https://aka.ms/dotnet-qs
+2024-12-06T03:14:19.855330226Z ASP .NETCore Version: 8.0.10
+2024-12-06T03:14:19.855362742Z Note: Any data outside '/home' is not persisted
+2024-12-06T03:14:22.396869713Z Starting OpenBSD Secure Shell server: sshd.
+2024-12-06T03:14:22.422551831Z WEBSITES_INCLUDE_CLOUD_CERTS is not set to true.
+2024-12-06T03:14:22.657211314Z Starting periodic command scheduler: cron.
+2024-12-06T03:14:22.745654424Z Running oryx create-script -appPath /home/site/wwwroot -output /opt/startup/startup.sh -defaultAppFilePath /defaulthome/hostingstart/hostingstart.dll     -bindPort 8080 -bindPort2 '' -userStartupCommand '' 
+2024-12-06T03:14:22.862735798Z Could not find build manifest file at '/home/site/wwwroot/oryx-manifest.toml'
+2024-12-06T03:14:22.862766152Z Could not find operation ID in manifest. Generating an operation id...
+2024-12-06T03:14:22.863332550Z Build Operation ID: 5bd06375-6517-4c08-a824-5e28764bcc57
+2024-12-06T03:14:23.462679446Z 
+2024-12-06T03:14:23.462720997Z Agent extension 
+2024-12-06T03:14:23.462726228Z Before if loop >> DotNet Runtime 
+2024-12-06T03:14:23.502060759Z DotNet Runtime 8.0Writing output script to '/opt/startup/startup.sh'
+2024-12-06T03:14:24.569835092Z Trying to find the startup DLL name...
+2024-12-06T03:14:24.569900856Z Found the startup D name: LoteriaWebApi.dll
+2024-12-06T03:14:24.569906512Z Running the command: dotnet "LoteriaWebApi.dll"
+2024-12-06T03:14:26.020403237Z A JSON parsing exception occurred in [/home/site/wwwroot/LoteriaWebApi.deps.json], offset 0 (line 1, column 1): The document is empty.
+2024-12-06T03:14:26.020999098Z Error initializing the dependency resolver: An error occurred while parsing: /home/site/wwwroot/LoteriaWebApi.deps.json
+
+2024-12-06T03:21:57.245290802Z    _____                               
+2024-12-06T03:21:57.245318440Z   /  _  \ __________ _________   ____  
+2024-12-06T03:21:57.245322807Z  /  /_\  \\___   /  |  \_  __ \_/ __ \ 
+2024-12-06T03:21:57.245326329Z /    |    \/    /|  |  /|  | \/\  ___/ 
+2024-12-06T03:21:57.245329940Z \____|__  /_____ \____/ |__|    \___  >
+2024-12-06T03:21:57.245333423Z         \/      \/                  \/ 
+2024-12-06T03:21:57.245336721Z A P P   S E R V I C E   O N   L I N U X
+2024-12-06T03:21:57.245340593Z 
+2024-12-06T03:21:57.245343681Z Documentation: http://aka.ms/webapp-linux
+2024-12-06T03:21:57.245346967Z Dotnet quickstart: https://aka.ms/dotnet-qs
+2024-12-06T03:21:57.245350198Z ASP .NETCore Version: 8.0.10
+2024-12-06T03:21:57.245353360Z Note: Any data outside '/home' is not persisted
+2024-12-06T03:21:58.565603841Z Starting OpenBSD Secure Shell server: sshd.
+2024-12-06T03:21:58.580459189Z WEBSITES_INCLUDE_CLOUD_CERTS is not set to true.
+2024-12-06T03:21:58.855368006Z Starting periodic command scheduler: cron.
+2024-12-06T03:21:58.868287488Z Running oryx create-script -appPath /home/site/wwwroot -output /opt/startup/startup.sh -defaultAppFilePath /defaulthome/hostingstart/hostingstart.dll     -bindPort 8080 -bindPort2 '' -userStartupCommand '' 
+2024-12-06T03:21:58.998504770Z Could not find build manifest file at '/home/site/wwwroot/oryx-manifest.toml'
+2024-12-06T03:21:58.998772343Z Could not find operation ID in manifest. Generating an operation id...
+2024-12-06T03:21:58.999114660Z Build Operation ID: 4824a643-f311-4d3c-b4cc-0e079745e1b0
+2024-12-06T03:21:59.710750227Z 
+2024-12-06T03:21:59.712704662Z Agent extension 
+2024-12-06T03:21:59.713230693Z Before if loop >> DotNet Runtime 
+2024-12-06T03:21:59.756505544Z DotNet Runtime 8.0Writing output script to '/opt/startup/startup.sh'
+2024-12-06T03:21:59.803252156Z Trying to find the startup DLL name...
+2024-12-06T03:21:59.804081462Z Found the startup D name: LoteriaWebApi.dll
+2024-12-06T03:21:59.804697889Z Running the command: dotnet "LoteriaWebApi.dll"
+2024-12-06T03:21:59.860642552Z A JSON parsing exception occurred in [/home/site/wwwroot/LoteriaWebApi.deps.json], offset 0 (line 1, column 1): The document is empty.
+2024-12-06T03:21:59.861688541Z Error initializing the dependency resolver: An error occurred while parsing: /home/site/wwwroot/LoteriaWebApi.deps.json
+
+2024-12-06T04:08:28.223929951Z    _____                               
+2024-12-06T04:08:28.223960051Z   /  _  \ __________ _________   ____  
+2024-12-06T04:08:28.223964995Z  /  /_\  \\___   /  |  \_  __ \_/ __ \ 
+2024-12-06T04:08:28.223968840Z /    |    \/    /|  |  /|  | \/\  ___/ 
+2024-12-06T04:08:28.223972478Z \____|__  /_____ \____/ |__|    \___  >
+2024-12-06T04:08:28.223976208Z         \/      \/                  \/ 
+2024-12-06T04:08:28.223979508Z A P P   S E R V I C E   O N   L I N U X
+2024-12-06T04:08:28.223982623Z 
+2024-12-06T04:08:28.223985904Z Documentation: http://aka.ms/webapp-linux
+2024-12-06T04:08:28.223990107Z Dotnet quickstart: https://aka.ms/dotnet-qs
+2024-12-06T04:08:28.223993316Z ASP .NETCore Version: 8.0.10
+2024-12-06T04:08:28.223996533Z Note: Any data outside '/home' is not persisted
+2024-12-06T04:08:28.982508648Z Starting OpenBSD Secure Shell server: sshd.
+2024-12-06T04:08:28.986556871Z WEBSITES_INCLUDE_CLOUD_CERTS is not set to true.
+2024-12-06T04:08:30.715384654Z Starting periodic command scheduler: cron.
+2024-12-06T04:08:30.722200327Z Running oryx create-script -appPath /home/site/wwwroot -output /opt/startup/startup.sh -defaultAppFilePath /defaulthome/hostingstart/hostingstart.dll     -bindPort 8080 -bindPort2 '' -userStartupCommand '' 
+2024-12-06T04:08:30.827123559Z Could not find build manifest file at '/home/site/wwwroot/oryx-manifest.toml'
+2024-12-06T04:08:30.827189679Z Could not find operation ID in manifest. Generating an operation id...
+2024-12-06T04:08:30.831318762Z Build Operation ID: cb100060-5999-4fb4-bf52-08b36bc6a85d
+2024-12-06T04:08:31.651213479Z 
+2024-12-06T04:08:31.651238928Z Agent extension 
+2024-12-06T04:08:31.651243078Z Before if loop >> DotNet Runtime 
+2024-12-06T04:08:31.686805657Z DotNet Runtime 8.0Writing output script to '/opt/startup/startup.sh'
+2024-12-06T04:08:31.791209850Z Trying to find the startup DLL name...
+2024-12-06T04:08:31.791291212Z Found the startup D name: LoteriaWebApi.dll
+2024-12-06T04:08:31.791297920Z Running the command: dotnet "LoteriaWebApi.dll"
+2024-12-06T04:08:32.071600323Z A JSON parsing exception occurred in [/home/site/wwwroot/LoteriaWebApi.deps.json], offset 0 (line 1, column 1): The document is empty.
+2024-12-06T04:08:32.071677134Z Error initializing the dependency resolver: An error occurred while parsing: /home/site/wwwroot/LoteriaWebApi.deps.json
+
+2024-12-06T04:26:29.116474023Z    _____                               
+2024-12-06T04:26:29.116497578Z   /  _  \ __________ _________   ____  
+2024-12-06T04:26:29.116523464Z  /  /_\  \\___   /  |  \_  __ \_/ __ \ 
+2024-12-06T04:26:29.116527487Z /    |    \/    /|  |  /|  | \/\  ___/ 
+2024-12-06T04:26:29.116530531Z \____|__  /_____ \____/ |__|    \___  >
+2024-12-06T04:26:29.116533492Z         \/      \/                  \/ 
+2024-12-06T04:26:29.116536162Z A P P   S E R V I C E   O N   L I N U X
+2024-12-06T04:26:29.116538956Z 
+2024-12-06T04:26:29.116541685Z Documentation: http://aka.ms/webapp-linux
+2024-12-06T04:26:29.116634884Z Dotnet quickstart: https://aka.ms/dotnet-qs
+2024-12-06T04:26:29.116637891Z ASP .NETCore Version: 8.0.10
+2024-12-06T04:26:29.116640649Z Note: Any data outside '/home' is not persisted
+2024-12-06T04:26:31.530943915Z Starting OpenBSD Secure Shell server: sshd.
+2024-12-06T04:26:31.547093017Z WEBSITES_INCLUDE_CLOUD_CERTS is not set to true.
+2024-12-06T04:26:31.634154783Z Starting periodic command scheduler: cron.
+2024-12-06T04:26:31.641064739Z Running oryx create-script -appPath /home/site/wwwroot -output /opt/startup/startup.sh -defaultAppFilePath /defaulthome/hostingstart/hostingstart.dll     -bindPort 8080 -bindPort2 '' -userStartupCommand '' 
+2024-12-06T04:26:31.743989720Z Could not find build manifest file at '/home/site/wwwroot/oryx-manifest.toml'
+2024-12-06T04:26:31.744042484Z Could not find operation ID in manifest. Generating an operation id...
+2024-12-06T04:26:31.744047803Z Build Operation ID: ab53d6a1-cf03-4afb-98dc-b9dbefe7825d
+2024-12-06T04:26:33.139045982Z 
+2024-12-06T04:26:33.139800607Z Agent extension 
+2024-12-06T04:26:33.139817111Z Before if loop >> DotNet Runtime 
+2024-12-06T04:26:33.204539859Z DotNet Runtime 8.0Writing output script to '/opt/startup/startup.sh'
+2024-12-06T04:26:33.251579127Z Trying to find the startup DLL name...
+2024-12-06T04:26:33.251652915Z Found the startup D name: LoteriaWebApi.dll
+2024-12-06T04:26:33.251659335Z Running the command: dotnet "LoteriaWebApi.dll"
+2024-12-06T04:26:33.305573237Z A JSON parsing exception occurred in [/home/site/wwwroot/LoteriaWebApi.deps.json], offset 0 (line 1, column 1): The document is empty.
+2024-12-06T04:26:33.305762177Z Error initializing the dependency resolver: An error occurred while parsing: /home/site/wwwroot/LoteriaWebApi.deps.json
+
+2024-12-06T05:33:23.631626870Z    _____                               
+2024-12-06T05:33:23.631680842Z   /  _  \ __________ _________   ____  
+2024-12-06T05:33:23.631685676Z  /  /_\  \\___   /  |  \_  __ \_/ __ \ 
+2024-12-06T05:33:23.631689291Z /    |    \/    /|  |  /|  | \/\  ___/ 
+2024-12-06T05:33:23.631692790Z \____|__  /_____ \____/ |__|    \___  >
+2024-12-06T05:33:23.631696362Z         \/      \/                  \/ 
+2024-12-06T05:33:23.631699747Z A P P   S E R V I C E   O N   L I N U X
+2024-12-06T05:33:23.631703574Z 
+2024-12-06T05:33:23.631706443Z Documentation: http://aka.ms/webapp-linux
+2024-12-06T05:33:23.631709639Z Dotnet quickstart: https://aka.ms/dotnet-qs
+2024-12-06T05:33:23.631713418Z ASP .NETCore Version: 8.0.10
+2024-12-06T05:33:23.631716820Z Note: Any data outside '/home' is not persisted
+2024-12-06T05:33:24.518005736Z Starting OpenBSD Secure Shell server: sshd.
+2024-12-06T05:33:24.526878448Z WEBSITES_INCLUDE_CLOUD_CERTS is not set to true.
+2024-12-06T05:33:24.724105945Z Starting periodic command scheduler: cron.
+2024-12-06T05:33:24.739970498Z Running oryx create-script -appPath /home/site/wwwroot -output /opt/startup/startup.sh -defaultAppFilePath /defaulthome/hostingstart/hostingstart.dll     -bindPort 8080 -bindPort2 '' -userStartupCommand '' 
+2024-12-06T05:33:24.852912939Z Could not find build manifest file at '/home/site/wwwroot/oryx-manifest.toml'
+2024-12-06T05:33:24.852957081Z Could not find operation ID in manifest. Generating an operation id...
+2024-12-06T05:33:24.852961009Z Build Operation ID: 6d7b9a78-820e-4401-a676-a6d68ca47794
+2024-12-06T05:33:25.420369965Z 
+2024-12-06T05:33:25.420393560Z Agent extension 
+2024-12-06T05:33:25.420397876Z Before if loop >> DotNet Runtime 
+2024-12-06T05:33:25.462165884Z DotNet Runtime 8.0Writing output script to '/opt/startup/startup.sh'
+2024-12-06T05:33:25.559307033Z Trying to find the startup DLL name...
+2024-12-06T05:33:25.559502274Z Found the startup D name: LoteriaWebApi.dll
+2024-12-06T05:33:25.559607022Z Running the command: dotnet "LoteriaWebApi.dll"
+2024-12-06T05:33:25.738998592Z A JSON parsing exception occurred in [/home/site/wwwroot/LoteriaWebApi.deps.json], offset 0 (line 1, column 1): The document is empty.
+2024-12-06T05:33:25.739078424Z Error initializing the dependency resolver: An error occurred while parsing: /home/site/wwwroot/LoteriaWebApi.deps.json
+
+2024-12-06T05:47:29.794218890Z    _____                               
+2024-12-06T05:47:29.794245752Z   /  _  \ __________ _________   ____  
+2024-12-06T05:47:29.794274104Z  /  /_\  \\___   /  |  \_  __ \_/ __ \ 
+2024-12-06T05:47:29.794278627Z /    |    \/    /|  |  /|  | \/\  ___/ 
+2024-12-06T05:47:29.794282154Z \____|__  /_____ \____/ |__|    \___  >
+2024-12-06T05:47:29.794285859Z         \/      \/                  \/ 
+2024-12-06T05:47:29.794289557Z A P P   S E R V I C E   O N   L I N U X
+2024-12-06T05:47:29.794292894Z 
+2024-12-06T05:47:29.794296145Z Documentation: http://aka.ms/webapp-linux
+2024-12-06T05:47:29.794299546Z Dotnet quickstart: https://aka.ms/dotnet-qs
+2024-12-06T05:47:29.794303047Z ASP .NETCore Version: 8.0.10
+2024-12-06T05:47:29.794306471Z Note: Any data outside '/home' is not persisted
+2024-12-06T05:47:34.382566754Z Starting OpenBSD Secure Shell server: sshd.
+2024-12-06T05:47:34.390724466Z WEBSITES_INCLUDE_CLOUD_CERTS is not set to true.
+2024-12-06T05:47:34.505973502Z Starting periodic command scheduler: cron.
+2024-12-06T05:47:34.508596947Z Running oryx create-script -appPath /home/site/wwwroot -output /opt/startup/startup.sh -defaultAppFilePath /defaulthome/hostingstart/hostingstart.dll     -bindPort 8080 -bindPort2 '' -userStartupCommand '' 
+2024-12-06T05:47:34.754863608Z Could not find build manifest file at '/home/site/wwwroot/oryx-manifest.toml'
+2024-12-06T05:47:34.754897629Z Could not find operation ID in manifest. Generating an operation id...
+2024-12-06T05:47:34.754902718Z Build Operation ID: 577ad581-278d-41b8-ba9d-cb28ffc482e6
+2024-12-06T05:47:35.203093850Z 
+2024-12-06T05:47:35.203196579Z Agent extension 
+2024-12-06T05:47:35.203223118Z Before if loop >> DotNet Runtime 
+2024-12-06T05:47:35.308197710Z DotNet Runtime 8.0Writing output script to '/opt/startup/startup.sh'
+2024-12-06T05:47:35.423765435Z Trying to find the startup DLL name...
+2024-12-06T05:47:35.424387551Z Found the startup D name: LoteriaWebApi.dll
+2024-12-06T05:47:35.424759601Z Running the command: dotnet "LoteriaWebApi.dll"
+2024-12-06T05:47:35.444297070Z A JSON parsing exception occurred in [/home/site/wwwroot/LoteriaWebApi.deps.json], offset 0 (line 1, column 1): The document is empty.
+2024-12-06T05:47:35.444966210Z Error initializing the dependency resolver: An error occurred while parsing: /home/site/wwwroot/LoteriaWebApi.deps.json
+
+2024-12-06T05:52:40.926847850Z    _____                               
+2024-12-06T05:52:40.926874682Z   /  _  \ __________ _________   ____  
+2024-12-06T05:52:40.926879223Z  /  /_\  \\___   /  |  \_  __ \_/ __ \ 
+2024-12-06T05:52:40.926882985Z /    |    \/    /|  |  /|  | \/\  ___/ 
+2024-12-06T05:52:40.926886601Z \____|__  /_____ \____/ |__|    \___  >
+2024-12-06T05:52:40.926890283Z         \/      \/                  \/ 
+2024-12-06T05:52:40.926893576Z A P P   S E R V I C E   O N   L I N U X
+2024-12-06T05:52:40.926896548Z 
+2024-12-06T05:52:40.926899715Z Documentation: http://aka.ms/webapp-linux
+2024-12-06T05:52:40.926902825Z Dotnet quickstart: https://aka.ms/dotnet-qs
+2024-12-06T05:52:40.926905886Z ASP .NETCore Version: 8.0.10
+2024-12-06T05:52:40.926909125Z Note: Any data outside '/home' is not persisted
+2024-12-06T05:52:43.619304230Z Starting OpenBSD Secure Shell server: sshd.
+2024-12-06T05:52:43.634840389Z WEBSITES_INCLUDE_CLOUD_CERTS is not set to true.
+2024-12-06T05:52:44.356215408Z Starting periodic command scheduler: cron.
+2024-12-06T05:52:44.381243358Z Running oryx create-script -appPath /home/site/wwwroot -output /opt/startup/startup.sh -defaultAppFilePath /defaulthome/hostingstart/hostingstart.dll     -bindPort 8080 -bindPort2 '' -userStartupCommand '' 
+2024-12-06T05:52:44.442501248Z Could not find build manifest file at '/home/site/wwwroot/oryx-manifest.toml'
+2024-12-06T05:52:44.442528710Z Could not find operation ID in manifest. Generating an operation id...
+2024-12-06T05:52:44.444685539Z Build Operation ID: 84f6e8e3-5793-4fd6-b343-6c88babd66bf
+2024-12-06T05:52:44.985682423Z 
+2024-12-06T05:52:44.985709250Z Agent extension 
+2024-12-06T05:52:44.985759271Z Before if loop >> DotNet Runtime 
+2024-12-06T05:52:45.034857412Z DotNet Runtime 8.0Writing output script to '/opt/startup/startup.sh'
+2024-12-06T05:52:45.110381417Z Trying to find the startup DLL name...
+2024-12-06T05:52:45.110838527Z Found the startup D name: LoteriaWebApi.dll
+2024-12-06T05:52:45.110854647Z Running the command: dotnet "LoteriaWebApi.dll"
+2024-12-06T05:52:45.134035979Z A JSON parsing exception occurred in [/home/site/wwwroot/LoteriaWebApi.deps.json], offset 0 (line 1, column 1): The document is empty.
+2024-12-06T05:52:45.134248159Z Error initializing the dependency resolver: An error occurred while parsing: /home/site/wwwroot/LoteriaWebApi.deps.json
+
+2024-12-06T05:55:08.133050850Z    _____                               
+2024-12-06T05:55:08.133075369Z   /  _  \ __________ _________   ____  
+2024-12-06T05:55:08.133079323Z  /  /_\  \\___   /  |  \_  __ \_/ __ \ 
+2024-12-06T05:55:08.133082735Z /    |    \/    /|  |  /|  | \/\  ___/ 
+2024-12-06T05:55:08.133085921Z \____|__  /_____ \____/ |__|    \___  >
+2024-12-06T05:55:08.133089382Z         \/      \/                  \/ 
+2024-12-06T05:55:08.133092710Z A P P   S E R V I C E   O N   L I N U X
+2024-12-06T05:55:08.133095690Z 
+2024-12-06T05:55:08.133098609Z Documentation: http://aka.ms/webapp-linux
+2024-12-06T05:55:08.133101663Z Dotnet quickstart: https://aka.ms/dotnet-qs
+2024-12-06T05:55:08.133104718Z ASP .NETCore Version: 8.0.10
+2024-12-06T05:55:08.133107653Z Note: Any data outside '/home' is not persisted
+2024-12-06T05:55:08.931240163Z Starting OpenBSD Secure Shell server: sshd.
+2024-12-06T05:55:08.949416899Z WEBSITES_INCLUDE_CLOUD_CERTS is not set to true.
+2024-12-06T05:55:09.029250228Z Starting periodic command scheduler: cron.
+2024-12-06T05:55:09.037019680Z Running oryx create-script -appPath /home/site/wwwroot -output /opt/startup/startup.sh -defaultAppFilePath /defaulthome/hostingstart/hostingstart.dll     -bindPort 8080 -bindPort2 '' -userStartupCommand '' 
+2024-12-06T05:55:09.138363751Z Could not find build manifest file at '/home/site/wwwroot/oryx-manifest.toml'
+2024-12-06T05:55:09.138424780Z Could not find operation ID in manifest. Generating an operation id...
+2024-12-06T05:55:09.139045532Z Build Operation ID: 95e4baae-e112-4572-b9f2-2e32fc2b9cfd
+2024-12-06T05:55:09.416054673Z 
+2024-12-06T05:55:09.416259647Z Agent extension 
+2024-12-06T05:55:09.416316562Z Before if loop >> DotNet Runtime 
+2024-12-06T05:55:09.449944886Z DotNet Runtime 8.0Writing output script to '/opt/startup/startup.sh'
+2024-12-06T05:55:09.637468169Z Trying to find the startup DLL name...
+2024-12-06T05:55:09.637490696Z Found the startup D name: LoteriaWebApi.dll
+2024-12-06T05:55:09.637495612Z Running the command: dotnet "LoteriaWebApi.dll"
+2024-12-06T05:55:09.661235943Z A JSON parsing exception occurred in [/home/site/wwwroot/LoteriaWebApi.deps.json], offset 0 (line 1, column 1): The document is empty.
+2024-12-06T05:55:09.661593281Z Error initializing the dependency resolver: An error occurred while parsing: /home/site/wwwroot/LoteriaWebApi.deps.json
+
+2024-12-06T06:12:08.337842402Z    _____                               
+2024-12-06T06:12:08.337889981Z   /  _  \ __________ _________   ____  
+2024-12-06T06:12:08.337916168Z  /  /_\  \\___   /  |  \_  __ \_/ __ \ 
+2024-12-06T06:12:08.337919971Z /    |    \/    /|  |  /|  | \/\  ___/ 
+2024-12-06T06:12:08.337923491Z \____|__  /_____ \____/ |__|    \___  >
+2024-12-06T06:12:08.337927369Z         \/      \/                  \/ 
+2024-12-06T06:12:08.337938554Z A P P   S E R V I C E   O N   L I N U X
+2024-12-06T06:12:08.337941729Z 
+2024-12-06T06:12:08.337944609Z Documentation: http://aka.ms/webapp-linux
+2024-12-06T06:12:08.337996639Z Dotnet quickstart: https://aka.ms/dotnet-qs
+2024-12-06T06:12:08.338001291Z ASP .NETCore Version: 8.0.10
+2024-12-06T06:12:08.338004774Z Note: Any data outside '/home' is not persisted
+2024-12-06T06:12:18.655387573Z Starting OpenBSD Secure Shell server: sshd.
+2024-12-06T06:12:19.370494297Z WEBSITES_INCLUDE_CLOUD_CERTS is not set to true.
+2024-12-06T06:12:21.833215533Z Starting periodic command scheduler: cron.
+2024-12-06T06:12:21.870854881Z Running oryx create-script -appPath /home/site/wwwroot -output /opt/startup/startup.sh -defaultAppFilePath /defaulthome/hostingstart/hostingstart.dll     -bindPort 8080 -bindPort2 '' -userStartupCommand '' 
+2024-12-06T06:12:22.212921336Z Could not find build manifest file at '/home/site/wwwroot/oryx-manifest.toml'
+2024-12-06T06:12:22.212976474Z Could not find operation ID in manifest. Generating an operation id...
+2024-12-06T06:12:22.212983049Z Build Operation ID: c51b95ca-e3c5-41d7-b9dc-99d51a95e07e
+2024-12-06T06:12:22.671716406Z 
+2024-12-06T06:12:22.671741933Z Agent extension 
+2024-12-06T06:12:22.671746924Z Before if loop >> DotNet Runtime 
+2024-12-06T06:12:22.741575511Z DotNet Runtime 8.0Writing output script to '/opt/startup/startup.sh'
+2024-12-06T06:12:22.794836019Z Trying to find the startup DLL name...
+2024-12-06T06:12:22.794855953Z Found the startup D name: LoteriaWebApi.dll
+2024-12-06T06:12:22.800700137Z Running the command: dotnet "LoteriaWebApi.dll"
+2024-12-06T06:12:22.818832997Z A JSON parsing exception occurred in [/home/site/wwwroot/LoteriaWebApi.deps.json], offset 0 (line 1, column 1): The document is empty.
+2024-12-06T06:12:22.818857887Z Error initializing the dependency resolver: An error occurred while parsing: /home/site/wwwroot/LoteriaWebApi.deps.json
+

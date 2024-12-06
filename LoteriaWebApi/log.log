@@ -1,0 +1,64 @@
+2024-12-06T05:52:24.6580152Z,Updating submodules.,3b525f20-561d-4cf7-b129-8bba84d482fe,0
+2024-12-06T05:52:25.9635565Z,Preparing deployment for commit id 'eaca73ca-9'.,22793326-b082-4825-a333-7a4d45fee727,0
+2024-12-06T05:52:26.1788123Z,PreDeployment: context.CleanOutputPath False,48784189-d944-43aa-a347-87dfedf827d9,0
+2024-12-06T05:52:26.2437400Z,PreDeployment: context.OutputPath /home/site/wwwroot,24c47da8-ed90-4474-88f1-8b7ee6046574,0
+2024-12-06T05:52:26.3829539Z,Generating deployment script.,868e0660-8515-4954-a4ff-e8c71ac46d3f,0
+	2024-12-06T05:52:26.4270380Z,Using cached version of deployment script (command: 'azure -y --no-dot-deployment -r "/tmp/zipdeploy/extracted" -o "/home/site/deployments/tools" --basic --sitePath "/tmp/zipdeploy/extracted"').,,0
+2024-12-06T05:52:26.5146823Z,Running deployment command...,35f82db9-e602-43f4-9924-ed6ebdeb7081,0
+	2024-12-06T05:52:26.5198913Z,Command: "/home/site/deployments/tools/deploy.sh",,0
+	2024-12-06T05:52:26.6411881Z,Handling Basic Web Site deployment.,,0
+	2024-12-06T05:52:27.0798988Z,Kudu sync from: '/tmp/zipdeploy/extracted' to: '/home/site/wwwroot',,0
+	2024-12-06T05:52:27.1373465Z,Ignoring: .git,,0
+	2024-12-06T05:52:27.2534095Z,Copying file: 'AccesoDatos/bin/Release/net8.0/AccesoDatos.dll',,0
+	2024-12-06T05:52:27.8743482Z,Copying file: 'AccesoDatos/bin/Release/net8.0/AccesoDatos.pdb',,0
+	2024-12-06T05:52:27.8991090Z,Copying file: 'AccesoDatos/bin/Release/net8.0/Entidades.dll',,0
+	2024-12-06T05:52:27.9319881Z,Copying file: 'AccesoDatos/bin/Release/net8.0/Entidades.pdb',,0
+	2024-12-06T05:52:27.9465621Z,Copying file: 'AccesoDatos/bin/Release/net8.0/MetodosComunes.dll',,0
+	2024-12-06T05:52:27.9686076Z,Copying file: 'AccesoDatos/bin/Release/net8.0/MetodosComunes.pdb',,0
+	2024-12-06T05:52:28.0062554Z,Copying file: 'AccesoDatos/bin/Release/net8.0/publish/AccesoDatos.dll',,0
+	2024-12-06T05:52:28.0169478Z,Copying file: 'AccesoDatos/bin/Release/net8.0/publish/AccesoDatos.pdb',,0
+	2024-12-06T05:52:28.0292058Z,Copying file: 'AccesoDatos/bin/Release/net8.0/publish/Entidades.dll',,0
+	2024-12-06T05:52:28.0630647Z,Copying file: 'AccesoDatos/bin/Release/net8.0/publish/Entidades.pdb',,0
+	2024-12-06T05:52:28.0809634Z,Copying file: 'AccesoDatos/bin/Release/net8.0/publish/MetodosComunes.dll',,0
+	2024-12-06T05:52:28.1100221Z,Copying file: 'AccesoDatos/bin/Release/net8.0/publish/MetodosComunes.pdb',,0
+	2024-12-06T05:52:28.2351332Z,Copying file: 'AccesoDatos/obj/Release/net8.0/AccesoDa.B2719C34.Up2Date',,0
+	2024-12-06T05:52:28.2479853Z,Copying file: 'AccesoDatos/obj/Release/net8.0/AccesoDatos.AssemblyInfo.cs',,0
+	2024-12-06T05:52:28.2641905Z,Copying file: 'AccesoDatos/obj/Release/net8.0/AccesoDatos.AssemblyInfoInputs.cache',,0
+	2024-12-06T05:52:28.2875540Z,Copying file: 'AccesoDatos/obj/Release/net8.0/AccesoDatos.csproj.AssemblyReference.cache',,0
+	2024-12-06T05:52:28.3242826Z,Copying file: 'AccesoDatos/obj/Release/net8.0/AccesoDatos.dll',,0
+	2024-12-06T05:52:28.3639452Z,Copying file: 'AccesoDatos/obj/Release/net8.0/AccesoDatos.pdb',,0
+	2024-12-06T05:52:28.3830038Z,Copying file: 'AccesoDatos/obj/Release/net8.0/AccesoDatos.sourcelink.json',,0
+	2024-12-06T05:52:28.3920485Z,Copying file: 'AccesoDatos/obj/Release/net8.0/PublishOutputs.983ed52105.txt',,0
+	2024-12-06T05:52:28.4586812Z,Copying file: 'AccesoDatos/obj/Release/net8.0/ref/AccesoDatos.dll',,0
+	2024-12-06T05:52:28.4987364Z,Copying file: 'AccesoDatos/obj/Release/net8.0/refint/AccesoDatos.dll',,0
+	2024-12-06T05:52:28.5973117Z,Copying file: 'Entidades/bin/Release/net8.0/Entidades.dll',,0
+	2024-12-06T05:52:28.6086401Z,Copying file: 'Entidades/bin/Release/net8.0/Entidades.pdb',,0
+	2024-12-06T05:52:28.7689292Z,Copying file: 'Entidades/bin/Release/net8.0/publish/Entidades.dll',,0
+	2024-12-06T05:52:28.7823184Z,Copying file: 'Entidades/bin/Release/net8.0/publish/Entidades.pdb',,0
+	2024-12-06T05:52:29.0149689Z,Copying file: 'Entidades/obj/Release/net8.0/Entidades.AssemblyInfo.cs',,0
+	2024-12-06T05:52:29.0300670Z,Copying file: 'Entidades/obj/Release/net8.0/Entidades.AssemblyInfoInputs.cache',,0
+	2024-12-06T05:52:29.0688773Z,Copying file: 'Entidades/obj/Release/net8.0/Entidades.dll',,0
+	2024-12-06T05:52:29.0771482Z,Copying file: 'Entidades/obj/Release/net8.0/Entidades.pdb',,0
+	2024-12-06T05:52:29.0880278Z,Copying file: 'Entidades/obj/Release/net8.0/Entidades.sourcelink.json',,0
+	2024-12-06T05:52:29.1111389Z,Copying file: 'Entidades/obj/Release/net8.0/PublishOutputs.73e49c7413.txt',,0
+	2024-12-06T05:52:29.1509182Z,Copying file: 'Entidades/obj/Release/net8.0/ref/Entidades.dll',,0
+	2024-12-06T05:52:29.1880969Z,Copying file: 'Entidades/obj/Release/net8.0/refint/Entidades.dll',,0
+	2024-12-06T05:52:29.2662573Z,Copying file: 'LogicaNegocio/bin/Release/net8.0/AccesoDatos.dll',,0
+	2024-12-06T05:52:29.2792064Z,Copying file: 'LogicaNegocio/bin/Release/net8.0/AccesoDatos.pdb',,0
+	2024-12-06T05:52:29.3057303Z,Copying file: 'LogicaNegocio/bin/Release/net8.0/Entidades.dll',,0
+	2024-12-06T05:52:29.3232719Z,Copying file: 'LogicaNegocio/bin/Release/net8.0/Entidades.pdb',,0
+	2024-12-06T05:52:29.3509510Z,Copying file: 'LogicaNegocio/bin/Release/net8.0/LogicaNegocio.dll',,0
+	2024-12-06T05:52:29.3593847Z,Copying file: 'LogicaNegocio/bin/Release/net8.0/LogicaNegocio.pdb',,0
+	2024-12-06T05:52:29.3696972Z,Copying file: 'LogicaNegocio/bin/Release/net8.0/MetodosComunes.dll',,0
+	2024-12-06T05:52:29.3770655Z,Copying file: 'LogicaNegocio/bin/Release/net8.0/MetodosComunes.pdb',,0
+	2024-12-06T05:52:29.3893808Z,Copying file: 'LogicaNegocio/bin/Release/net8.0/publish/AccesoDatos.dll',,0
+	2024-12-06T05:52:29.4025828Z,Copying file: 'LogicaNegocio/bin/Release/net8.0/publish/AccesoDatos.pdb',,0
+	2024-12-06T05:52:29.4175041Z,Copying file: 'LogicaNegocio/bin/Release/net8.0/publish/Entidades.dll',,0
+	2024-12-06T05:52:29.4270587Z,Copying file: 'LogicaNegocio/bin/Release/net8.0/publish/Entidades.pdb',,0
+	2024-12-06T05:52:29.4355380Z,Copying file: 'LogicaNegocio/bin/Release/net8.0/publish/LogicaNegocio.dll',,0
+	2024-12-06T05:52:29.4534180Z,Copying file: 'LogicaNegocio/bin/Release/net8.0/publish/LogicaNegocio.pdb',,0
+	2024-12-06T05:52:29.4623499Z,Omitting next output lines...,,0
+	2024-12-06T05:52:34.2498377Z,Finished successfully.,,0
+2024-12-06T05:52:34.6253818Z,Running post deployment command(s)...,72aaa325-088e-4f6f-a687-57dd27e38ab7,0
+2024-12-06T05:52:34.8016306Z,Triggering recycle (preview mode disabled).,a7cca7d7-0767-4af4-b8ed-dbbbe6585b0d,0
+2024-12-06T05:52:34.9734925Z,Deployment successful. deployer = ms-azuretools-vscode deploymentPath = ZipDeploy. Extract zip.,254e2010-ca48-408d-944b-a6e87c49c225,0

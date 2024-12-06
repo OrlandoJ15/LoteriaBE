@@ -1,0 +1,4 @@
+C:\Loteria\Back-End\LoteriaBE\MetodosComunes\bin\Release\net8.0\publish\MetodosComunes.dll
+C:\Loteria\Back-End\LoteriaBE\MetodosComunes\bin\Release\net8.0\publish\MetodosComunes.deps.json
+C:\Loteria\Back-End\LoteriaBE\MetodosComunes\bin\Release\net8.0\publish\MetodosComunes.pdb
+C:\Loteria\Back-End\LoteriaBE\MetodosComunes\bin\Release\net8.0\publish\NLog.dll

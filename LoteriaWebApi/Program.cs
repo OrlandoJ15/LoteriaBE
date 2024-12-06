@@ -13,7 +13,7 @@ namespace LoteriaWebApi
     {
         public static void Main(string[] args)
         {
-            // Configuración de logging
+            // Configuraciï¿½n de logging
             Log.Logger = new LoggerConfiguration()
                 .WriteTo.Console() // Registrar en consola
                 .WriteTo.File("logs/log.txt", rollingInterval: RollingInterval.Day) // Registrar en archivo
@@ -21,10 +21,10 @@ namespace LoteriaWebApi
 
             var builder = WebApplication.CreateBuilder(args);
 
-            // Configuración de Kestrel para manejar HTTPS y puertos
+            // Configuraciï¿½n de Kestrel para manejar HTTPS y puertos
             ConfigureKestrel(builder);
 
-            // Configuración de servicios
+            // Configuraciï¿½n de servicios
             builder.Services.AddHealthChecks();
             ConfigureHttpClient(builder);
             ConfigureCors(builder);
@@ -33,21 +33,21 @@ namespace LoteriaWebApi
             ConfigureAuthorization(builder);
             ConfigureSwagger(builder);
 
-            // Configuración de controladores y servicios
+            // Configuraciï¿½n de controladores y servicios
             builder.Services.AddControllers();
             builder.Services.AddEndpointsApiExplorer();
-            builder.Services.AddHttpsRedirection(options => options.HttpsPort = 443); // Redirige tráfico HTTP a HTTPS
+            builder.Services.AddHttpsRedirection(options => options.HttpsPort = 443); // Redirige trï¿½fico HTTP a HTTPS
 
             var app = builder.Build();
 
-            // Configuración de Swagger y enrutamiento
+            // Configuraciï¿½n de Swagger y enrutamiento
             if (app.Environment.IsDevelopment() || app.Environment.IsProduction())
             {
                 app.UseSwagger();
                 app.UseSwaggerUI(c =>
                 {
-                    c.SwaggerEndpoint("/swagger/v1/swagger.json", "Lotería API V1");
-                    c.RoutePrefix = string.Empty;
+                    c.SwaggerEndpoint("/swagger/v1/swagger.json", "Loterï¿½a API V1");
+                    c.RoutePrefix = string.Empty; // Esto harï¿½ que Swagger estï¿½ accesible en la raï¿½z de la aplicaciï¿½n
                 });
             }
 
@@ -57,30 +57,31 @@ namespace LoteriaWebApi
             app.UseHttpsRedirection();
 
             app.UseRouting(); // Necesario para que los controladores usen las rutas
-            app.UseAuthentication(); // Habilita la autenticación
-            app.UseAuthorization(); // Habilita la autorización
+            app.UseAuthentication(); // Habilita la autenticaciï¿½n
+            app.UseAuthorization(); // Habilita la autorizaciï¿½n
 
             app.MapControllers(); // Mapea los controladores
 
             app.Run();
         }
 
-        // Configuración de Kestrel
+        // Configuraciï¿½n de Kestrel
+        // Configuraciï¿½n de Kestrel
         private static void ConfigureKestrel(WebApplicationBuilder builder)
         {
             builder.WebHost.ConfigureKestrel(options =>
             {
-                /*options.ListenLocalhost(44366, listenOptions =>
+                options.ListenLocalhost(443, listenOptions =>
                 {
                     listenOptions.UseHttps(httpsOptions =>
                     {
                         httpsOptions.SslProtocols = System.Security.Authentication.SslProtocols.Tls12 | System.Security.Authentication.SslProtocols.Tls13;
                     });
-                });*/
+                });
             });
         }
 
-        // Configuración del HttpClient
+        // Configuraciï¿½n del HttpClient
         private static void ConfigureHttpClient(WebApplicationBuilder builder)
         {
             builder.Services.AddHttpClient("HttpClientWithCertValidation")
@@ -91,7 +92,7 @@ namespace LoteriaWebApi
                 });
         }
 
-        // Configuración de CORS
+        // Configuraciï¿½n de CORS
         private static void ConfigureCors(WebApplicationBuilder builder)
         {
             builder.Services.AddCors(options =>
@@ -107,7 +108,7 @@ namespace LoteriaWebApi
             });
         }
 
-        // Configuración de Azure Key Vault
+        // Configuraciï¿½n de Azure Key Vault
         private static void ConfigureAzureKeyVault(WebApplicationBuilder builder)
         {
             var keyVaultUrl = builder.Configuration["AzureKeyVault:VaultUrl"];
@@ -116,13 +117,13 @@ namespace LoteriaWebApi
             builder.Services.AddSingleton(jwtSecretKey);
         }
 
-        // Configuración de JWT Authentication
+        // Configuraciï¿½n de JWT Authentication
         private static void ConfigureJwtAuthentication(WebApplicationBuilder builder)
         {
             var jwtSecretKey = builder.Services.BuildServiceProvider().GetService<string>();
             var issuer = builder.Configuration["JwtI:Issuer"];
             var audience = builder.Configuration["JwtA:Audience"];
-            var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtSecretKey));
+            var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtSecretKey ?? ""));
             var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
 
             builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
@@ -145,7 +146,7 @@ namespace LoteriaWebApi
                     {
                         OnAuthenticationFailed = context =>
                         {
-                            Log.Error($"Error de autenticación: {context.Exception.GetType()} - {context.Exception.Message}");
+                            Log.Error($"Error de autenticaciï¿½n: {context.Exception.GetType()} - {context.Exception.Message}");
                             return Task.CompletedTask;
                         },
                         OnTokenValidated = context =>
@@ -156,7 +157,7 @@ namespace LoteriaWebApi
                         },
                         OnChallenge = context =>
                         {
-                            Log.Warning($"Desafío de autenticación: {context.ErrorDescription} - {context.ErrorUri}");
+                            Log.Warning($"Desafï¿½o de autenticaciï¿½n: {context.ErrorDescription} - {context.ErrorUri}");
                             return Task.CompletedTask;
                         },
                         OnMessageReceived = context =>
@@ -170,7 +171,7 @@ namespace LoteriaWebApi
                                     ValidateIssuer = true,
                                     ValidateAudience = true,
                                     ValidateLifetime = false,
-                                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtSecretKey)),
+                                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtSecretKey ?? "")),
                                     ValidIssuer = builder.Configuration["JwtI:Issuer"],
                                     ValidAudience = builder.Configuration["JwtA:Audience"]
                                 };
@@ -186,7 +187,7 @@ namespace LoteriaWebApi
                 });
         }
 
-        // Configuración de Autorización
+        // Configuraciï¿½n de Autorizaciï¿½n
         private static void ConfigureAuthorization(WebApplicationBuilder builder)
         {
             builder.Services.AddAuthorization(options =>
@@ -198,7 +199,7 @@ namespace LoteriaWebApi
             });
         }
 
-        // Configuración de Swagger
+        // Configuraciï¿½n de Swagger
         private static void ConfigureSwagger(WebApplicationBuilder builder)
         {
             builder.Services.AddSwaggerGen(options =>

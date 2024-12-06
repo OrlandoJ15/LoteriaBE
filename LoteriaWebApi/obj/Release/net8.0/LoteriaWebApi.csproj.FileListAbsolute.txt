@@ -107,3 +107,5 @@ C:\Loteria\Back-End\LoteriaBE\LoteriaWebApi\obj\Release\net8.0\refint\LoteriaWeb
 C:\Loteria\Back-End\LoteriaBE\LoteriaWebApi\obj\Release\net8.0\LoteriaWebApi.pdb
 C:\Loteria\Back-End\LoteriaBE\LoteriaWebApi\obj\Release\net8.0\LoteriaWebApi.genruntimeconfig.cache
 C:\Loteria\Back-End\LoteriaBE\LoteriaWebApi\obj\Release\net8.0\ref\LoteriaWebApi.dll
+C:\Loteria\Back-End\LoteriaBE\LoteriaWebApi\bin\Release\net8.0\appsettings copy.json
+C:\Loteria\Back-End\LoteriaBE\LoteriaWebApi\bin\Release\net8.0\runtimeconfig.json

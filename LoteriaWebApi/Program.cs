@@ -64,8 +64,6 @@ namespace LoteriaWebApi
 
             app.Run();
         }
-
-        // Configuraci�n de Kestrel
         // Configuraci�n de Kestrel
         private static void ConfigureKestrel(WebApplicationBuilder builder)
         {

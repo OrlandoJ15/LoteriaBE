@@ -53,4 +53,4 @@ jobs:
           app-name: 'LoteriaBackApi'
           slot-name: 'Production'
           package: .
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_5F0F09C17C4744AAB81B73E4F921217F }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_958A679508714C4AB212C93DDC769959 }}

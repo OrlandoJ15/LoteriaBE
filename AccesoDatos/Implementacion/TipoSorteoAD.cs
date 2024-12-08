@@ -65,7 +65,7 @@ namespace AccesoDatos.Implementacion
                 using (LoteriaContext lobjCnn = new LoteriaContext(_configuration))
                 {
                     var lCmd = gObjSqlCommandAbrirCerrar.CrearComando(lobjCnn, "RecTipoSorteoXIdPA");
-                    lCmd.Parameters.Add(new SqlParameter("@idTipoSorteo", pIdTipoSorteo));
+                    lCmd.Parameters.Add(new SqlParameter("@id", pIdTipoSorteo));
                     var lReader = lCmd.ExecuteReader();
 
                     // Si hay filas en el reader, creamos un nuevo objeto TipoSorteo
@@ -73,7 +73,7 @@ namespace AccesoDatos.Implementacion
                     {
                         lObjRespuesta = new TipoSorteo
                         {
-                            Id = Convert.ToInt32(lReader["idTipoSorteo"]),
+                            Id = Convert.ToInt32(lReader["id"]),
                             NumeroGanador = Convert.ToInt32(lReader["numeroGanador"]),
                             IdTipoSorteoGeneral = Convert.ToInt32(lReader["idTipoSorteoGeneral"]),
                             Fecha = Convert.ToDateTime(lReader["fecha"]),
@@ -121,11 +121,11 @@ namespace AccesoDatos.Implementacion
 
                     if (procedimientoAlmacenado == "delTipoSorteoPA")
                     {
-                        lCmd.Parameters.Add(new SqlParameter("@idTipoSorteo", pTipoSorteo.Id));
+                        lCmd.Parameters.Add(new SqlParameter("@id", pTipoSorteo.Id));
                     }
                     else
                     {
-                        lCmd.Parameters.Add(new SqlParameter("@idTipoSorteo", pTipoSorteo.Id));
+                        lCmd.Parameters.Add(new SqlParameter("@id", pTipoSorteo.Id));
                         lCmd.Parameters.Add(new SqlParameter("@numeroGanador", pTipoSorteo.NumeroGanador));
                         lCmd.Parameters.Add(new SqlParameter("@idTipoSorteoGeneral", pTipoSorteo.IdTipoSorteoGeneral));
                         lCmd.Parameters.Add(new SqlParameter("@fecha", pTipoSorteo.Fecha));
@@ -153,7 +153,7 @@ namespace AccesoDatos.Implementacion
 
 
 
-        public int RecIdTipoSorteoFromTipoSorteoGeneral(int pIdTipoSorteoGeneral)
+        public int RecIdTipoSorteoFromTipoSorteoGeneral(TipoSorteo pTipoSorteo)
         {
             int lObjRespuesta = 0;
             try
@@ -161,8 +161,9 @@ namespace AccesoDatos.Implementacion
                 using (LoteriaContext lobjCnn = new LoteriaContext(_configuration))
                 {
                     var lCmd = gObjSqlCommandAbrirCerrar.CrearComando(lobjCnn, "RecIdTipoSorteoFromTipoSorteoGeneralPA");
-                    lCmd.Parameters.Add(new SqlParameter("@idTipoSorteoGeneral", pIdTipoSorteoGeneral));
-                    lCmd.Parameters.Add(new SqlParameter("@fecha", DateTime.Now.Date));
+                    lCmd.Parameters.Add(new SqlParameter("@id", pTipoSorteo.Id));
+                    lCmd.Parameters.Add(new SqlParameter("@fecha", pTipoSorteo.Fecha));
+
 
                     var lReader = lCmd.ExecuteReader();
 

@@ -10,21 +10,21 @@ namespace LoteriaWebApi.Controllers
 
     [Route("[controller]")]
     [ApiController]
-    public class TipoSorteoGeneralController : Controller
+    public class TipoSorteoGeneralExtraordinarioController : Controller
     {
 
         public IConfiguration lConfiguration;
 
-        private readonly ITipoSorteoGeneralLN gObjTipoSorteoGeneralLN;
+        private readonly ITipoSorteoGeneralExtraordinarioLN gObjTipoSorteoGeneralExtraordinarioLN;
 
         public Excepciones gObjExcepciones = new Excepciones();
 
-        public TipoSorteoGeneralController(IConfiguration lConfig)
+        public TipoSorteoGeneralExtraordinarioController(IConfiguration lConfig)
         {
             lConfiguration = lConfig;
             string? lCadenaConexcion = lConfiguration.GetConnectionString("LoteriaBD");
 
-            gObjTipoSorteoGeneralLN = new TipoSorteoGeneralLN(lConfiguration);
+            gObjTipoSorteoGeneralExtraordinarioLN = new TipoSorteoGeneralExtraordinarioLN(lConfiguration);
         }
 
         //Metodo para manejar la excepcion y devulocion de status de error
@@ -46,25 +46,25 @@ namespace LoteriaWebApi.Controllers
         //[Authorize]
         [Route("[action]")]
         [HttpGet]
-        public ActionResult<List<TipoSorteoGeneral>> RecTipoSorteoGeneral()
+        public ActionResult<List<TipoSorteoGeneralExtraordinario>> RecTipoSorteoGeneralExtraordinario()
         {
-            List<TipoSorteoGeneral> lObjRespuesta = new List<TipoSorteoGeneral>();
+            List<TipoSorteoGeneralExtraordinario> lObjRespuesta = new List<TipoSorteoGeneralExtraordinario>();
 
             try
             {
-                lObjRespuesta = gObjTipoSorteoGeneralLN.RecTipoSorteoGeneral();
+                lObjRespuesta = gObjTipoSorteoGeneralExtraordinarioLN.RecTipoSorteoGeneralExtraordinario();
 
-                var TipoSorteoGeneral = lObjRespuesta.Select(u => new TipoSorteoGeneral
+                var TipoSorteoGeneralExtraordinario = lObjRespuesta.Select(u => new TipoSorteoGeneralExtraordinario
                 {
                     Id = u.Id,
                     Nombre = u.Nombre,
                     Fondo = u.Fondo,
                     PorcentajePago = u.PorcentajePago,
-                    FechaInicio = u.fec,
+                    FechaInicio = u.FechaInicio,
                     FechaFin = u.FechaFin
                 }).ToList();
 
-                return Ok(TipoSorteoGeneral); // Retorna un HTTP 200 con la lista de TipoSorteoGenerals.
+                return Ok(TipoSorteoGeneralExtraordinario); // Retorna un HTTP 200 con la lista de TipoSorteoGenerals.
             }
             catch (Exception lEx)
             {
@@ -75,12 +75,12 @@ namespace LoteriaWebApi.Controllers
         //[Authorize]
         [Route("[action]")]
         [HttpPost]
-        public IActionResult? RecTipoSorteoGeneralXId([FromBody] TipoSorteoGeneral pTipoSorteoGeneral)
+        public IActionResult? RecTipoSorteoGeneralExtraordinarioXId([FromBody] TipoSorteoGeneralExtraordinario pTipoSorteoGeneralExtraordinario)
         {
             try
             {
                 // Llamada al método para obtener el usuario por su ID
-                var lObjRespuesta = gObjTipoSorteoGeneralLN.RecTipoSorteoGeneralXId(pTipoSorteoGeneral.Id);
+                var lObjRespuesta = gObjTipoSorteoGeneralExtraordinarioLN.RecTipoSorteoGeneralExtraordinarioXId(pTipoSorteoGeneralExtraordinario.Id);
 
                 return HandleResponse(lObjRespuesta);
 
@@ -94,15 +94,15 @@ namespace LoteriaWebApi.Controllers
         //[Authorize]
         [Route("[action]")]
         [HttpPost]
-        public IActionResult InsTipoSorteoGeneral([FromBody] TipoSorteoGeneral pTipoSorteoGeneral)
+        public IActionResult InsTipoSorteoGeneralExtraordinario([FromBody] TipoSorteoGeneralExtraordinario pTipoSorteoGeneralExtraordinario)
         {
             if (!ModelState.IsValid)
                 return BadRequest("Modelo Invalido");
 
             try
             {
-                gObjTipoSorteoGeneralLN.InsTipoSorteoGeneral(pTipoSorteoGeneral);
-                return CreatedAtAction(nameof(RecTipoSorteoGeneralXId), new { pIdTipoSorteoGeneral = pTipoSorteoGeneral.Id }, pTipoSorteoGeneral); // Retorna 201 Created, Mejor por convencion de REST API
+                gObjTipoSorteoGeneralExtraordinarioLN.InsTipoSorteoGeneralExtraordinario(pTipoSorteoGeneralExtraordinario);
+                return CreatedAtAction(nameof(RecTipoSorteoGeneralExtraordinarioXId), new { pIdTipoSorteoGeneralExtraordinario = pTipoSorteoGeneralExtraordinario.Id }, pTipoSorteoGeneralExtraordinario); // Retorna 201 Created, Mejor por convencion de REST API
             }
             catch (Exception lEx)
             {
@@ -112,15 +112,15 @@ namespace LoteriaWebApi.Controllers
         //[Authorize]
         [Route("[action]")]
         [HttpPut]
-        public IActionResult ModTipoSorteoGeneral([FromBody] TipoSorteoGeneral pTipoSorteoGeneral)
+        public IActionResult ModTipoSorteoGeneralExtraordinario([FromBody] TipoSorteoGeneralExtraordinario pTipoSorteoGeneralExtraordinario)
         {
             if (!ModelState.IsValid)
                 return BadRequest("Modelo Invalido");
 
             try
             {
-                gObjTipoSorteoGeneralLN.ModTipoSorteoGeneral(pTipoSorteoGeneral);
-                return Ok(pTipoSorteoGeneral);
+                gObjTipoSorteoGeneralExtraordinarioLN.ModTipoSorteoGeneralExtraordinario(pTipoSorteoGeneralExtraordinario);
+                return Ok(pTipoSorteoGeneralExtraordinario);
             }
             catch (Exception lEx)
             {
@@ -131,18 +131,18 @@ namespace LoteriaWebApi.Controllers
         //[Authorize]
         [Route("[action]")]
         [HttpDelete]
-        public IActionResult DelTipoSorteoGeneral([FromBody] int IdTipoSorteoGeneral)
+        public IActionResult DelTipoSorteoGeneralExtraordinario([FromBody] int IdTipoSorteoGeneralExtraordinario)
         {
 
             try
             {
-                var lTipoSorteoGeneral = gObjTipoSorteoGeneralLN.RecTipoSorteoGeneralXId(IdTipoSorteoGeneral);
-                if (lTipoSorteoGeneral == null)
+                var lTipoSorteoGeneralExtraordinario = gObjTipoSorteoGeneralExtraordinarioLN.RecTipoSorteoGeneralExtraordinarioXId(IdTipoSorteoGeneralExtraordinario);
+                if (lTipoSorteoGeneralExtraordinario == null)
                 {
                     return BadRequest("TipoSorteoGeneral No Encontrado");
                 }
-                gObjTipoSorteoGeneralLN.DelTipoSorteoGeneral(lTipoSorteoGeneral);
-                return Ok(lTipoSorteoGeneral);
+                gObjTipoSorteoGeneralExtraordinarioLN.DelTipoSorteoGeneralExtraordinario(lTipoSorteoGeneralExtraordinario);
+                return Ok(lTipoSorteoGeneralExtraordinario);
             }
             catch (Exception lEx)
             {

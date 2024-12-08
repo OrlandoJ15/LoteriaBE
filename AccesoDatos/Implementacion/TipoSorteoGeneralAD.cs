@@ -39,7 +39,11 @@ namespace AccesoDatos.Implementacion
                         lobjDatosTipoSorteoGeneral.Nombre = lReader["nombre"]?.ToString() ?? string.Empty;
                         lobjDatosTipoSorteoGeneral.Fondo = Convert.ToInt32(lReader["fondo"]);
                         lobjDatosTipoSorteoGeneral.PorcentajePago = Convert.ToInt32(lReader["porcentajePago"]);
-                        lobjDatosTipoSorteoGeneral.HoraFin = (TimeSpan)lReader["horaFin"];
+                        lobjDatosTipoSorteoGeneral.FechaInicio = Convert.ToDateTime(lReader["fechaInicio"]);
+                        lobjDatosTipoSorteoGeneral.FechaFin = Convert.ToDateTime(lReader["fechaFin"]);
+                        lobjDatosTipoSorteoGeneral.IdTipoSorteoGeneralExtraordinario = Convert.ToInt32(lReader["idTipoSorteoGeneralExtraordinario"]);
+
+
                         lObjRespuesta.Add(lobjDatosTipoSorteoGeneral);
 
                     }
@@ -64,7 +68,7 @@ namespace AccesoDatos.Implementacion
                 using (LoteriaContext lobjCnn = new LoteriaContext(_configuration))
                 {
                     var lCmd = gObjSqlCommandAbrirCerrar.CrearComando(lobjCnn, "RecTipoSorteoGeneralXIdPA");
-                    lCmd.Parameters.Add(new SqlParameter("@idTipoSorteoGeneral", pIdTipoSorteoGeneral));
+                    lCmd.Parameters.Add(new SqlParameter("@id", pIdTipoSorteoGeneral));
                     var lReader = lCmd.ExecuteReader();
 
                     // Si hay filas en el reader, creamos un nuevo objeto TipoSorteoGeneral
@@ -72,11 +76,13 @@ namespace AccesoDatos.Implementacion
                     {
                         lObjRespuesta = new TipoSorteoGeneral
                         {
-                            Id = Convert.ToInt32(lReader["idTipoSorteoGeneral"]),
+                            Id = Convert.ToInt32(lReader["id"]),
                             Nombre = lReader["nombre"]?.ToString() ?? string.Empty,
                             Fondo = Convert.ToInt32(lReader["fondo"]),
                             PorcentajePago = Convert.ToInt32(lReader["porcentajePago"]),
-                            HoraFin = (TimeSpan)lReader["horaFin"],
+                            FechaInicio = Convert.ToDateTime(lReader["fechaInicio"]),
+                            FechaFin = Convert.ToDateTime(lReader["fechaFin"]),
+                            IdTipoSorteoGeneralExtraordinario = Convert.ToInt32(lReader["idTipoSorteoGeneralExtraordinario"])
                         };
                     }
                     gObjSqlCommandAbrirCerrar.CerrarConexion(lCmd);
@@ -120,15 +126,17 @@ namespace AccesoDatos.Implementacion
 
                     if (procedimientoAlmacenado == "delTipoSorteoGeneralPA")
                     {
-                        lCmd.Parameters.Add(new SqlParameter("@idTipoSorteoGeneral", pTipoSorteoGeneral.Id));
+                        lCmd.Parameters.Add(new SqlParameter("@id", pTipoSorteoGeneral.Id));
                     }
                     else
                     {
-                        lCmd.Parameters.Add(new SqlParameter("@idTipoSorteoGeneral", pTipoSorteoGeneral.Id));
+                        lCmd.Parameters.Add(new SqlParameter("@id", pTipoSorteoGeneral.Id));
                         lCmd.Parameters.Add(new SqlParameter("@nombre", pTipoSorteoGeneral.Nombre));
                         lCmd.Parameters.Add(new SqlParameter("@fondo", pTipoSorteoGeneral.Fondo));
                         lCmd.Parameters.Add(new SqlParameter("@porcentajePago", pTipoSorteoGeneral.PorcentajePago));
-                        lCmd.Parameters.Add(new SqlParameter("@horaFin", pTipoSorteoGeneral.HoraFin));
+                        lCmd.Parameters.Add(new SqlParameter("@fechaInicio", pTipoSorteoGeneral.FechaInicio));
+                        lCmd.Parameters.Add(new SqlParameter("@fechaFin", pTipoSorteoGeneral.FechaFin));
+                        lCmd.Parameters.Add(new SqlParameter("@idTipoSorteoGeneralExtraordinario", pTipoSorteoGeneral.IdTipoSorteoGeneralExtraordinario));
 
                     }
 

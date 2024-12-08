@@ -66,7 +66,7 @@ namespace AccesoDatos.Implementacion
                 using (LoteriaContext lobjCnn = new LoteriaContext(_configuration))
                 {
                     var lCmd = gObjSqlCommandAbrirCerrar.CrearComando(lobjCnn, "RecSorteoXIdPA");
-                    lCmd.Parameters.Add(new SqlParameter("@idSorteo", pIdSorteo));
+                    lCmd.Parameters.Add(new SqlParameter("@id", pIdSorteo));
                     var lReader = lCmd.ExecuteReader();
 
                     // Si hay filas en el reader, creamos un nuevo objeto Sorteo
@@ -124,11 +124,11 @@ namespace AccesoDatos.Implementacion
 
                     if (procedimientoAlmacenado == "delSorteoPA")
                     {
-                        lCmd.Parameters.Add(new SqlParameter("@idSorteo", pSorteo.Id));
+                        lCmd.Parameters.Add(new SqlParameter("@id", pSorteo.Id));
                     }
                     else 
                     {
-                        lCmd.Parameters.Add(new SqlParameter("@idSorteo", pSorteo.Id));
+                        lCmd.Parameters.Add(new SqlParameter("@id", pSorteo.Id));
                         lCmd.Parameters.Add(new SqlParameter("@idUsuario", pSorteo.IdUsuario));
                         lCmd.Parameters.Add(new SqlParameter("@idTipoSorteo", pSorteo.IdTipoSorteo));
 

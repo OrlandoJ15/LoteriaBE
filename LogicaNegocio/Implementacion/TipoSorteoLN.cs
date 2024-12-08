@@ -82,9 +82,9 @@ namespace LogicaNegocio.Implementacion
 
 
 
-        public int RecIdTipoSorteoFromTipoSorteoGeneral(int pIdTipoSorteoGeneral)
+        public int RecIdTipoSorteoFromTipoSorteoGeneralOExtraordinario(int pId)
         {
-            return EjecutarProcConEntidad(() => gObjTipoSorteoAD.RecIdTipoSorteoFromTipoSorteoGeneral(pIdTipoSorteoGeneral));
+            return EjecutarProcConEntidad(() => gObjTipoSorteoAD.RecIdTipoSorteoFromTipoSorteoGeneral(pId));
         }
 
     }

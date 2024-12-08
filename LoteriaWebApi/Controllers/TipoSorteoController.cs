@@ -59,7 +59,7 @@ namespace LoteriaWebApi.Controllers
                     Id = u.Id,
                     NumeroGanador = u.NumeroGanador,
                     IdTipoSorteoGeneral = u.IdTipoSorteoGeneral,
-                    Fecha = u.Fecha,
+                    Fecha  = u.Fecha,
                     NombreTipoSorteoGeneral = u.NombreTipoSorteoGeneral,
                 }).ToList();
 
@@ -154,12 +154,12 @@ namespace LoteriaWebApi.Controllers
         //[Authorize]
         [Route("[action]")]
         [HttpPost]
-        public IActionResult? RecIdTipoSorteoFromTipoSorteoGeneral([FromBody] TipoSorteoGeneral pTipoSorteoGeneral)
+        public IActionResult? RecIdTipoSorteoFromTipoSorteoGeneralOExtraordinario([FromBody] TipoSorteoGeneral pTipoSorteoGeneral)
         {
             try
             {
                 // Llamada al método para obtener el usuario por su ID
-                var lObjRespuesta = gObjTipoSorteoLN.RecIdTipoSorteoFromTipoSorteoGeneral(pTipoSorteoGeneral.Id);
+                var lObjRespuesta = gObjTipoSorteoLN.RecIdTipoSorteoFromTipoSorteoGeneralOExtraordinario(pTipoSorteoGeneral.Id);
 
                 return HandleResponse(lObjRespuesta);
 

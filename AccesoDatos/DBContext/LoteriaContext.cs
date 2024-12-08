@@ -35,6 +35,8 @@ namespace AccesoDatos.DBContext
         public virtual DbSet<TipoSorteo> TipoSorteos { get; set; } = null!;
         public virtual DbSet<TipoSorteoGeneral> TipoSorteoGenerals { get; set; } = null!;
         public virtual DbSet<Usuario> Usuarios { get; set; } = null!;
+        public virtual DbSet<TipoSorteoGeneralExtraordinario> TipoSorteoGeneralExtraordinarios { get; set; } = null!;
+
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -199,9 +201,42 @@ namespace AccesoDatos.DBContext
 
                 entity.Property(e => e.Id).HasColumnName("id");
 
+                entity.Property(e => e.IdTipoSorteoGeneralExtraordinario).HasColumnName("idTipoSorteoGeneralExtraordinario");
+
+
                 entity.Property(e => e.Fondo).HasColumnName("fondo");
 
-                entity.Property(e => e.HoraFin).HasColumnName("horaFin");
+                entity.Property(e => e.FechaInicio).HasColumnName("fechaInicio");
+
+                entity.Property(e => e.FechaFin).HasColumnName("fechaFin");
+
+                entity.Property(e => e.Nombre)
+                    .HasMaxLength(50)
+                    .IsUnicode(false)
+                    .HasColumnName("nombre");
+
+                entity.Property(e => e.NombreTipoSorteoGeneralExtraordinario).HasColumnName("nombreTipoSorteoGeneralExtraordinario");
+
+                entity.HasOne(d => d.IdTipoSorteoGeneralExtraordinarioNavigation)
+                    .WithMany(p => p.TipoSorteosGenerales)
+                    .HasForeignKey(d => d.IdTipoSorteoGeneralExtraordinario)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK_TipoSorteoGeneral_TipoSorteoGeneralExtraordinario");
+
+                entity.Property(e => e.PorcentajePago).HasColumnName("porcentajePago");
+            });
+
+            modelBuilder.Entity<TipoSorteoGeneralExtraordinario>(entity =>
+            {
+                entity.ToTable("TipoSorteoGeneralExtraordinario");
+
+                entity.Property(e => e.Id).HasColumnName("id");
+
+                entity.Property(e => e.Fondo).HasColumnName("fondo");
+
+                entity.Property(e => e.FechaInicio).HasColumnName("fechaInicio");
+
+                entity.Property(e => e.FechaFin).HasColumnName("fechaFin");
 
                 entity.Property(e => e.Nombre)
                     .HasMaxLength(50)

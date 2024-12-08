@@ -153,16 +153,15 @@ namespace AccesoDatos.Implementacion
 
 
 
-        public int RecIdTipoSorteoFromTipoSorteoGeneral(TipoSorteo pTipoSorteo)
+        public int RecIdTipoSorteoFromTipoSorteoGeneralOExtraordinario(int pTipoSorteo)
         {
             int lObjRespuesta = 0;
             try
             {
                 using (LoteriaContext lobjCnn = new LoteriaContext(_configuration))
                 {
-                    var lCmd = gObjSqlCommandAbrirCerrar.CrearComando(lobjCnn, "RecIdTipoSorteoFromTipoSorteoGeneralPA");
-                    lCmd.Parameters.Add(new SqlParameter("@id", pTipoSorteo.Id));
-                    lCmd.Parameters.Add(new SqlParameter("@fecha", pTipoSorteo.Fecha));
+                    var lCmd = gObjSqlCommandAbrirCerrar.CrearComando(lobjCnn, "RecIdTipoSorteoFromTipoSorteoGeneralOExtraordinarioPA");
+                    lCmd.Parameters.Add(new SqlParameter("@id", pTipoSorteo));
 
 
                     var lReader = lCmd.ExecuteReader();

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MetodosComunes")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a7f6023d3e51bd5dbe58470569215e0d4f4bd72c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+93c61ddf66464219418f4fd42d7ca5b6686dafd5")]
 [assembly: System.Reflection.AssemblyProductAttribute("MetodosComunes")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MetodosComunes")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

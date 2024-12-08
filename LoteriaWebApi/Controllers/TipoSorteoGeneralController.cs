@@ -60,7 +60,7 @@ namespace LoteriaWebApi.Controllers
                     Nombre = u.Nombre,
                     Fondo = u.Fondo,
                     PorcentajePago = u.PorcentajePago,
-                    FechaInicio = u.fec,
+                    FechaInicio = u.FechaInicio,
                     FechaFin = u.FechaFin
                 }).ToList();
 
